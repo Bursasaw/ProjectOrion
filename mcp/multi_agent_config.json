@@ -1,0 +1,73 @@
+{
+  "project_path": "/Users/bursasaw/Documents/Morph Studios/ProjectOrion-0.12.12",
+  "agents": {
+    "core_systems": {
+      "description": "Handles core game systems like skill trees, class specializations, and progression",
+      "focus_areas": ["progression", "combat", "character_systems"],
+      "priority": "high",
+      "estimated_duration_hours": 4
+    },
+    "item_systems": {
+      "description": "Handles item creation, crafting systems, and equipment",
+      "focus_areas": ["items", "crafting", "equipment"],
+      "priority": "medium",
+      "estimated_duration_hours": 3
+    },
+    "world_systems": {
+      "description": "Handles world persistence, quests, and NPC interactions",
+      "focus_areas": ["world_state", "quests", "npcs"],
+      "priority": "medium",
+      "estimated_duration_hours": 5
+    },
+    "performance": {
+      "description": "Handles optimization, bug fixes, and polish",
+      "focus_areas": ["optimization", "bug_fixes", "ui_polish"],
+      "priority": "low",
+      "estimated_duration_hours": 2
+    },
+    "content_creation": {
+      "description": "Creates game content like items, quests, and characters",
+      "focus_areas": ["content", "story", "assets"],
+      "priority": "medium",
+      "estimated_duration_hours": 6
+    },
+    "testing": {
+      "description": "Runs comprehensive tests and validation",
+      "focus_areas": ["testing", "validation", "quality_assurance"],
+      "priority": "high",
+      "estimated_duration_hours": 2
+    }
+  },
+  "coordination": {
+    "status_check_interval": 30,
+    "log_level": "INFO",
+    "auto_restart_failed_agents": true,
+    "max_concurrent_agents": 6
+  },
+  "task_types": {
+    "code_implementation": {
+      "description": "Implement new code files or modify existing ones",
+      "estimated_time_minutes": 15
+    },
+    "testing": {
+      "description": "Run tests and validation",
+      "estimated_time_minutes": 10
+    },
+    "documentation": {
+      "description": "Update documentation and changelogs",
+      "estimated_time_minutes": 5
+    },
+    "content_creation": {
+      "description": "Create game content like items, quests, characters",
+      "estimated_time_minutes": 20
+    },
+    "bug_fixing": {
+      "description": "Fix bugs and issues",
+      "estimated_time_minutes": 10
+    },
+    "optimization": {
+      "description": "Optimize performance and systems",
+      "estimated_time_minutes": 15
+    }
+  }
+} 
