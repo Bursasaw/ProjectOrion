@@ -1,0 +1,1204 @@
+{
+  "version": "0.13.0",
+  "skill_trees": {
+    "combat_mastery": {
+      "id": "combat_mastery",
+      "name": "Combat Mastery",
+      "description": "Master the art of physical combat and weapon techniques",
+      "stance_requirements": ["combat", "stealth"],
+      "unlock_requirements": ["level_1"],
+      "tiers": {
+        "tier_1": {
+          "unlock_level": 1,
+          "skills": [
+            {
+              "id": "basic_attack",
+              "name": "Basic Attack",
+              "description": "Perform a basic melee attack",
+              "cost": 1,
+              "prerequisites": [],
+              "effects": {
+                "damage": 10,
+                "range": 1,
+                "cooldown": 0
+              }
+            },
+            {
+              "id": "weapon_proficiency",
+              "name": "Weapon Proficiency",
+              "description": "Increase damage with all weapons by 15%",
+              "cost": 2,
+              "prerequisites": ["basic_attack"],
+              "effects": {
+                "weapon_damage_bonus": 0.15
+              }
+            },
+            {
+              "id": "defensive_stance",
+              "name": "Defensive Stance",
+              "description": "Reduce incoming damage by 20%",
+              "cost": 2,
+              "prerequisites": ["basic_attack"],
+              "effects": {
+                "damage_reduction": 0.20
+              }
+            },
+            {
+              "id": "critical_strike",
+              "name": "Critical Strike",
+              "description": "Increase critical hit chance by 10%",
+              "cost": 2,
+              "prerequisites": ["weapon_proficiency"],
+              "effects": {
+                "critical_chance": 0.10
+              }
+            }
+          ]
+        },
+        "tier_2": {
+          "unlock_level": 10,
+          "skills": [
+            {
+              "id": "advanced_techniques",
+              "name": "Advanced Techniques",
+              "description": "Unlock advanced combat moves and combos",
+              "cost": 3,
+              "prerequisites": ["weapon_proficiency", "defensive_stance"],
+              "effects": {
+                "combo_damage_bonus": 0.25,
+                "unlock_combos": true
+              }
+            },
+            {
+              "id": "weapon_mastery",
+              "name": "Weapon Mastery",
+              "description": "Master specific weapon types for increased effectiveness",
+              "cost": 4,
+              "prerequisites": ["weapon_proficiency"],
+              "effects": {
+                "weapon_damage_bonus": 0.30,
+                "critical_chance": 0.10
+              }
+            },
+            {
+              "id": "battle_tactics",
+              "name": "Battle Tactics",
+              "description": "Learn advanced battlefield positioning and strategy",
+              "cost": 3,
+              "prerequisites": ["advanced_techniques"],
+              "effects": {
+                "positioning_bonus": 0.20,
+                "tactical_advantage": 0.15
+              }
+            }
+          ]
+        },
+        "tier_3": {
+          "unlock_level": 25,
+          "skills": [
+            {
+              "id": "master_techniques",
+              "name": "Master Techniques",
+              "description": "Unlock legendary combat techniques",
+              "cost": 5,
+              "prerequisites": ["advanced_techniques", "weapon_mastery"],
+              "effects": {
+                "master_technique_damage": 0.50,
+                "unlock_master_combos": true
+              }
+            },
+            {
+              "id": "weapon_specialization",
+              "name": "Weapon Specialization",
+              "description": "Specialize in specific weapon types for maximum effectiveness",
+              "cost": 4,
+              "prerequisites": ["weapon_mastery"],
+              "effects": {
+                "specialized_weapon_damage": 0.40,
+                "weapon_abilities": true
+              }
+            },
+            {
+              "id": "combat_instincts",
+              "name": "Combat Instincts",
+              "description": "Develop supernatural combat reflexes and intuition",
+              "cost": 5,
+              "prerequisites": ["battle_tactics"],
+              "effects": {
+                "reflex_bonus": 0.30,
+                "predictive_combat": true
+              }
+            }
+          ]
+        },
+        "tier_4": {
+          "unlock_level": 50,
+          "skills": [
+            {
+              "id": "legendary_techniques",
+              "name": "Legendary Techniques",
+              "description": "Unlock reality-bending combat abilities",
+              "cost": 8,
+              "prerequisites": ["master_techniques"],
+              "effects": {
+                "legendary_damage": 0.75,
+                "reality_manipulation": true
+              }
+            },
+            {
+              "id": "weapon_transcendence",
+              "name": "Weapon Transcendence",
+              "description": "Transcend the limitations of physical weapons",
+              "cost": 7,
+              "prerequisites": ["weapon_specialization"],
+              "effects": {
+                "transcendent_weapons": true,
+                "weapon_creation": true
+              }
+            },
+            {
+              "id": "combat_transcendence",
+              "name": "Combat Transcendence",
+              "description": "Transcend beyond mortal combat limitations",
+              "cost": 8,
+              "prerequisites": ["combat_instincts"],
+              "effects": {
+                "transcendent_combat": true,
+                "cosmic_combat": 0.50
+              }
+            }
+          ]
+        },
+        "tier_5": {
+          "unlock_level": 75,
+          "skills": [
+            {
+              "id": "cosmic_techniques",
+              "name": "Cosmic Techniques",
+              "description": "Unlock the power to manipulate reality itself",
+              "cost": 10,
+              "prerequisites": ["legendary_techniques"],
+              "effects": {
+                "cosmic_damage": 1.0,
+                "reality_creation": true
+              }
+            },
+            {
+              "id": "weapon_godhood",
+              "name": "Weapon Godhood",
+              "description": "Achieve godlike mastery over all weapons",
+              "cost": 10,
+              "prerequisites": ["weapon_transcendence"],
+              "effects": {
+                "weapon_godhood": true,
+                "omnipotent_weapons": true
+              }
+            },
+            {
+              "id": "combat_godhood",
+              "name": "Combat Godhood",
+              "description": "Achieve godlike combat abilities",
+              "cost": 10,
+              "prerequisites": ["combat_transcendence"],
+              "effects": {
+                "combat_godhood": true,
+                "omnipotent_combat": true
+              }
+            }
+          ]
+        }
+      }
+    },
+    "arcane_arts": {
+      "id": "arcane_arts",
+      "name": "Arcane Arts",
+      "description": "Master the arcane arts and elemental magic",
+      "stance_requirements": ["arcane", "support"],
+      "unlock_requirements": ["level_1"],
+      "tiers": {
+        "tier_1": {
+          "unlock_level": 1,
+          "skills": [
+            {
+              "id": "basic_spells",
+              "name": "Basic Spells",
+              "description": "Cast basic elemental spells",
+              "cost": 1,
+              "prerequisites": [],
+              "effects": {
+                "spell_damage": 15,
+                "mana_cost": 10
+              }
+            },
+            {
+              "id": "elemental_control",
+              "name": "Elemental Control",
+              "description": "Gain control over fire, ice, and lightning",
+              "cost": 2,
+              "prerequisites": ["basic_spells"],
+              "effects": {
+                "elemental_damage_bonus": 0.20,
+                "elemental_resistance": 0.15
+              }
+            },
+            {
+              "id": "mana_manipulation",
+              "name": "Mana Manipulation",
+              "description": "Learn to efficiently use and regenerate mana",
+              "cost": 2,
+              "prerequisites": ["basic_spells"],
+              "effects": {
+                "mana_efficiency": 0.15,
+                "mana_regeneration": 0.10
+              }
+            }
+          ]
+        },
+        "tier_2": {
+          "unlock_level": 10,
+          "skills": [
+            {
+              "id": "advanced_spells",
+              "name": "Advanced Spells",
+              "description": "Unlock powerful spell combinations",
+              "cost": 3,
+              "prerequisites": ["elemental_control"],
+              "effects": {
+                "spell_combinations": true,
+                "spell_damage_bonus": 0.30
+              }
+            },
+            {
+              "id": "spell_specialization",
+              "name": "Spell Specialization",
+              "description": "Specialize in specific schools of magic",
+              "cost": 3,
+              "prerequisites": ["advanced_spells"],
+              "effects": {
+                "specialized_spell_damage": 0.25,
+                "spell_efficiency": 0.20
+              }
+            },
+            {
+              "id": "arcane_resonance",
+              "name": "Arcane Resonance",
+              "description": "Develop a deeper connection to magical energies",
+              "cost": 4,
+              "prerequisites": ["mana_manipulation"],
+              "effects": {
+                "arcane_affinity": 0.30,
+                "spell_power": 0.25
+              }
+            }
+          ]
+        },
+        "tier_3": {
+          "unlock_level": 25,
+          "skills": [
+            {
+              "id": "reality_warping",
+              "name": "Reality Warping",
+              "description": "Begin to manipulate the fabric of reality",
+              "cost": 5,
+              "prerequisites": ["advanced_spells"],
+              "effects": {
+                "reality_manipulation": true,
+                "spell_damage_bonus": 0.50
+              }
+            },
+            {
+              "id": "spell_mastery",
+              "name": "Spell Mastery",
+              "description": "Achieve mastery over all forms of magic",
+              "cost": 5,
+              "prerequisites": ["spell_specialization"],
+              "effects": {
+                "spell_mastery": true,
+                "universal_magic": 0.40
+              }
+            },
+            {
+              "id": "arcane_transcendence",
+              "name": "Arcane Transcendence",
+              "description": "Transcend beyond mortal magical limitations",
+              "cost": 6,
+              "prerequisites": ["arcane_resonance"],
+              "effects": {
+                "transcendent_magic": true,
+                "cosmic_magic": 0.45
+              }
+            }
+          ]
+        },
+        "tier_4": {
+          "unlock_level": 50,
+          "skills": [
+            {
+              "id": "dimensional_magic",
+              "name": "Dimensional Magic",
+              "description": "Access the power to manipulate dimensions",
+              "cost": 8,
+              "prerequisites": ["reality_warping"],
+              "effects": {
+                "dimensional_manipulation": true,
+                "spell_damage_bonus": 0.75
+              }
+            },
+            {
+              "id": "spell_godhood",
+              "name": "Spell Godhood",
+              "description": "Achieve godlike mastery over all magic",
+              "cost": 8,
+              "prerequisites": ["spell_mastery"],
+              "effects": {
+                "spell_godhood": true,
+                "omnipotent_magic": true
+              }
+            },
+            {
+              "id": "arcane_godhood",
+              "name": "Arcane Godhood",
+              "description": "Achieve godlike arcane abilities",
+              "cost": 8,
+              "prerequisites": ["arcane_transcendence"],
+              "effects": {
+                "arcane_godhood": true,
+                "cosmic_arcane": 0.60
+              }
+            }
+          ]
+        },
+        "tier_5": {
+          "unlock_level": 75,
+          "skills": [
+            {
+              "id": "creation_magic",
+              "name": "Creation Magic",
+              "description": "Unlock the power to create from nothing",
+              "cost": 10,
+              "prerequisites": ["dimensional_magic"],
+              "effects": {
+                "creation_power": true,
+                "spell_damage_bonus": 1.0
+              }
+            },
+            {
+              "id": "reality_creation",
+              "name": "Reality Creation",
+              "description": "Create and destroy entire realities",
+              "cost": 10,
+              "prerequisites": ["spell_godhood"],
+              "effects": {
+                "reality_creation": true,
+                "omnipotent_creation": true
+              }
+            },
+            {
+              "id": "cosmic_arcane",
+              "name": "Cosmic Arcane",
+              "description": "Achieve cosmic mastery over all arcane forces",
+              "cost": 10,
+              "prerequisites": ["arcane_godhood"],
+              "effects": {
+                "cosmic_arcane": true,
+                "omnipotent_arcane": true
+              }
+            }
+          ]
+        }
+      }
+    },
+    "utility_expertise": {
+      "id": "utility_expertise",
+      "name": "Utility Expertise",
+      "description": "Master crafting, exploration, and utility skills",
+      "stance_requirements": ["exploration", "support"],
+      "unlock_requirements": ["level_1"],
+      "tiers": {
+        "tier_1": {
+          "unlock_level": 1,
+          "skills": [
+            {
+              "id": "basic_crafting",
+              "name": "Basic Crafting",
+              "description": "Craft basic items and equipment",
+              "cost": 1,
+              "prerequisites": [],
+              "effects": {
+                "crafting_quality": 0.10,
+                "unlock_basic_recipes": true
+              }
+            },
+            {
+              "id": "exploration_skills",
+              "name": "Exploration Skills",
+              "description": "Enhanced movement and traversal abilities",
+              "cost": 2,
+              "prerequisites": ["basic_crafting"],
+              "effects": {
+                "movement_speed": 0.15,
+                "jump_height": 0.20
+              }
+            },
+            {
+              "id": "survival_skills",
+              "name": "Survival Skills",
+              "description": "Learn to survive in harsh environments",
+              "cost": 2,
+              "prerequisites": ["exploration_skills"],
+              "effects": {
+                "environmental_resistance": 0.20,
+                "resource_finding": 0.15
+              }
+            }
+          ]
+        },
+        "tier_2": {
+          "unlock_level": 10,
+          "skills": [
+            {
+              "id": "advanced_crafting",
+              "name": "Advanced Crafting",
+              "description": "Craft advanced items and equipment",
+              "cost": 3,
+              "prerequisites": ["basic_crafting", "exploration_skills"],
+              "effects": {
+                "crafting_quality": 0.25,
+                "unlock_advanced_recipes": true
+              }
+            },
+            {
+              "id": "enhanced_mobility",
+              "name": "Enhanced Mobility",
+              "description": "Develop superhuman movement abilities",
+              "cost": 3,
+              "prerequisites": ["exploration_skills"],
+              "effects": {
+                "enhanced_movement": 0.30,
+                "acrobatic_abilities": true
+              }
+            },
+            {
+              "id": "resource_mastery",
+              "name": "Resource Mastery",
+              "description": "Master the art of resource gathering and management",
+              "cost": 3,
+              "prerequisites": ["survival_skills"],
+              "effects": {
+                "resource_efficiency": 0.25,
+                "rare_resource_finding": 0.20
+              }
+            }
+          ]
+        },
+        "tier_3": {
+          "unlock_level": 25,
+          "skills": [
+            {
+              "id": "legendary_crafting",
+              "name": "Legendary Crafting",
+              "description": "Craft legendary items and equipment",
+              "cost": 5,
+              "prerequisites": ["advanced_crafting"],
+              "effects": {
+                "crafting_quality": 0.50,
+                "unlock_legendary_recipes": true
+              }
+            },
+            {
+              "id": "dimensional_mobility",
+              "name": "Dimensional Mobility",
+              "description": "Learn to traverse dimensions and realities",
+              "cost": 5,
+              "prerequisites": ["enhanced_mobility"],
+              "effects": {
+                "dimensional_travel": true,
+                "reality_hopping": 0.40
+              }
+            },
+            {
+              "id": "cosmic_resources",
+              "name": "Cosmic Resources",
+              "description": "Access resources from across the cosmos",
+              "cost": 5,
+              "prerequisites": ["resource_mastery"],
+              "effects": {
+                "cosmic_resources": true,
+                "reality_resources": 0.35
+              }
+            }
+          ]
+        },
+        "tier_4": {
+          "unlock_level": 50,
+          "skills": [
+            {
+              "id": "reality_crafting",
+              "name": "Reality Crafting",
+              "description": "Craft items that manipulate reality",
+              "cost": 8,
+              "prerequisites": ["legendary_crafting"],
+              "effects": {
+                "reality_crafting": true,
+                "crafting_quality": 0.75
+              }
+            },
+            {
+              "id": "cosmic_mobility",
+              "name": "Cosmic Mobility",
+              "description": "Traverse the cosmos and realities",
+              "cost": 8,
+              "prerequisites": ["dimensional_mobility"],
+              "effects": {
+                "cosmic_travel": true,
+                "reality_transcendence": 0.60
+              }
+            },
+            {
+              "id": "omnipotent_resources",
+              "name": "Omnipotent Resources",
+              "description": "Access resources from all realities",
+              "cost": 8,
+              "prerequisites": ["cosmic_resources"],
+              "effects": {
+                "omnipotent_resources": true,
+                "creation_resources": 0.50
+              }
+            }
+          ]
+        },
+        "tier_5": {
+          "unlock_level": 75,
+          "skills": [
+            {
+              "id": "creation_crafting",
+              "name": "Creation Crafting",
+              "description": "Create items from pure imagination",
+              "cost": 10,
+              "prerequisites": ["reality_crafting"],
+              "effects": {
+                "creation_crafting": true,
+                "crafting_quality": 1.0
+              }
+            },
+            {
+              "id": "omnipotent_mobility",
+              "name": "Omnipotent Mobility",
+              "description": "Achieve omnipotent movement abilities",
+              "cost": 10,
+              "prerequisites": ["cosmic_mobility"],
+              "effects": {
+                "omnipotent_mobility": true,
+                "instant_transcendence": true
+              }
+            },
+            {
+              "id": "creation_resources",
+              "name": "Creation Resources",
+              "description": "Create resources from nothing",
+              "cost": 10,
+              "prerequisites": ["omnipotent_resources"],
+              "effects": {
+                "creation_resources": true,
+                "omnipotent_creation": true
+              }
+            }
+          ]
+        }
+      }
+    },
+    "emotional_intelligence": {
+      "id": "emotional_intelligence",
+      "name": "Emotional Intelligence",
+      "description": "Master emotional control and social manipulation",
+      "stance_requirements": ["support", "stealth"],
+      "unlock_requirements": ["level_1"],
+      "tiers": {
+        "tier_1": {
+          "unlock_level": 1,
+          "skills": [
+            {
+              "id": "basic_empathy",
+              "name": "Basic Empathy",
+              "description": "Understand and influence others' emotions",
+              "cost": 1,
+              "prerequisites": [],
+              "effects": {
+                "social_influence": 0.15,
+                "dialogue_options": 2
+              }
+            },
+            {
+              "id": "emotional_control",
+              "name": "Emotional Control",
+              "description": "Maintain composure in stressful situations",
+              "cost": 2,
+              "prerequisites": ["basic_empathy"],
+              "effects": {
+                "stress_resistance": 0.20,
+                "focus_bonus": 0.15
+              }
+            },
+            {
+              "id": "social_awareness",
+              "name": "Social Awareness",
+              "description": "Develop keen awareness of social dynamics",
+              "cost": 2,
+              "prerequisites": ["basic_empathy"],
+              "effects": {
+                "social_perception": 0.20,
+                "relationship_building": 0.15
+              }
+            }
+          ]
+        },
+        "tier_2": {
+          "unlock_level": 10,
+          "skills": [
+            {
+              "id": "emotional_manipulation",
+              "name": "Emotional Manipulation",
+              "description": "Subtly influence others' emotional states",
+              "cost": 3,
+              "prerequisites": ["basic_empathy", "emotional_control"],
+              "effects": {
+                "emotional_manipulation": true,
+                "social_influence": 0.30
+              }
+            },
+            {
+              "id": "psychological_warfare",
+              "name": "Psychological Warfare",
+              "description": "Use psychological tactics in combat",
+              "cost": 3,
+              "prerequisites": ["emotional_control"],
+              "effects": {
+                "psychological_damage": 0.25,
+                "fear_effects": 0.20
+              }
+            },
+            {
+              "id": "social_mastery",
+              "name": "Social Mastery",
+              "description": "Master all aspects of social interaction",
+              "cost": 4,
+              "prerequisites": ["social_awareness"],
+              "effects": {
+                "social_mastery": true,
+                "influence_multiplier": 0.30
+              }
+            }
+          ]
+        },
+        "tier_3": {
+          "unlock_level": 25,
+          "skills": [
+            {
+              "id": "emotional_warfare",
+              "name": "Emotional Warfare",
+              "description": "Use emotions as weapons in combat",
+              "cost": 5,
+              "prerequisites": ["emotional_manipulation"],
+              "effects": {
+                "emotional_combat": true,
+                "fear_effects": 0.25
+              }
+            },
+            {
+              "id": "reality_emotion_control",
+              "name": "Reality Emotion Control",
+              "description": "Manipulate emotions on a reality-wide scale",
+              "cost": 5,
+              "prerequisites": ["psychological_warfare"],
+              "effects": {
+                "reality_emotion_control": true,
+                "cosmic_emotion_manipulation": 0.40
+              }
+            },
+            {
+              "id": "social_transcendence",
+              "name": "Social Transcendence",
+              "description": "Transcend beyond normal social limitations",
+              "cost": 6,
+              "prerequisites": ["social_mastery"],
+              "effects": {
+                "social_transcendence": true,
+                "cosmic_social_influence": 0.45
+              }
+            }
+          ]
+        },
+        "tier_4": {
+          "unlock_level": 50,
+          "skills": [
+            {
+              "id": "emotional_mastery",
+              "name": "Emotional Mastery",
+              "description": "Complete control over emotional states",
+              "cost": 8,
+              "prerequisites": ["emotional_warfare"],
+              "effects": {
+                "emotional_mastery": true,
+                "reality_emotion_control": true
+              }
+            },
+            {
+              "id": "cosmic_emotion_control",
+              "name": "Cosmic Emotion Control",
+              "description": "Control emotions across the cosmos",
+              "cost": 8,
+              "prerequisites": ["reality_emotion_control"],
+              "effects": {
+                "cosmic_emotion_control": true,
+                "omnipotent_emotion": 0.60
+              }
+            },
+            {
+              "id": "social_godhood",
+              "name": "Social Godhood",
+              "description": "Achieve godlike social abilities",
+              "cost": 8,
+              "prerequisites": ["social_transcendence"],
+              "effects": {
+                "social_godhood": true,
+                "omnipotent_social": 0.60
+              }
+            }
+          ]
+        },
+        "tier_5": {
+          "unlock_level": 75,
+          "skills": [
+            {
+              "id": "emotional_transcendence",
+              "name": "Emotional Transcendence",
+              "description": "Transcend beyond emotions entirely",
+              "cost": 10,
+              "prerequisites": ["emotional_mastery"],
+              "effects": {
+                "emotional_transcendence": true,
+                "cosmic_emotional_control": true
+              }
+            },
+            {
+              "id": "omnipotent_emotion",
+              "name": "Omnipotent Emotion",
+              "description": "Achieve omnipotent control over all emotions",
+              "cost": 10,
+              "prerequisites": ["cosmic_emotion_control"],
+              "effects": {
+                "omnipotent_emotion": true,
+                "creation_emotion": true
+              }
+            },
+            {
+              "id": "cosmic_social",
+              "name": "Cosmic Social",
+              "description": "Achieve cosmic mastery over all social forces",
+              "cost": 10,
+              "prerequisites": ["social_godhood"],
+              "effects": {
+                "cosmic_social": true,
+                "omnipotent_social": true
+              }
+            }
+          ]
+        }
+      }
+    },
+    "world_resonance": {
+      "id": "world_resonance",
+      "name": "World Resonance",
+      "description": "Attune to and manipulate the world around you",
+      "stance_requirements": ["exploration", "arcane"],
+      "unlock_requirements": ["level_1"],
+      "tiers": {
+        "tier_1": {
+          "unlock_level": 1,
+          "skills": [
+            {
+              "id": "world_attunement",
+              "name": "World Attunement",
+              "description": "Sense and interact with the world's energy",
+              "cost": 1,
+              "prerequisites": [],
+              "effects": {
+                "world_sensing": true,
+                "environmental_bonus": 0.15
+              }
+            },
+            {
+              "id": "nature_connection",
+              "name": "Nature Connection",
+              "description": "Connect with natural elements and forces",
+              "cost": 2,
+              "prerequisites": ["world_attunement"],
+              "effects": {
+                "nature_affinity": 0.20,
+                "healing_bonus": 0.15
+              }
+            },
+            {
+              "id": "environmental_sense",
+              "name": "Environmental Sense",
+              "description": "Develop heightened awareness of surroundings",
+              "cost": 2,
+              "prerequisites": ["world_attunement"],
+              "effects": {
+                "environmental_awareness": 0.25,
+                "danger_sense": 0.20
+              }
+            }
+          ]
+        },
+        "tier_2": {
+          "unlock_level": 10,
+          "skills": [
+            {
+              "id": "world_manipulation",
+              "name": "World Manipulation",
+              "description": "Begin to manipulate the world around you",
+              "cost": 3,
+              "prerequisites": ["world_attunement", "nature_connection"],
+              "effects": {
+                "world_manipulation": true,
+                "environmental_control": 0.25
+              }
+            },
+            {
+              "id": "reality_sensing",
+              "name": "Reality Sensing",
+              "description": "Sense the fabric of reality itself",
+              "cost": 3,
+              "prerequisites": ["environmental_sense"],
+              "effects": {
+                "reality_sensing": true,
+                "dimensional_awareness": 0.30
+              }
+            },
+            {
+              "id": "world_mastery",
+              "name": "World Mastery",
+              "description": "Master the art of world interaction",
+              "cost": 4,
+              "prerequisites": ["world_manipulation"],
+              "effects": {
+                "world_mastery": true,
+                "environmental_transcendence": 0.35
+              }
+            }
+          ]
+        },
+        "tier_3": {
+          "unlock_level": 25,
+          "skills": [
+            {
+              "id": "world_control",
+              "name": "World Control",
+              "description": "Gain significant control over the environment",
+              "cost": 5,
+              "prerequisites": ["world_manipulation"],
+              "effects": {
+                "world_control": true,
+                "environmental_mastery": 0.50
+              }
+            },
+            {
+              "id": "reality_manipulation",
+              "name": "Reality Manipulation",
+              "description": "Begin to manipulate the fabric of reality",
+              "cost": 5,
+              "prerequisites": ["reality_sensing"],
+              "effects": {
+                "reality_manipulation": true,
+                "dimensional_control": 0.45
+              }
+            },
+            {
+              "id": "cosmic_resonance",
+              "name": "Cosmic Resonance",
+              "description": "Develop resonance with cosmic forces",
+              "cost": 6,
+              "prerequisites": ["world_mastery"],
+              "effects": {
+                "cosmic_resonance": true,
+                "reality_transcendence": 0.50
+              }
+            }
+          ]
+        },
+        "tier_4": {
+          "unlock_level": 50,
+          "skills": [
+            {
+              "id": "world_creation",
+              "name": "World Creation",
+              "description": "Create and shape worlds to your will",
+              "cost": 8,
+              "prerequisites": ["world_control"],
+              "effects": {
+                "world_creation": true,
+                "reality_shaping": true
+              }
+            },
+            {
+              "id": "reality_creation",
+              "name": "Reality Creation",
+              "description": "Create and destroy entire realities",
+              "cost": 8,
+              "prerequisites": ["reality_manipulation"],
+              "effects": {
+                "reality_creation": true,
+                "cosmic_creation": 0.60
+              }
+            },
+            {
+              "id": "cosmic_mastery",
+              "name": "Cosmic Mastery",
+              "description": "Achieve mastery over cosmic forces",
+              "cost": 8,
+              "prerequisites": ["cosmic_resonance"],
+              "effects": {
+                "cosmic_mastery": true,
+                "omnipotent_cosmic": 0.60
+              }
+            }
+          ]
+        },
+        "tier_5": {
+          "unlock_level": 75,
+          "skills": [
+            {
+              "id": "world_transcendence",
+              "name": "World Transcendence",
+              "description": "Transcend beyond the limitations of worlds",
+              "cost": 10,
+              "prerequisites": ["world_creation"],
+              "effects": {
+                "world_transcendence": true,
+                "cosmic_world_control": true
+              }
+            },
+            {
+              "id": "omnipotent_reality",
+              "name": "Omnipotent Reality",
+              "description": "Achieve omnipotent control over all realities",
+              "cost": 10,
+              "prerequisites": ["reality_creation"],
+              "effects": {
+                "omnipotent_reality": true,
+                "creation_reality": true
+              }
+            },
+            {
+              "id": "cosmic_transcendence",
+              "name": "Cosmic Transcendence",
+              "description": "Transcend beyond cosmic limitations",
+              "cost": 10,
+              "prerequisites": ["cosmic_mastery"],
+              "effects": {
+                "cosmic_transcendence": true,
+                "omnipotent_cosmic": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "stances": {
+    "combat": {
+      "id": "combat",
+      "name": "Combat Stance",
+      "description": "Focused on physical combat and weapon mastery",
+      "unlock_requirements": ["level_1"],
+      "skill_tree_bonuses": {
+        "combat_mastery": 0.25,
+        "arcane_arts": -0.10
+      }
+    },
+    "arcane": {
+      "id": "arcane",
+      "name": "Arcane Stance",
+      "description": "Focused on magic and elemental control",
+      "unlock_requirements": ["level_1"],
+      "skill_tree_bonuses": {
+        "arcane_arts": 0.25,
+        "combat_mastery": -0.10
+      }
+    },
+    "stealth": {
+      "id": "stealth",
+      "name": "Stealth Stance",
+      "description": "Focused on stealth and precision strikes",
+      "unlock_requirements": ["level_5"],
+      "skill_tree_bonuses": {
+        "combat_mastery": 0.15,
+        "emotional_intelligence": 0.15
+      }
+    },
+    "support": {
+      "id": "support",
+      "name": "Support Stance",
+      "description": "Focused on healing and team coordination",
+      "unlock_requirements": ["level_5"],
+      "skill_tree_bonuses": {
+        "emotional_intelligence": 0.25,
+        "utility_expertise": 0.15
+      }
+    },
+    "exploration": {
+      "id": "exploration",
+      "name": "Exploration Stance",
+      "description": "Focused on movement and world interaction",
+      "unlock_requirements": ["level_5"],
+      "skill_tree_bonuses": {
+        "utility_expertise": 0.25,
+        "world_resonance": 0.15
+      }
+    },
+    "dragon": {
+      "id": "dragon",
+      "name": "Dragon Stance",
+      "description": "Focused on dragon magic and fire manipulation",
+      "unlock_requirements": ["level_10"],
+      "skill_tree_bonuses": {
+        "combat_mastery": 0.20,
+        "arcane_arts": 0.20
+      }
+    },
+    "shadow": {
+      "id": "shadow",
+      "name": "Shadow Stance",
+      "description": "Focused on shadows and void magic",
+      "unlock_requirements": ["level_10"],
+      "skill_tree_bonuses": {
+        "emotional_intelligence": 0.25,
+        "arcane_arts": 0.15
+      }
+    },
+    "reality": {
+      "id": "reality",
+      "name": "Reality Stance",
+      "description": "Focused on reality manipulation and will magic",
+      "unlock_requirements": ["level_15"],
+      "skill_tree_bonuses": {
+        "arcane_arts": 0.30,
+        "world_resonance": 0.20
+      }
+    },
+    "void": {
+      "id": "void",
+      "name": "Void Stance",
+      "description": "Focused on void magic and dimensional travel",
+      "unlock_requirements": ["level_15"],
+      "skill_tree_bonuses": {
+        "arcane_arts": 0.35,
+        "world_resonance": 0.25
+      }
+    },
+    "technology": {
+      "id": "technology",
+      "name": "Technology Stance",
+      "description": "Focused on technology and fusion magic",
+      "unlock_requirements": ["level_10"],
+      "skill_tree_bonuses": {
+        "arcane_arts": 0.20,
+        "utility_expertise": 0.25
+      }
+    }
+  },
+  "cross_tree_synergies": [
+    {
+      "id": "battle_mage",
+      "name": "Battle Mage",
+      "description": "Combine combat and arcane skills for devastating effects",
+      "requirements": {
+        "combat_mastery": 10,
+        "arcane_arts": 10
+      },
+      "effects": {
+        "spell_sword_damage": 0.50,
+        "magic_weapon_bonus": 0.30
+      }
+    },
+    {
+      "id": "shadow_assassin",
+      "name": "Shadow Assassin",
+      "description": "Combine stealth and emotional manipulation for deadly precision",
+      "requirements": {
+        "combat_mastery": 8,
+        "emotional_intelligence": 12
+      },
+      "effects": {
+        "stealth_damage": 0.40,
+        "fear_combat_bonus": 0.25
+      }
+    },
+    {
+      "id": "nature_warrior",
+      "name": "Nature Warrior",
+      "description": "Combine world resonance and combat for environmental mastery",
+      "requirements": {
+        "combat_mastery": 8,
+        "world_resonance": 12
+      },
+      "effects": {
+        "environmental_combat": 0.35,
+        "nature_weapon_bonus": 0.30
+      }
+    },
+    {
+      "id": "dragon_mage",
+      "name": "Dragon Mage",
+      "description": "Combine dragon magic with arcane arts",
+      "requirements": {
+        "combat_mastery": 10,
+        "arcane_arts": 15
+      },
+      "effects": {
+        "dragon_magic": 0.45,
+        "fire_magic_bonus": 0.35
+      }
+    },
+    {
+      "id": "shadow_void_mage",
+      "name": "Shadow Void Mage",
+      "description": "Combine shadows with void magic",
+      "requirements": {
+        "emotional_intelligence": 12,
+        "arcane_arts": 15
+      },
+      "effects": {
+        "shadow_void_magic": 0.50,
+        "void_stealth": 0.40
+      }
+    },
+    {
+      "id": "reality_weaver",
+      "name": "Reality Weaver",
+      "description": "Combine reality manipulation with world resonance",
+      "requirements": {
+        "arcane_arts": 15,
+        "world_resonance": 12
+      },
+      "effects": {
+        "reality_weaving": 0.55,
+        "world_creation": 0.45
+      }
+    },
+    {
+      "id": "tech_void_mage",
+      "name": "Tech Void Mage",
+      "description": "Combine technology with void magic",
+      "requirements": {
+        "arcane_arts": 12,
+        "utility_expertise": 15
+      },
+      "effects": {
+        "tech_void_magic": 0.45,
+        "digital_void_manipulation": 0.35
+      }
+    }
+  ]
+} 

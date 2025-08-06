@@ -1,0 +1,763 @@
+{
+  "version": "0.13.0",
+  "locations": {
+    "Terra": {
+      "Arcanum_Sanctum": {
+        "id": "Arcanum_Sanctum",
+        "name": "Arcanum Sanctum",
+        "description": "A sacred temple where the first magi discovered the secrets of magic",
+        "type": "temple",
+        "difficulty": 1,
+        "level_requirement": 1,
+        "enemies": ["Guardian Spirit", "Ancient Mage", "Protective Golem"],
+        "items": ["Ancient Scroll", "Magic Crystal", "Wisdom Essence"],
+        "quests": ["The First Discovery", "Guardian's Test", "Sanctum Secrets"],
+        "effects": {
+          "magic_enhancement": 0.25,
+          "knowledge_gain": 0.30
+        }
+      },
+      "Ancient_Grove": {
+        "id": "Ancient_Grove",
+        "name": "Ancient Grove",
+        "description": "A mystical forest where nature and magic intertwine",
+        "type": "forest",
+        "difficulty": 2,
+        "level_requirement": 5,
+        "enemies": ["Forest Sprite", "Ancient Treant", "Nature Guardian"],
+        "items": ["Nature Essence", "Healing Herb", "Life Crystal"],
+        "quests": ["Nature's Call", "Grove Guardian", "Life Force"],
+        "effects": {
+          "nature_affinity": 0.30,
+          "healing_bonus": 0.20
+        }
+      },
+      "Crystal_Caverns": {
+        "id": "Crystal_Caverns",
+        "name": "Crystal Caverns",
+        "description": "Deep caves filled with magical crystals that pulse with energy",
+        "type": "cave",
+        "difficulty": 3,
+        "level_requirement": 10,
+        "enemies": ["Crystal Guardian", "Crystal Golem", "Cave Dweller"],
+        "items": ["Crystal Shard", "Magic Crystal", "Crystal Essence"],
+        "quests": ["Crystal Resonance", "Guardian's Trial", "Crystal Power"],
+        "effects": {
+          "magic_power": 0.25,
+          "crystal_affinity": 0.30
+        }
+      },
+      "Mystic_Springs": {
+        "id": "Mystic_Springs",
+        "name": "Mystic Springs",
+        "description": "Healing springs with magical properties",
+        "type": "spring",
+        "difficulty": 1,
+        "level_requirement": 1,
+        "enemies": ["Water Spirit", "Spring Guardian"],
+        "items": ["Healing Water", "Life Essence", "Spring Crystal"],
+        "quests": ["Spring's Blessing", "Healing Waters"],
+        "effects": {
+          "healing_enhancement": 0.40,
+          "regeneration": 0.25
+        }
+      },
+      "Primal_Heart": {
+        "id": "Primal_Heart",
+        "name": "Primal Heart",
+        "description": "The very center of Terra's life force",
+        "type": "sacred",
+        "difficulty": 10,
+        "level_requirement": 50,
+        "enemies": ["Life Guardian", "Primal Force", "Nature Titan"],
+        "items": ["Life Essence", "Primal Crystal", "Heart of Terra"],
+        "quests": ["Heart of the World", "Primal Power", "Life's Source"],
+        "effects": {
+          "life_mastery": 0.50,
+          "nature_transcendence": 0.40
+        }
+      }
+    },
+    "Nokturn": {
+      "Shadow_Keep": {
+        "id": "Shadow_Keep",
+        "name": "Shadow Keep",
+        "description": "A fortress of darkness where shadows come alive",
+        "type": "fortress",
+        "difficulty": 3,
+        "level_requirement": 15,
+        "enemies": ["Shadow Stalker", "Dark Knight", "Shadow Mage"],
+        "items": ["Shadow Essence", "Dark Rune", "Shadow Crystal"],
+        "quests": ["Shadow's Embrace", "Dark Secrets", "Keep's Guardian"],
+        "effects": {
+          "shadow_affinity": 0.35,
+          "stealth_bonus": 0.25
+        }
+      },
+      "Void_Depths": {
+        "id": "Void_Depths",
+        "name": "Void Depths",
+        "description": "A bottomless pit where reality begins to unravel",
+        "type": "void",
+        "difficulty": 8,
+        "level_requirement": 40,
+        "enemies": ["Void Wraith", "Reality Eater", "Void Horror"],
+        "items": ["Void Essence", "Void Crystal", "Reality Shard"],
+        "quests": ["Void's Call", "Reality's Edge", "Void Mastery"],
+        "effects": {
+          "void_affinity": 0.50,
+          "dimensional_sight": 1
+        }
+      },
+      "Eclipse_Tower": {
+        "id": "Eclipse_Tower",
+        "name": "Eclipse Tower",
+        "description": "A tower where light and shadow meet in eternal conflict",
+        "type": "tower",
+        "difficulty": 6,
+        "level_requirement": 30,
+        "enemies": ["Eclipse Guardian", "Shadow Light", "Dual Force"],
+        "items": ["Eclipse Crystal", "Shadow Light Essence", "Balance Rune"],
+        "quests": ["Eclipse's Power", "Balance of Forces", "Tower's Secret"],
+        "effects": {
+          "shadow_light_magic": 0.40,
+          "balance_mastery": 0.30
+        }
+      },
+      "Nightmare_Forest": {
+        "id": "Nightmare_Forest",
+        "name": "Nightmare Forest",
+        "description": "A forest where dreams become nightmares",
+        "type": "forest",
+        "difficulty": 4,
+        "level_requirement": 20,
+        "enemies": ["Nightmare Creature", "Dream Eater", "Fear Phantom"],
+        "items": ["Nightmare Essence", "Dream Crystal", "Fear Rune"],
+        "quests": ["Nightmare's Grasp", "Dream's End", "Fear's Power"],
+        "effects": {
+          "nightmare_magic": 0.35,
+          "fear_manipulation": 0.25
+        }
+      },
+      "Shadow_Nexus": {
+        "id": "Shadow_Nexus",
+        "name": "Shadow Nexus",
+        "description": "The center of all shadow power in Nokturn",
+        "type": "nexus",
+        "difficulty": 12,
+        "level_requirement": 60,
+        "enemies": ["Shadow Lord", "Void Master", "Dark Transcendent"],
+        "items": ["Shadow Lord Essence", "Void Master Crystal", "Dark Transcendence"],
+        "quests": ["Shadow's Throne", "Void's Mastery", "Dark Transcendence"],
+        "effects": {
+          "shadow_transcendence": 0.60,
+          "void_mastery": 0.50
+        }
+      }
+    },
+    "Elysion": {
+      "Temple_of_Light": {
+        "id": "Temple_of_Light",
+        "name": "Temple of Light",
+        "description": "A sacred temple where divine light flows freely",
+        "type": "temple",
+        "difficulty": 5,
+        "level_requirement": 25,
+        "enemies": ["Light Guardian", "Divine Sentinel", "Holy Warrior"],
+        "items": ["Light Essence", "Divine Crystal", "Holy Rune"],
+        "quests": ["Light's Blessing", "Divine Test", "Holy Power"],
+        "effects": {
+          "light_affinity": 0.40,
+          "healing_enhancement": 0.30
+        }
+      },
+      "Celestial_Gardens": {
+        "id": "Celestial_Gardens",
+        "name": "Celestial Gardens",
+        "description": "Gardens where celestial beings walk among mortals",
+        "type": "garden",
+        "difficulty": 4,
+        "level_requirement": 20,
+        "enemies": ["Celestial Guardian", "Garden Spirit", "Light Sprite"],
+        "items": ["Celestial Essence", "Garden Crystal", "Light Flower"],
+        "quests": ["Celestial Beauty", "Garden's Secret", "Light's Growth"],
+        "effects": {
+          "celestial_affinity": 0.35,
+          "beauty_magic": 0.25
+        }
+      },
+      "Divine_Library": {
+        "id": "Divine_Library",
+        "name": "Divine Library",
+        "description": "A library containing all divine knowledge",
+        "type": "library",
+        "difficulty": 3,
+        "level_requirement": 15,
+        "enemies": ["Library Guardian", "Knowledge Keeper", "Divine Scholar"],
+        "items": ["Divine Scroll", "Knowledge Crystal", "Wisdom Essence"],
+        "quests": ["Divine Knowledge", "Library's Secrets", "Wisdom's Path"],
+        "effects": {
+          "knowledge_gain": 0.50,
+          "wisdom_enhancement": 0.30
+        }
+      },
+      "Ascension_Peak": {
+        "id": "Ascension_Peak",
+        "name": "Ascension Peak",
+        "description": "A mountain peak where mortals can ascend to divinity",
+        "type": "mountain",
+        "difficulty": 10,
+        "level_requirement": 50,
+        "enemies": ["Ascension Guardian", "Divine Force", "Transcendent Being"],
+        "items": ["Ascension Essence", "Divine Crystal", "Transcendence Rune"],
+        "quests": ["Path to Ascension", "Divine Transcendence", "Peak's Power"],
+        "effects": {
+          "divine_transcendence": 0.50,
+          "ascension_magic": 0.40
+        }
+      },
+      "Light_Nexus": {
+        "id": "Light_Nexus",
+        "name": "Light Nexus",
+        "description": "The center of all divine light in Elysion",
+        "type": "nexus",
+        "difficulty": 15,
+        "level_requirement": 75,
+        "enemies": ["Light Lord", "Divine Master", "Celestial Transcendent"],
+        "items": ["Light Lord Essence", "Divine Master Crystal", "Celestial Transcendence"],
+        "quests": ["Light's Throne", "Divine Mastery", "Celestial Transcendence"],
+        "effects": {
+          "light_transcendence": 0.70,
+          "divine_mastery": 0.60
+        }
+      }
+    },
+    "Sylithar": {
+      "Crystal_Palace": {
+        "id": "Crystal_Palace",
+        "name": "Crystal Palace",
+        "description": "A palace made entirely of living crystal",
+        "type": "palace",
+        "difficulty": 4,
+        "level_requirement": 20,
+        "enemies": ["Crystal Guardian", "Palace Defender", "Crystal Mage"],
+        "items": ["Crystal Essence", "Palace Crystal", "Living Shard"],
+        "quests": ["Crystal's Heart", "Palace Secrets", "Living Crystal"],
+        "effects": {
+          "crystal_affinity": 0.40,
+          "reflection_magic": 0.30
+        }
+      },
+      "Time_Sands": {
+        "id": "Time_Sands",
+        "name": "Time Sands",
+        "description": "Sands that flow through time itself",
+        "type": "desert",
+        "difficulty": 7,
+        "level_requirement": 35,
+        "enemies": ["Time Weaver", "Sand Phantom", "Temporal Guardian"],
+        "items": ["Time Crystal", "Sand Essence", "Temporal Shard"],
+        "quests": ["Time's Flow", "Sand's Secret", "Temporal Power"],
+        "effects": {
+          "time_manipulation": 0.45,
+          "temporal_sight": 1
+        }
+      },
+      "Mirror_Maze": {
+        "id": "Mirror_Maze",
+        "name": "Mirror Maze",
+        "description": "A maze of mirrors that reflect different realities",
+        "type": "maze",
+        "difficulty": 6,
+        "level_requirement": 30,
+        "enemies": ["Mirror Phantom", "Reflection Guardian", "Reality Echo"],
+        "items": ["Mirror Shard", "Reflection Crystal", "Echo Essence"],
+        "quests": ["Mirror's Truth", "Reflection's Power", "Echo's Call"],
+        "effects": {
+          "reflection_magic": 0.40,
+          "reality_echo": 0.30
+        }
+      },
+      "Fractal_Canyon": {
+        "id": "Fractal_Canyon",
+        "name": "Fractal Canyon",
+        "description": "A canyon where geometry becomes infinite",
+        "type": "canyon",
+        "difficulty": 8,
+        "level_requirement": 40,
+        "enemies": ["Fractal Guardian", "Geometric Force", "Infinite Being"],
+        "items": ["Fractal Essence", "Geometric Crystal", "Infinite Shard"],
+        "quests": ["Fractal's Pattern", "Geometry's Power", "Infinite's Secret"],
+        "effects": {
+          "fractal_magic": 0.50,
+          "infinite_vision": 1
+        }
+      },
+      "Crystal_Nexus": {
+        "id": "Crystal_Nexus",
+        "name": "Crystal Nexus",
+        "description": "The center of all crystal power in Sylithar",
+        "type": "nexus",
+        "difficulty": 12,
+        "level_requirement": 60,
+        "enemies": ["Crystal Lord", "Time Master", "Fractal Transcendent"],
+        "items": ["Crystal Lord Essence", "Time Master Crystal", "Fractal Transcendence"],
+        "quests": ["Crystal's Throne", "Time's Mastery", "Fractal Transcendence"],
+        "effects": {
+          "crystal_transcendence": 0.60,
+          "time_mastery": 0.50
+        }
+      }
+    },
+    "Aethra": {
+      "Sky_Citadel": {
+        "id": "Sky_Citadel",
+        "name": "Sky Citadel",
+        "description": "A floating citadel in the endless sky",
+        "type": "citadel",
+        "difficulty": 2,
+        "level_requirement": 10,
+        "enemies": ["Sky Guardian", "Wind Warrior", "Cloud Walker"],
+        "items": ["Sky Essence", "Wind Crystal", "Cloud Fragment"],
+        "quests": ["Sky's Freedom", "Wind's Power", "Cloud's Secret"],
+        "effects": {
+          "wind_affinity": 0.35,
+          "mobility_enhancement": 0.25
+        }
+      },
+      "Wind_Temple": {
+        "id": "Wind_Temple",
+        "name": "Wind Temple",
+        "description": "A temple where the wind speaks ancient secrets",
+        "type": "temple",
+        "difficulty": 3,
+        "level_requirement": 15,
+        "enemies": ["Wind Spirit", "Temple Guardian", "Air Mage"],
+        "items": ["Wind Essence", "Temple Crystal", "Air Rune"],
+        "quests": ["Wind's Voice", "Temple's Secret", "Air's Power"],
+        "effects": {
+          "wind_magic": 0.40,
+          "communication_enhancement": 0.30
+        }
+      },
+      "Cloud_Gardens": {
+        "id": "Cloud_Gardens",
+        "name": "Cloud Gardens",
+        "description": "Gardens that float on clouds",
+        "type": "garden",
+        "difficulty": 2,
+        "level_requirement": 8,
+        "enemies": ["Cloud Guardian", "Garden Spirit", "Floating Creature"],
+        "items": ["Cloud Essence", "Garden Crystal", "Floating Shard"],
+        "quests": ["Cloud's Beauty", "Garden's Float", "Floating Secret"],
+        "effects": {
+          "cloud_affinity": 0.30,
+          "levitation": 0.20
+        }
+      },
+      "Storm_Peak": {
+        "id": "Storm_Peak",
+        "name": "Storm Peak",
+        "description": "A mountain peak where storms rage eternally",
+        "type": "mountain",
+        "difficulty": 5,
+        "level_requirement": 25,
+        "enemies": ["Storm Guardian", "Lightning Force", "Thunder Being"],
+        "items": ["Storm Essence", "Lightning Crystal", "Thunder Shard"],
+        "quests": ["Storm's Rage", "Lightning's Power", "Thunder's Call"],
+        "effects": {
+          "storm_magic": 0.45,
+          "lightning_affinity": 0.35
+        }
+      },
+      "Wind_Nexus": {
+        "id": "Wind_Nexus",
+        "name": "Wind Nexus",
+        "description": "The center of all wind power in Aethra",
+        "type": "nexus",
+        "difficulty": 10,
+        "level_requirement": 50,
+        "enemies": ["Wind Lord", "Storm Master", "Air Transcendent"],
+        "items": ["Wind Lord Essence", "Storm Master Crystal", "Air Transcendence"],
+        "quests": ["Wind's Throne", "Storm's Mastery", "Air's Transcendence"],
+        "effects": {
+          "wind_transcendence": 0.55,
+          "storm_mastery": 0.45
+        }
+      }
+    },
+    "Ombra": {
+      "Mist_Palace": {
+        "id": "Mist_Palace",
+        "name": "Mist Palace",
+        "description": "A palace that exists in perpetual twilight",
+        "type": "palace",
+        "difficulty": 6,
+        "level_requirement": 30,
+        "enemies": ["Mist Guardian", "Twilight Warrior", "Shadow Mage"],
+        "items": ["Mist Essence", "Twilight Crystal", "Shadow Rune"],
+        "quests": ["Mist's Mystery", "Twilight's Power", "Shadow's Secret"],
+        "effects": {
+          "mist_affinity": 0.40,
+          "stealth_enhancement": 0.30
+        }
+      },
+      "Illusion_Garden": {
+        "id": "Illusion_Garden",
+        "name": "Illusion Garden",
+        "description": "A garden where nothing is as it seems",
+        "type": "garden",
+        "difficulty": 5,
+        "level_requirement": 25,
+        "enemies": ["Illusion Guardian", "Garden Phantom", "Mystery Creature"],
+        "items": ["Illusion Essence", "Garden Crystal", "Mystery Shard"],
+        "quests": ["Illusion's Truth", "Garden's Mystery", "Mystery's Power"],
+        "effects": {
+          "illusion_magic": 0.45,
+          "mystery_sight": 1
+        }
+      },
+      "Veil_Chamber": {
+        "id": "Veil_Chamber",
+        "name": "Veil Chamber",
+        "description": "A chamber where the Veil is thinnest",
+        "type": "chamber",
+        "difficulty": 9,
+        "level_requirement": 45,
+        "enemies": ["Veil Guardian", "Reality Walker", "Dimensional Force"],
+        "items": ["Veil Fragment", "Reality Shard", "Dimensional Crystal"],
+        "quests": ["Veil's Secret", "Reality's Edge", "Dimensional Power"],
+        "effects": {
+          "veil_understanding": 0.50,
+          "dimensional_sight": 1
+        }
+      },
+      "Mystery_Depths": {
+        "id": "Mystery_Depths",
+        "name": "Mystery Depths",
+        "description": "Depths where the greatest mysteries are hidden",
+        "type": "depths",
+        "difficulty": 11,
+        "level_requirement": 55,
+        "enemies": ["Mystery Guardian", "Secret Keeper", "Hidden Force"],
+        "items": ["Mystery Essence", "Secret Crystal", "Hidden Shard"],
+        "quests": ["Mystery's Heart", "Secret's Power", "Hidden's Truth"],
+        "effects": {
+          "mystery_mastery": 0.55,
+          "secret_sight": 1
+        }
+      },
+      "Twilight_Nexus": {
+        "id": "Twilight_Nexus",
+        "name": "Twilight Nexus",
+        "description": "The center of all twilight power in Ombra",
+        "type": "nexus",
+        "difficulty": 14,
+        "level_requirement": 70,
+        "enemies": ["Twilight Lord", "Mystery Master", "Veil Transcendent"],
+        "items": ["Twilight Lord Essence", "Mystery Master Crystal", "Veil Transcendence"],
+        "quests": ["Twilight's Throne", "Mystery's Mastery", "Veil's Transcendence"],
+        "effects": {
+          "twilight_transcendence": 0.65,
+          "mystery_mastery": 0.55
+        }
+      }
+    },
+    "Krynn": {
+      "Dragon_Peak": {
+        "id": "Dragon_Peak",
+        "name": "Dragon Peak",
+        "description": "A mountain peak where dragons make their lairs",
+        "type": "mountain",
+        "difficulty": 7,
+        "level_requirement": 35,
+        "enemies": ["Young Dragon", "Dragon Guardian", "Fire Drake"],
+        "items": ["Dragon Scale", "Fire Essence", "Dragon Crystal"],
+        "quests": ["Dragon's Lair", "Fire's Power", "Scale's Secret"],
+        "effects": {
+          "dragon_affinity": 0.45,
+          "fire_magic": 0.35
+        }
+      },
+      "Fire_Temple": {
+        "id": "Fire_Temple",
+        "name": "Fire Temple",
+        "description": "A temple where fire burns eternally",
+        "type": "temple",
+        "difficulty": 6,
+        "level_requirement": 30,
+        "enemies": ["Fire Guardian", "Temple Warrior", "Flame Mage"],
+        "items": ["Fire Essence", "Temple Crystal", "Flame Rune"],
+        "quests": ["Fire's Heart", "Temple's Power", "Flame's Secret"],
+        "effects": {
+          "fire_magic": 0.40,
+          "heat_resistance": 0.30
+        }
+      },
+      "Lava_Caverns": {
+        "id": "Lava_Caverns",
+        "name": "Lava Caverns",
+        "description": "Caverns filled with flowing lava",
+        "type": "cave",
+        "difficulty": 8,
+        "level_requirement": 40,
+        "enemies": ["Lava Guardian", "Fire Creature", "Heat Force"],
+        "items": ["Lava Essence", "Fire Crystal", "Heat Shard"],
+        "quests": ["Lava's Flow", "Fire's Power", "Heat's Secret"],
+        "effects": {
+          "lava_affinity": 0.50,
+          "fire_resistance": 0.40
+        }
+      },
+      "Wyrm's_Lair": {
+        "id": "Wyrm's_Lair",
+        "name": "Wyrm's Lair",
+        "description": "The lair of the most ancient dragon",
+        "type": "lair",
+        "difficulty": 12,
+        "level_requirement": 60,
+        "enemies": ["Ancient Wyrm", "Dragon Lord", "Fire Titan"],
+        "items": ["Wyrm Essence", "Dragon Lord Crystal", "Fire Titan Shard"],
+        "quests": ["Wyrm's Power", "Lord's Secret", "Titan's Call"],
+        "effects": {
+          "dragon_mastery": 0.60,
+          "fire_transcendence": 0.50
+        }
+      },
+      "Dragon_Nexus": {
+        "id": "Dragon_Nexus",
+        "name": "Dragon Nexus",
+        "description": "The center of all dragon power in Krynn",
+        "type": "nexus",
+        "difficulty": 16,
+        "level_requirement": 80,
+        "enemies": ["Dragon Emperor", "Fire Master", "Wyrm Transcendent"],
+        "items": ["Dragon Emperor Essence", "Fire Master Crystal", "Wyrm Transcendence"],
+        "quests": ["Dragon's Throne", "Fire's Mastery", "Wyrm's Transcendence"],
+        "effects": {
+          "dragon_transcendence": 0.70,
+          "fire_mastery": 0.60
+        }
+      }
+    },
+    "Tauron": {
+      "Tech_Nexus": {
+        "id": "Tech_Nexus",
+        "name": "Tech Nexus",
+        "description": "A nexus where technology and magic merge",
+        "type": "nexus",
+        "difficulty": 8,
+        "level_requirement": 40,
+        "enemies": ["Tech Guardian", "Fusion Being", "Cyber Mage"],
+        "items": ["Tech Essence", "Fusion Crystal", "Cyber Fragment"],
+        "quests": ["Tech's Power", "Fusion's Secret", "Cyber's Call"],
+        "effects": {
+          "tech_affinity": 0.45,
+          "fusion_magic": 0.35
+        }
+      },
+      "Fusion_Core": {
+        "id": "Fusion_Core",
+        "name": "Fusion Core",
+        "description": "The core where magic and technology become one",
+        "type": "core",
+        "difficulty": 10,
+        "level_requirement": 50,
+        "enemies": ["Core Guardian", "Fusion Force", "Tech Titan"],
+        "items": ["Core Essence", "Fusion Shard", "Tech Crystal"],
+        "quests": ["Core's Power", "Fusion's Heart", "Tech's Secret"],
+        "effects": {
+          "fusion_mastery": 0.55,
+          "tech_transcendence": 0.45
+        }
+      },
+      "Machine_Temple": {
+        "id": "Machine_Temple",
+        "name": "Machine Temple",
+        "description": "A temple where machines worship technology",
+        "type": "temple",
+        "difficulty": 7,
+        "level_requirement": 35,
+        "enemies": ["Machine Guardian", "Temple Tech", "Cyber Priest"],
+        "items": ["Machine Essence", "Temple Crystal", "Cyber Rune"],
+        "quests": ["Machine's Heart", "Temple's Power", "Cyber's Secret"],
+        "effects": {
+          "machine_affinity": 0.40,
+          "tech_magic": 0.30
+        }
+      },
+      "Cyber_Garden": {
+        "id": "Cyber_Garden",
+        "name": "Cyber Garden",
+        "description": "A garden where organic and synthetic life merge",
+        "type": "garden",
+        "difficulty": 6,
+        "level_requirement": 30,
+        "enemies": ["Cyber Guardian", "Garden Tech", "Fusion Spirit"],
+        "items": ["Cyber Essence", "Garden Crystal", "Fusion Shard"],
+        "quests": ["Cyber's Beauty", "Garden's Tech", "Fusion's Secret"],
+        "effects": {
+          "cyber_affinity": 0.35,
+          "organic_synthesis": 0.25
+        }
+      },
+      "Tech_Nexus": {
+        "id": "Tech_Nexus",
+        "name": "Tech Nexus",
+        "description": "The center of all technological power in Tauron",
+        "type": "nexus",
+        "difficulty": 13,
+        "level_requirement": 65,
+        "enemies": ["Tech Lord", "Fusion Master", "Cyber Transcendent"],
+        "items": ["Tech Lord Essence", "Fusion Master Crystal", "Cyber Transcendence"],
+        "quests": ["Tech's Throne", "Fusion's Mastery", "Cyber's Transcendence"],
+        "effects": {
+          "tech_transcendence": 0.65,
+          "fusion_mastery": 0.55
+        }
+      }
+    },
+    "Aelria": {
+      "Will_Palace": {
+        "id": "Will_Palace",
+        "name": "Will Palace",
+        "description": "A palace where thoughts become reality",
+        "type": "palace",
+        "difficulty": 9,
+        "level_requirement": 45,
+        "enemies": ["Will Guardian", "Reality Weaver", "Thought Phantom"],
+        "items": ["Will Essence", "Reality Crystal", "Thought Fragment"],
+        "quests": ["Will's Power", "Reality's Weave", "Thought's Secret"],
+        "effects": {
+          "will_magic": 0.50,
+          "reality_manipulation": 0.40
+        }
+      },
+      "Reality_Nexus": {
+        "id": "Reality_Nexus",
+        "name": "Reality Nexus",
+        "description": "A nexus where reality can be rewritten",
+        "type": "nexus",
+        "difficulty": 15,
+        "level_requirement": 75,
+        "enemies": ["Reality Guardian", "Nexus Force", "Will Titan"],
+        "items": ["Reality Essence", "Nexus Shard", "Will Crystal"],
+        "quests": ["Reality's Heart", "Nexus's Power", "Will's Secret"],
+        "effects": {
+          "reality_mastery": 0.65,
+          "will_transcendence": 0.55
+        }
+      },
+      "Thought_Garden": {
+        "id": "Thought_Garden",
+        "name": "Thought Garden",
+        "description": "A garden where thoughts bloom into reality",
+        "type": "garden",
+        "difficulty": 8,
+        "level_requirement": 40,
+        "enemies": ["Thought Guardian", "Garden Weaver", "Reality Spirit"],
+        "items": ["Thought Essence", "Garden Crystal", "Reality Shard"],
+        "quests": ["Thought's Bloom", "Garden's Weave", "Reality's Secret"],
+        "effects": {
+          "thought_magic": 0.45,
+          "reality_creation": 0.35
+        }
+      },
+      "Manifestation_Core": {
+        "id": "Manifestation_Core",
+        "name": "Manifestation Core",
+        "description": "The core where will becomes reality",
+        "type": "core",
+        "difficulty": 12,
+        "level_requirement": 60,
+        "enemies": ["Core Guardian", "Manifestation Force", "Will Master"],
+        "items": ["Core Essence", "Manifestation Shard", "Will Master Crystal"],
+        "quests": ["Core's Power", "Manifestation's Heart", "Will's Mastery"],
+        "effects": {
+          "manifestation_mastery": 0.60,
+          "will_creation": 0.50
+        }
+      },
+      "Reality_Nexus": {
+        "id": "Reality_Nexus",
+        "name": "Reality Nexus",
+        "description": "The center of all reality power in Aelria",
+        "type": "nexus",
+        "difficulty": 18,
+        "level_requirement": 90,
+        "enemies": ["Reality Lord", "Will Master", "Manifestation Transcendent"],
+        "items": ["Reality Lord Essence", "Will Master Crystal", "Manifestation Transcendence"],
+        "quests": ["Reality's Throne", "Will's Mastery", "Manifestation's Transcendence"],
+        "effects": {
+          "reality_transcendence": 0.75,
+          "will_mastery": 0.65
+        }
+      }
+    }
+  },
+  "location_connections": {
+    "Terra": {
+      "Arcanum_Sanctum": ["Ancient_Grove", "Crystal_Caverns"],
+      "Ancient_Grove": ["Arcanum_Sanctum", "Mystic_Springs", "Primal_Heart"],
+      "Crystal_Caverns": ["Arcanum_Sanctum", "Mystic_Springs"],
+      "Mystic_Springs": ["Ancient_Grove", "Crystal_Caverns"],
+      "Primal_Heart": ["Ancient_Grove"]
+    },
+    "Nokturn": {
+      "Shadow_Keep": ["Void_Depths", "Eclipse_Tower"],
+      "Void_Depths": ["Shadow_Keep", "Nightmare_Forest", "Shadow_Nexus"],
+      "Eclipse_Tower": ["Shadow_Keep", "Nightmare_Forest"],
+      "Nightmare_Forest": ["Void_Depths", "Eclipse_Tower"],
+      "Shadow_Nexus": ["Void_Depths"]
+    },
+    "Elysion": {
+      "Temple_of_Light": ["Celestial_Gardens", "Divine_Library"],
+      "Celestial_Gardens": ["Temple_of_Light", "Ascension_Peak"],
+      "Divine_Library": ["Temple_of_Light", "Ascension_Peak"],
+      "Ascension_Peak": ["Celestial_Gardens", "Divine_Library", "Light_Nexus"],
+      "Light_Nexus": ["Ascension_Peak"]
+    },
+    "Sylithar": {
+      "Crystal_Palace": ["Time_Sands", "Mirror_Maze"],
+      "Time_Sands": ["Crystal_Palace", "Fractal_Canyon"],
+      "Mirror_Maze": ["Crystal_Palace", "Fractal_Canyon"],
+      "Fractal_Canyon": ["Time_Sands", "Mirror_Maze", "Crystal_Nexus"],
+      "Crystal_Nexus": ["Fractal_Canyon"]
+    },
+    "Aethra": {
+      "Sky_Citadel": ["Wind_Temple", "Cloud_Gardens"],
+      "Wind_Temple": ["Sky_Citadel", "Storm_Peak"],
+      "Cloud_Gardens": ["Sky_Citadel", "Storm_Peak"],
+      "Storm_Peak": ["Wind_Temple", "Cloud_Gardens", "Wind_Nexus"],
+      "Wind_Nexus": ["Storm_Peak"]
+    },
+    "Ombra": {
+      "Mist_Palace": ["Illusion_Garden", "Veil_Chamber"],
+      "Illusion_Garden": ["Mist_Palace", "Mystery_Depths"],
+      "Veil_Chamber": ["Mist_Palace", "Mystery_Depths"],
+      "Mystery_Depths": ["Illusion_Garden", "Veil_Chamber", "Twilight_Nexus"],
+      "Twilight_Nexus": ["Mystery_Depths"]
+    },
+    "Krynn": {
+      "Dragon_Peak": ["Fire_Temple", "Lava_Caverns"],
+      "Fire_Temple": ["Dragon_Peak", "Wyrm's_Lair"],
+      "Lava_Caverns": ["Dragon_Peak", "Wyrm's_Lair"],
+      "Wyrm's_Lair": ["Fire_Temple", "Lava_Caverns", "Dragon_Nexus"],
+      "Dragon_Nexus": ["Wyrm's_Lair"]
+    },
+    "Tauron": {
+      "Tech_Nexus": ["Fusion_Core", "Machine_Temple"],
+      "Fusion_Core": ["Tech_Nexus", "Cyber_Garden"],
+      "Machine_Temple": ["Tech_Nexus", "Cyber_Garden"],
+      "Cyber_Garden": ["Fusion_Core", "Machine_Temple", "Tech_Nexus"],
+      "Tech_Nexus": ["Cyber_Garden"]
+    },
+    "Aelria": {
+      "Will_Palace": ["Reality_Nexus", "Thought_Garden"],
+      "Reality_Nexus": ["Will_Palace", "Manifestation_Core"],
+      "Thought_Garden": ["Will_Palace", "Manifestation_Core"],
+      "Manifestation_Core": ["Reality_Nexus", "Thought_Garden", "Reality_Nexus"],
+      "Reality_Nexus": ["Manifestation_Core"]
+    }
+  }
+} 

@@ -1,0 +1,743 @@
+{
+  "version": "0.13.0",
+  "weapons": {
+    "swords": {
+      "basic_sword": {
+        "id": "basic_sword",
+        "name": "Basic Sword",
+        "description": "A simple but reliable steel sword",
+        "type": "melee",
+        "rarity": "common",
+        "level_requirement": 1,
+        "damage": 15,
+        "attack_speed": 1.0,
+        "range": 1,
+        "effects": {
+          "attack_power": 10
+        },
+        "durability": 100,
+        "value": 100,
+        "crafting_requirements": {
+          "steel": 2,
+          "wood": 1
+        }
+      },
+      "magic_sword": {
+        "id": "magic_sword",
+        "name": "Magic Sword",
+        "description": "A sword imbued with magical energy",
+        "type": "melee",
+        "rarity": "uncommon",
+        "level_requirement": 5,
+        "damage": 25,
+        "attack_speed": 1.1,
+        "range": 1,
+        "effects": {
+          "attack_power": 15,
+          "magic_damage": 10
+        },
+        "durability": 150,
+        "value": 300,
+        "crafting_requirements": {
+          "steel": 3,
+          "magic_crystal": 1
+        }
+      },
+      "fire_sword": {
+        "id": "fire_sword",
+        "name": "Fire Sword",
+        "description": "A sword that burns with eternal flame",
+        "type": "melee",
+        "rarity": "rare",
+        "level_requirement": 10,
+        "damage": 35,
+        "attack_speed": 1.2,
+        "range": 1,
+        "effects": {
+          "attack_power": 20,
+          "fire_damage": 15,
+          "burn_chance": 0.25
+        },
+        "durability": 200,
+        "value": 600,
+        "crafting_requirements": {
+          "steel": 4,
+          "fire_crystal": 2
+        }
+      },
+      "dragon_sword": {
+        "id": "dragon_sword",
+        "name": "Dragon Sword",
+        "description": "A sword forged from dragon scales and fire",
+        "type": "melee",
+        "rarity": "epic",
+        "level_requirement": 20,
+        "damage": 50,
+        "attack_speed": 1.3,
+        "range": 1,
+        "effects": {
+          "attack_power": 30,
+          "fire_damage": 25,
+          "dragon_magic": 20,
+          "burn_chance": 0.35
+        },
+        "durability": 300,
+        "value": 1500,
+        "crafting_requirements": {
+          "dragon_scale": 3,
+          "fire_crystal": 3,
+          "magic_crystal": 2
+        }
+      },
+      "void_sword": {
+        "id": "void_sword",
+        "name": "Void Sword",
+        "description": "A sword that cuts through reality itself",
+        "type": "melee",
+        "rarity": "legendary",
+        "level_requirement": 50,
+        "damage": 80,
+        "attack_speed": 1.5,
+        "range": 2,
+        "effects": {
+          "attack_power": 50,
+          "void_damage": 40,
+          "reality_manipulation": 30,
+          "dimensional_cut": 0.25
+        },
+        "durability": 500,
+        "value": 5000,
+        "crafting_requirements": {
+          "void_essence": 5,
+          "reality_crystal": 3,
+          "dimensional_shard": 2
+        }
+      },
+      "cosmic_sword": {
+        "id": "cosmic_sword",
+        "name": "Cosmic Sword",
+        "description": "A sword that transcends reality and time",
+        "type": "melee",
+        "rarity": "mythic",
+        "level_requirement": 100,
+        "damage": 150,
+        "attack_speed": 2.0,
+        "range": 3,
+        "effects": {
+          "attack_power": 100,
+          "cosmic_damage": 80,
+          "reality_creation": 60,
+          "time_manipulation": 50,
+          "instant_kill_chance": 0.10
+        },
+        "durability": 1000,
+        "value": 25000,
+        "crafting_requirements": {
+          "cosmic_essence": 10,
+          "reality_crystal": 5,
+          "time_crystal": 3
+        }
+      }
+    },
+    "staves": {
+      "basic_staff": {
+        "id": "basic_staff",
+        "name": "Basic Staff",
+        "description": "A simple wooden staff for casting spells",
+        "type": "magic",
+        "rarity": "common",
+        "level_requirement": 1,
+        "damage": 8,
+        "attack_speed": 0.8,
+        "range": 2,
+        "effects": {
+          "magic_power": 15,
+          "mana_regeneration": 5
+        },
+        "durability": 80,
+        "value": 80,
+        "crafting_requirements": {
+          "wood": 2,
+          "magic_crystal": 1
+        }
+      },
+      "elemental_staff": {
+        "id": "elemental_staff",
+        "name": "Elemental Staff",
+        "description": "A staff that channels elemental magic",
+        "type": "magic",
+        "rarity": "uncommon",
+        "level_requirement": 5,
+        "damage": 12,
+        "attack_speed": 0.9,
+        "range": 3,
+        "effects": {
+          "magic_power": 25,
+          "elemental_damage": 20,
+          "mana_regeneration": 10
+        },
+        "durability": 120,
+        "value": 250,
+        "crafting_requirements": {
+          "wood": 3,
+          "elemental_crystal": 2
+        }
+      },
+      "reality_staff": {
+        "id": "reality_staff",
+        "name": "Reality Staff",
+        "description": "A staff that manipulates the fabric of reality",
+        "type": "magic",
+        "rarity": "epic",
+        "level_requirement": 25,
+        "damage": 25,
+        "attack_speed": 1.0,
+        "range": 5,
+        "effects": {
+          "magic_power": 50,
+          "reality_manipulation": 40,
+          "dimensional_magic": 30,
+          "mana_regeneration": 20
+        },
+        "durability": 250,
+        "value": 2000,
+        "crafting_requirements": {
+          "reality_crystal": 3,
+          "dimensional_shard": 2,
+          "magic_crystal": 3
+        }
+      },
+      "void_staff": {
+        "id": "void_staff",
+        "name": "Void Staff",
+        "description": "A staff that channels the power of the void",
+        "type": "magic",
+        "rarity": "legendary",
+        "level_requirement": 50,
+        "damage": 45,
+        "attack_speed": 1.2,
+        "range": 8,
+        "effects": {
+          "magic_power": 80,
+          "void_magic": 60,
+          "dimensional_travel": 40,
+          "mana_regeneration": 35
+        },
+        "durability": 400,
+        "value": 8000,
+        "crafting_requirements": {
+          "void_essence": 4,
+          "dimensional_shard": 3,
+          "reality_crystal": 2
+        }
+      },
+      "cosmic_staff": {
+        "id": "cosmic_staff",
+        "name": "Cosmic Staff",
+        "description": "A staff that commands cosmic forces",
+        "type": "magic",
+        "rarity": "mythic",
+        "level_requirement": 100,
+        "damage": 100,
+        "attack_speed": 1.5,
+        "range": 15,
+        "effects": {
+          "magic_power": 150,
+          "cosmic_magic": 120,
+          "reality_creation": 100,
+          "time_manipulation": 80,
+          "mana_regeneration": 60
+        },
+        "durability": 800,
+        "value": 30000,
+        "crafting_requirements": {
+          "cosmic_essence": 8,
+          "reality_crystal": 5,
+          "time_crystal": 4
+        }
+      }
+    },
+    "daggers": {
+      "basic_dagger": {
+        "id": "basic_dagger",
+        "name": "Basic Dagger",
+        "description": "A simple dagger for stealth attacks",
+        "type": "melee",
+        "rarity": "common",
+        "level_requirement": 1,
+        "damage": 12,
+        "attack_speed": 1.5,
+        "range": 1,
+        "effects": {
+          "attack_power": 8,
+          "stealth_bonus": 10
+        },
+        "durability": 60,
+        "value": 60,
+        "crafting_requirements": {
+          "steel": 1,
+          "leather": 1
+        }
+      },
+      "shadow_dagger": {
+        "id": "shadow_dagger",
+        "name": "Shadow Dagger",
+        "description": "A dagger that exists in shadows",
+        "type": "melee",
+        "rarity": "rare",
+        "level_requirement": 15,
+        "damage": 25,
+        "attack_speed": 1.8,
+        "range": 1,
+        "effects": {
+          "attack_power": 20,
+          "shadow_damage": 15,
+          "stealth_bonus": 25,
+          "backstab_multiplier": 2.0
+        },
+        "durability": 150,
+        "value": 800,
+        "crafting_requirements": {
+          "shadow_crystal": 2,
+          "steel": 2,
+          "void_essence": 1
+        }
+      },
+      "void_dagger": {
+        "id": "void_dagger",
+        "name": "Void Dagger",
+        "description": "A dagger that cuts through dimensions",
+        "type": "melee",
+        "rarity": "legendary",
+        "level_requirement": 50,
+        "damage": 60,
+        "attack_speed": 2.0,
+        "range": 2,
+        "effects": {
+          "attack_power": 40,
+          "void_damage": 35,
+          "dimensional_cut": 25,
+          "stealth_bonus": 40,
+          "backstab_multiplier": 3.0
+        },
+        "durability": 300,
+        "value": 4000,
+        "crafting_requirements": {
+          "void_essence": 3,
+          "dimensional_shard": 2,
+          "shadow_crystal": 3
+        }
+      }
+    },
+    "bows": {
+      "basic_bow": {
+        "id": "basic_bow",
+        "name": "Basic Bow",
+        "description": "A simple wooden bow for ranged attacks",
+        "type": "ranged",
+        "rarity": "common",
+        "level_requirement": 1,
+        "damage": 18,
+        "attack_speed": 0.7,
+        "range": 8,
+        "effects": {
+          "attack_power": 12,
+          "ranged_bonus": 15
+        },
+        "durability": 100,
+        "value": 120,
+        "crafting_requirements": {
+          "wood": 3,
+          "string": 1
+        }
+      },
+      "magic_bow": {
+        "id": "magic_bow",
+        "name": "Magic Bow",
+        "description": "A bow that fires magical arrows",
+        "type": "ranged",
+        "rarity": "uncommon",
+        "level_requirement": 8,
+        "damage": 30,
+        "attack_speed": 0.8,
+        "range": 12,
+        "effects": {
+          "attack_power": 20,
+          "magic_damage": 15,
+          "ranged_bonus": 25
+        },
+        "durability": 150,
+        "value": 400,
+        "crafting_requirements": {
+          "wood": 4,
+          "magic_crystal": 2,
+          "string": 2
+        }
+      },
+      "dragon_bow": {
+        "id": "dragon_bow",
+        "name": "Dragon Bow",
+        "description": "A bow that fires arrows of pure fire",
+        "type": "ranged",
+        "rarity": "epic",
+        "level_requirement": 25,
+        "damage": 55,
+        "attack_speed": 0.9,
+        "range": 15,
+        "effects": {
+          "attack_power": 35,
+          "fire_damage": 30,
+          "dragon_magic": 25,
+          "ranged_bonus": 40
+        },
+        "durability": 250,
+        "value": 2000,
+        "crafting_requirements": {
+          "dragon_scale": 2,
+          "fire_crystal": 3,
+          "string": 3
+        }
+      }
+    },
+    "hammers": {
+      "basic_hammer": {
+        "id": "basic_hammer",
+        "name": "Basic Hammer",
+        "description": "A heavy hammer for crushing blows",
+        "type": "melee",
+        "rarity": "common",
+        "level_requirement": 1,
+        "damage": 20,
+        "attack_speed": 0.6,
+        "range": 1,
+        "effects": {
+          "attack_power": 15,
+          "stun_chance": 0.15
+        },
+        "durability": 120,
+        "value": 150,
+        "crafting_requirements": {
+          "steel": 3,
+          "wood": 2
+        }
+      },
+      "thunder_hammer": {
+        "id": "thunder_hammer",
+        "name": "Thunder Hammer",
+        "description": "A hammer that crackles with lightning",
+        "type": "melee",
+        "rarity": "rare",
+        "level_requirement": 15,
+        "damage": 40,
+        "attack_speed": 0.7,
+        "range": 1,
+        "effects": {
+          "attack_power": 30,
+          "lightning_damage": 25,
+          "stun_chance": 0.25,
+          "chain_lightning": 0.20
+        },
+        "durability": 200,
+        "value": 1000,
+        "crafting_requirements": {
+          "steel": 4,
+          "lightning_crystal": 3,
+          "magic_crystal": 2
+        }
+      }
+    },
+    "spears": {
+      "basic_spear": {
+        "id": "basic_spear",
+        "name": "Basic Spear",
+        "description": "A simple spear for thrusting attacks",
+        "type": "melee",
+        "rarity": "common",
+        "level_requirement": 1,
+        "damage": 16,
+        "attack_speed": 1.1,
+        "range": 2,
+        "effects": {
+          "attack_power": 12,
+          "reach_bonus": 0.20
+        },
+        "durability": 100,
+        "value": 100,
+        "crafting_requirements": {
+          "steel": 2,
+          "wood": 3
+        }
+      },
+      "ice_spear": {
+        "id": "ice_spear",
+        "name": "Ice Spear",
+        "description": "A spear that freezes enemies on contact",
+        "type": "melee",
+        "rarity": "rare",
+        "level_requirement": 12,
+        "damage": 35,
+        "attack_speed": 1.2,
+        "range": 2,
+        "effects": {
+          "attack_power": 25,
+          "ice_damage": 20,
+          "freeze_chance": 0.20,
+          "reach_bonus": 0.25
+        },
+        "durability": 180,
+        "value": 800,
+        "crafting_requirements": {
+          "steel": 3,
+          "ice_crystal": 3,
+          "wood": 2
+        }
+      }
+    },
+    "guns": {
+      "basic_pistol": {
+        "id": "basic_pistol",
+        "name": "Basic Pistol",
+        "description": "A simple firearm for ranged combat",
+        "type": "ranged",
+        "rarity": "uncommon",
+        "level_requirement": 5,
+        "damage": 25,
+        "attack_speed": 0.5,
+        "range": 10,
+        "effects": {
+          "attack_power": 20,
+          "ranged_bonus": 20
+        },
+        "durability": 80,
+        "value": 300,
+        "crafting_requirements": {
+          "steel": 4,
+          "tech_component": 2
+        }
+      },
+      "plasma_rifle": {
+        "id": "plasma_rifle",
+        "name": "Plasma Rifle",
+        "description": "A high-tech rifle that fires plasma bolts",
+        "type": "ranged",
+        "rarity": "epic",
+        "level_requirement": 20,
+        "damage": 60,
+        "attack_speed": 0.8,
+        "range": 15,
+        "effects": {
+          "attack_power": 45,
+          "plasma_damage": 40,
+          "tech_bonus": 30,
+          "ranged_bonus": 35
+        },
+        "durability": 200,
+        "value": 2500,
+        "crafting_requirements": {
+          "tech_component": 5,
+          "plasma_core": 3,
+          "energy_crystal": 2
+        }
+      }
+    },
+    "reality_weapons": {
+      "reality_blade": {
+        "id": "reality_blade",
+        "name": "Reality Blade",
+        "description": "A blade that cuts through the fabric of reality",
+        "type": "melee",
+        "rarity": "legendary",
+        "level_requirement": 75,
+        "damage": 120,
+        "attack_speed": 1.8,
+        "range": 3,
+        "effects": {
+          "attack_power": 80,
+          "reality_damage": 70,
+          "dimensional_cut": 50,
+          "reality_manipulation": 40
+        },
+        "durability": 600,
+        "value": 15000,
+        "crafting_requirements": {
+          "reality_crystal": 5,
+          "dimensional_shard": 4,
+          "cosmic_essence": 3
+        }
+      },
+      "void_cannon": {
+        "id": "void_cannon",
+        "name": "Void Cannon",
+        "description": "A cannon that fires void energy",
+        "type": "ranged",
+        "rarity": "legendary",
+        "level_requirement": 75,
+        "damage": 150,
+        "attack_speed": 0.3,
+        "range": 25,
+        "effects": {
+          "attack_power": 100,
+          "void_damage": 90,
+          "dimensional_destruction": 60,
+          "void_manipulation": 50
+        },
+        "durability": 400,
+        "value": 20000,
+        "crafting_requirements": {
+          "void_essence": 8,
+          "dimensional_shard": 5,
+          "tech_component": 4
+        }
+      }
+    },
+    "cosmic_weapons": {
+      "cosmic_blade": {
+        "id": "cosmic_blade",
+        "name": "Cosmic Blade",
+        "description": "A blade that transcends reality and time",
+        "type": "melee",
+        "rarity": "mythic",
+        "level_requirement": 100,
+        "damage": 200,
+        "attack_speed": 2.5,
+        "range": 5,
+        "effects": {
+          "attack_power": 150,
+          "cosmic_damage": 120,
+          "reality_creation": 100,
+          "time_manipulation": 80,
+          "instant_kill_chance": 0.15
+        },
+        "durability": 1000,
+        "value": 50000,
+        "crafting_requirements": {
+          "cosmic_essence": 10,
+          "reality_crystal": 8,
+          "time_crystal": 5
+        }
+      },
+      "omnipotent_cannon": {
+        "id": "omnipotent_cannon",
+        "name": "Omnipotent Cannon",
+        "description": "A cannon that can destroy entire realities",
+        "type": "ranged",
+        "rarity": "mythic",
+        "level_requirement": 100,
+        "damage": 300,
+        "attack_speed": 0.5,
+        "range": 50,
+        "effects": {
+          "attack_power": 200,
+          "omnipotent_damage": 180,
+          "reality_destruction": 150,
+          "cosmic_annihilation": 120,
+          "instant_kill_chance": 0.25
+        },
+        "durability": 800,
+        "value": 75000,
+        "crafting_requirements": {
+          "cosmic_essence": 15,
+          "omnipotent_core": 10,
+          "reality_crystal": 10
+        }
+      }
+    }
+  },
+  "weapon_specializations": {
+    "sword_mastery": {
+      "name": "Sword Mastery",
+      "description": "Master the art of sword fighting",
+      "requirements": {
+        "combat_mastery": 20,
+        "sword_usage": 100
+      },
+      "effects": {
+        "sword_damage_bonus": 0.50,
+        "sword_critical_chance": 0.25,
+        "sword_abilities": true
+      }
+    },
+    "staff_mastery": {
+      "name": "Staff Mastery",
+      "description": "Master the art of staff magic",
+      "requirements": {
+        "arcane_arts": 20,
+        "staff_usage": 100
+      },
+      "effects": {
+        "staff_magic_bonus": 0.50,
+        "staff_mana_efficiency": 0.30,
+        "staff_spells": true
+      }
+    },
+    "dagger_mastery": {
+      "name": "Dagger Mastery",
+      "description": "Master the art of stealth combat",
+      "requirements": {
+        "combat_mastery": 15,
+        "emotional_intelligence": 15,
+        "dagger_usage": 100
+      },
+      "effects": {
+        "dagger_damage_bonus": 0.40,
+        "stealth_bonus": 0.30,
+        "backstab_multiplier": 2.5
+      }
+    },
+    "bow_mastery": {
+      "name": "Bow Mastery",
+      "description": "Master the art of archery",
+      "requirements": {
+        "combat_mastery": 15,
+        "utility_expertise": 10,
+        "bow_usage": 100
+      },
+      "effects": {
+        "bow_damage_bonus": 0.45,
+        "ranged_accuracy": 0.30,
+        "bow_abilities": true
+      }
+    }
+  },
+  "weapon_combinations": {
+    "dual_wielding": {
+      "name": "Dual Wielding",
+      "description": "Wield two weapons simultaneously",
+      "requirements": {
+        "combat_mastery": 25,
+        "agility": 20
+      },
+      "effects": {
+        "dual_wield_bonus": 0.30,
+        "attack_speed_bonus": 0.25,
+        "combo_attacks": true
+      }
+    },
+    "spell_sword": {
+      "name": "Spell Sword",
+      "description": "Combine sword fighting with magic",
+      "requirements": {
+        "combat_mastery": 20,
+        "arcane_arts": 20
+      },
+      "effects": {
+        "spell_sword_damage": 0.40,
+        "magic_weapon_bonus": 0.25,
+        "spell_sword_abilities": true
+      }
+    },
+    "shadow_weapon": {
+      "name": "Shadow Weapon",
+      "description": "Infuse weapons with shadow magic",
+      "requirements": {
+        "emotional_intelligence": 25,
+        "arcane_arts": 15
+      },
+      "effects": {
+        "shadow_weapon_bonus": 0.35,
+        "stealth_weapon_bonus": 0.30,
+        "shadow_weapon_abilities": true
+      }
+    }
+  }
+} 

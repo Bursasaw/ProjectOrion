@@ -1,0 +1,609 @@
+{
+  "version": "0.13.0",
+  "stances": {
+    "basic_stances": {
+      "combat": {
+        "id": "combat",
+        "name": "Combat Stance",
+        "description": "Focused on physical combat and weapon mastery",
+        "unlock_requirements": ["level_1"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 0.25,
+          "arcane_arts": -0.10
+        },
+        "effects": {
+          "attack_power": 0.20,
+          "defense": 0.15,
+          "critical_chance": 0.10
+        }
+      },
+      "arcane": {
+        "id": "arcane",
+        "name": "Arcane Stance",
+        "description": "Focused on magic and elemental control",
+        "unlock_requirements": ["level_1"],
+        "skill_tree_bonuses": {
+          "arcane_arts": 0.25,
+          "combat_mastery": -0.10
+        },
+        "effects": {
+          "magic_power": 0.25,
+          "mana_regeneration": 0.20,
+          "spell_damage": 0.20
+        }
+      },
+      "stealth": {
+        "id": "stealth",
+        "name": "Stealth Stance",
+        "description": "Focused on stealth and precision strikes",
+        "unlock_requirements": ["level_5"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 0.15,
+          "emotional_intelligence": 0.15
+        },
+        "effects": {
+          "stealth_bonus": 0.30,
+          "critical_chance": 0.25,
+          "backstab_damage": 0.40
+        }
+      },
+      "support": {
+        "id": "support",
+        "name": "Support Stance",
+        "description": "Focused on healing and team coordination",
+        "unlock_requirements": ["level_5"],
+        "skill_tree_bonuses": {
+          "emotional_intelligence": 0.25,
+          "utility_expertise": 0.15
+        },
+        "effects": {
+          "healing_power": 0.30,
+          "mana_regeneration": 0.25,
+          "team_bonus": 0.20
+        }
+      },
+      "exploration": {
+        "id": "exploration",
+        "name": "Exploration Stance",
+        "description": "Focused on movement and world interaction",
+        "unlock_requirements": ["level_5"],
+        "skill_tree_bonuses": {
+          "utility_expertise": 0.25,
+          "world_resonance": 0.15
+        },
+        "effects": {
+          "movement_speed": 0.25,
+          "exploration_bonus": 0.30,
+          "resource_finding": 0.20
+        }
+      }
+    },
+    "advanced_stances": {
+      "dragon": {
+        "id": "dragon",
+        "name": "Dragon Stance",
+        "description": "Focused on dragon magic and fire manipulation",
+        "unlock_requirements": ["level_10", "dragon_knight"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 0.20,
+          "arcane_arts": 0.20
+        },
+        "effects": {
+          "dragon_magic": 0.30,
+          "fire_damage": 0.25,
+          "fire_resistance": 0.20,
+          "dragon_affinity": 0.25
+        }
+      },
+      "shadow": {
+        "id": "shadow",
+        "name": "Shadow Stance",
+        "description": "Focused on shadows and void magic",
+        "unlock_requirements": ["level_10", "shadow_walker"],
+        "skill_tree_bonuses": {
+          "emotional_intelligence": 0.25,
+          "arcane_arts": 0.15
+        },
+        "effects": {
+          "shadow_magic": 0.30,
+          "stealth_bonus": 0.25,
+          "void_affinity": 0.20,
+          "fear_effects": 0.15
+        }
+      },
+      "reality": {
+        "id": "reality",
+        "name": "Reality Stance",
+        "description": "Focused on reality manipulation and will magic",
+        "unlock_requirements": ["level_15", "reality_weaver"],
+        "skill_tree_bonuses": {
+          "arcane_arts": 0.30,
+          "world_resonance": 0.20
+        },
+        "effects": {
+          "reality_manipulation": 0.35,
+          "will_magic": 0.30,
+          "dimensional_sight": 1,
+          "reality_affinity": 0.25
+        }
+      },
+      "void": {
+        "id": "void",
+        "name": "Void Stance",
+        "description": "Focused on void magic and dimensional travel",
+        "unlock_requirements": ["level_15", "void_mage"],
+        "skill_tree_bonuses": {
+          "arcane_arts": 0.35,
+          "world_resonance": 0.25
+        },
+        "effects": {
+          "void_magic": 0.40,
+          "dimensional_travel": 1,
+          "void_affinity": 0.30,
+          "reality_manipulation": 0.20
+        }
+      },
+      "technology": {
+        "id": "technology",
+        "name": "Technology Stance",
+        "description": "Focused on technology and fusion magic",
+        "unlock_requirements": ["level_10", "technomancer"],
+        "skill_tree_bonuses": {
+          "arcane_arts": 0.20,
+          "utility_expertise": 0.25
+        },
+        "effects": {
+          "tech_magic": 0.30,
+          "fusion_magic": 0.25,
+          "tech_affinity": 0.25,
+          "energy_manipulation": 0.20
+        }
+      }
+    },
+    "master_stances": {
+      "battle_mage": {
+        "id": "battle_mage",
+        "name": "Battle Mage Stance",
+        "description": "Combine combat and magic for devastating effects",
+        "unlock_requirements": ["level_25", "battlemage"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 0.30,
+          "arcane_arts": 0.30
+        },
+        "effects": {
+          "spell_sword_damage": 0.40,
+          "magic_weapon_bonus": 0.30,
+          "combat_magic": 0.35,
+          "weapon_magic": 0.25
+        }
+      },
+      "shadow_assassin": {
+        "id": "shadow_assassin",
+        "name": "Shadow Assassin Stance",
+        "description": "Combine stealth and emotional manipulation",
+        "unlock_requirements": ["level_25", "assassin"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 0.25,
+          "emotional_intelligence": 0.30
+        },
+        "effects": {
+          "stealth_damage": 0.45,
+          "fear_combat_bonus": 0.30,
+          "psychological_warfare": 0.35,
+          "shadow_assassination": 0.40
+        }
+      },
+      "nature_warrior": {
+        "id": "nature_warrior",
+        "name": "Nature Warrior Stance",
+        "description": "Combine world resonance and combat",
+        "unlock_requirements": ["level_25", "ranger"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 0.25,
+          "world_resonance": 0.30
+        },
+        "effects": {
+          "environmental_combat": 0.40,
+          "nature_weapon_bonus": 0.35,
+          "world_combat": 0.30,
+          "nature_affinity": 0.25
+        }
+      },
+      "dragon_lord": {
+        "id": "dragon_lord",
+        "name": "Dragon Lord Stance",
+        "description": "Master dragon magic and fire manipulation",
+        "unlock_requirements": ["level_30", "dragon_lord"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 0.35,
+          "arcane_arts": 0.30
+        },
+        "effects": {
+          "dragon_magic": 0.50,
+          "fire_mastery": 0.40,
+          "dragon_transcendence": 0.30,
+          "fire_transcendence": 0.25
+        }
+      },
+      "shadow_lord": {
+        "id": "shadow_lord",
+        "name": "Shadow Lord Stance",
+        "description": "Master shadows and void manipulation",
+        "unlock_requirements": ["level_30", "shadow_lord"],
+        "skill_tree_bonuses": {
+          "emotional_intelligence": 0.40,
+          "arcane_arts": 0.25
+        },
+        "effects": {
+          "shadow_magic": 0.55,
+          "void_mastery": 0.45,
+          "shadow_transcendence": 0.35,
+          "void_transcendence": 0.30
+        }
+      },
+      "reality_bender": {
+        "id": "reality_bender",
+        "name": "Reality Bender Stance",
+        "description": "Master reality manipulation and creation",
+        "unlock_requirements": ["level_30", "reality_bender"],
+        "skill_tree_bonuses": {
+          "arcane_arts": 0.40,
+          "world_resonance": 0.30
+        },
+        "effects": {
+          "reality_manipulation": 0.60,
+          "will_mastery": 0.50,
+          "reality_transcendence": 0.40,
+          "will_transcendence": 0.35
+        }
+      },
+      "void_lord": {
+        "id": "void_lord",
+        "name": "Void Lord Stance",
+        "description": "Master void magic and dimensional manipulation",
+        "unlock_requirements": ["level_30", "void_lord"],
+        "skill_tree_bonuses": {
+          "arcane_arts": 0.45,
+          "world_resonance": 0.30
+        },
+        "effects": {
+          "void_magic": 0.65,
+          "dimensional_mastery": 0.55,
+          "void_transcendence": 0.45,
+          "dimensional_transcendence": 0.40
+        }
+      }
+    },
+    "legendary_stances": {
+      "warlord": {
+        "id": "warlord",
+        "name": "Warlord Stance",
+        "description": "Master battlefield tactics and leadership",
+        "unlock_requirements": ["level_50", "warlord"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 0.50,
+          "emotional_intelligence": 0.25
+        },
+        "effects": {
+          "leadership_bonus": 0.60,
+          "tactical_mastery": 0.50,
+          "army_command": 0.40,
+          "battlefield_control": 0.45
+        }
+      },
+      "archmage": {
+        "id": "archmage",
+        "name": "Archmage Stance",
+        "description": "Master all forms of magic and reality manipulation",
+        "unlock_requirements": ["level_50", "archmage"],
+        "skill_tree_bonuses": {
+          "arcane_arts": 0.50,
+          "emotional_intelligence": 0.25
+        },
+        "effects": {
+          "reality_manipulation": 0.70,
+          "magic_mastery": 0.60,
+          "spell_creation": 0.50,
+          "magic_transcendence": 0.45
+        }
+      },
+      "shadowblade": {
+        "id": "shadowblade",
+        "name": "Shadowblade Stance",
+        "description": "Master stealth and psychological warfare",
+        "unlock_requirements": ["level_50", "shadowblade"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 0.40,
+          "emotional_intelligence": 0.35
+        },
+        "effects": {
+          "shadow_bonus": 0.65,
+          "psychological_mastery": 0.55,
+          "stealth_transcendence": 0.50,
+          "fear_mastery": 0.45
+        }
+      },
+      "high_priest": {
+        "id": "high_priest",
+        "name": "High Priest Stance",
+        "description": "Master divine magic and spiritual leadership",
+        "unlock_requirements": ["level_50", "high_priest"],
+        "skill_tree_bonuses": {
+          "emotional_intelligence": 0.50,
+          "arcane_arts": 0.25
+        },
+        "effects": {
+          "divine_power": 0.70,
+          "spiritual_mastery": 0.60,
+          "healing_transcendence": 0.50,
+          "divine_transcendence": 0.45
+        }
+      },
+      "pathfinder": {
+        "id": "pathfinder",
+        "name": "Pathfinder Stance",
+        "description": "Master exploration and world manipulation",
+        "unlock_requirements": ["level_50", "pathfinder"],
+        "skill_tree_bonuses": {
+          "utility_expertise": 0.50,
+          "world_resonance": 0.25
+        },
+        "effects": {
+          "world_mastery": 0.70,
+          "exploration_transcendence": 0.60,
+          "dimensional_travel": 1,
+          "world_creation": 0.50
+        }
+      }
+    },
+    "mythic_stances": {
+      "war_god": {
+        "id": "war_god",
+        "name": "War God Stance",
+        "description": "Transcend mortal combat limitations",
+        "unlock_requirements": ["level_100", "war_god"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 0.80,
+          "emotional_intelligence": 0.30
+        },
+        "effects": {
+          "divine_combat": 0.80,
+          "cosmic_combat": 0.70,
+          "combat_transcendence": 0.60,
+          "war_god_power": 0.75
+        }
+      },
+      "reality_weaver": {
+        "id": "reality_weaver",
+        "name": "Reality Weaver Stance",
+        "description": "Master reality manipulation and creation",
+        "unlock_requirements": ["level_100", "reality_weaver"],
+        "skill_tree_bonuses": {
+          "arcane_arts": 0.80,
+          "emotional_intelligence": 0.30
+        },
+        "effects": {
+          "reality_creation": 0.80,
+          "cosmic_creation": 0.70,
+          "reality_transcendence": 0.60,
+          "creation_god_power": 0.75
+        }
+      },
+      "death_dealer": {
+        "id": "death_dealer",
+        "name": "Death Dealer Stance",
+        "description": "Master death and psychological manipulation",
+        "unlock_requirements": ["level_100", "death_dealer"],
+        "skill_tree_bonuses": {
+          "emotional_intelligence": 0.80,
+          "combat_mastery": 0.30
+        },
+        "effects": {
+          "death_magic": 0.80,
+          "cosmic_death": 0.70,
+          "death_transcendence": 0.60,
+          "death_god_power": 0.75
+        }
+      },
+      "divine_avatar": {
+        "id": "divine_avatar",
+        "name": "Divine Avatar Stance",
+        "description": "Manifest divine power and spiritual transcendence",
+        "unlock_requirements": ["level_100", "divine_avatar"],
+        "skill_tree_bonuses": {
+          "emotional_intelligence": 0.80,
+          "arcane_arts": 0.30
+        },
+        "effects": {
+          "divine_transcendence": 0.80,
+          "cosmic_divine": 0.70,
+          "spiritual_transcendence": 0.60,
+          "divine_god_power": 0.75
+        }
+      },
+      "world_walker": {
+        "id": "world_walker",
+        "name": "World Walker Stance",
+        "description": "Master dimensional travel and world manipulation",
+        "unlock_requirements": ["level_100", "world_walker"],
+        "skill_tree_bonuses": {
+          "utility_expertise": 0.80,
+          "world_resonance": 0.30
+        },
+        "effects": {
+          "dimensional_mastery": 0.80,
+          "cosmic_world": 0.70,
+          "world_transcendence": 0.60,
+          "world_god_power": 0.75
+        }
+      }
+    },
+    "cosmic_stances": {
+      "cosmic_warrior": {
+        "id": "cosmic_warrior",
+        "name": "Cosmic Warrior Stance",
+        "description": "Transcend reality itself in combat",
+        "unlock_requirements": ["level_150", "cosmic_warrior"],
+        "skill_tree_bonuses": {
+          "combat_mastery": 1.0,
+          "emotional_intelligence": 0.40
+        },
+        "effects": {
+          "cosmic_combat": 1.0,
+          "reality_combat": 0.90,
+          "cosmic_transcendence": 0.80,
+          "omnipotent_combat": 0.85
+        }
+      },
+      "dimensional_sage": {
+        "id": "dimensional_sage",
+        "name": "Dimensional Sage Stance",
+        "description": "Master dimensional magic and reality creation",
+        "unlock_requirements": ["level_150", "dimensional_sage"],
+        "skill_tree_bonuses": {
+          "arcane_arts": 1.0,
+          "emotional_intelligence": 0.40
+        },
+        "effects": {
+          "dimensional_magic": 1.0,
+          "reality_creation": 0.90,
+          "cosmic_transcendence": 0.80,
+          "omnipotent_magic": 0.85
+        }
+      },
+      "phantom_lord": {
+        "id": "phantom_lord",
+        "name": "Phantom Lord Stance",
+        "description": "Master shadows and psychological transcendence",
+        "unlock_requirements": ["level_150", "phantom_lord"],
+        "skill_tree_bonuses": {
+          "emotional_intelligence": 1.0,
+          "combat_mastery": 0.40
+        },
+        "effects": {
+          "phantom_power": 1.0,
+          "cosmic_shadow": 0.90,
+          "shadow_transcendence": 0.80,
+          "omnipotent_shadow": 0.85
+        }
+      },
+      "celestial_guardian": {
+        "id": "celestial_guardian",
+        "name": "Celestial Guardian Stance",
+        "description": "Guard cosmic balance and spiritual harmony",
+        "unlock_requirements": ["level_150", "celestial_guardian"],
+        "skill_tree_bonuses": {
+          "emotional_intelligence": 1.0,
+          "arcane_arts": 0.40
+        },
+        "effects": {
+          "celestial_power": 1.0,
+          "cosmic_balance": 0.90,
+          "spiritual_transcendence": 0.80,
+          "omnipotent_celestial": 0.85
+        }
+      },
+      "void_walker": {
+        "id": "void_walker",
+        "name": "Void Walker Stance",
+        "description": "Master the void and dimensional transcendence",
+        "unlock_requirements": ["level_150", "void_walker"],
+        "skill_tree_bonuses": {
+          "utility_expertise": 1.0,
+          "world_resonance": 0.40
+        },
+        "effects": {
+          "void_mastery": 1.0,
+          "cosmic_void": 0.90,
+          "void_transcendence": 0.80,
+          "omnipotent_void": 0.85
+        }
+      }
+    }
+  },
+  "stance_combinations": {
+    "dragon_battle_mage": {
+      "name": "Dragon Battle Mage",
+      "description": "Combine dragon stance with battle mage stance",
+      "stances": ["dragon", "battle_mage"],
+      "requirements": {
+        "level": 40,
+        "dragon_lord": true,
+        "battlemage": true
+      },
+      "effects": {
+        "dragon_spell_sword": 0.60,
+        "fire_magic_combat": 0.50,
+        "dragon_battle_mastery": 0.45
+      }
+    },
+    "shadow_reality_bender": {
+      "name": "Shadow Reality Bender",
+      "description": "Combine shadow stance with reality bender stance",
+      "stances": ["shadow", "reality_bender"],
+      "requirements": {
+        "level": 40,
+        "shadow_lord": true,
+        "reality_bender": true
+      },
+      "effects": {
+        "shadow_reality_manipulation": 0.60,
+        "void_reality_control": 0.50,
+        "shadow_reality_mastery": 0.45
+      }
+    },
+    "void_technology": {
+      "name": "Void Technology",
+      "description": "Combine void stance with technology stance",
+      "stances": ["void", "technology"],
+      "requirements": {
+        "level": 35,
+        "void_lord": true,
+        "cyber_lord": true
+      },
+      "effects": {
+        "void_tech_magic": 0.55,
+        "digital_void_manipulation": 0.45,
+        "void_tech_mastery": 0.40
+      }
+    }
+  },
+  "stance_transitions": {
+    "combat_to_battle_mage": {
+      "from": "combat",
+      "to": "battle_mage",
+      "requirements": {
+        "combat_mastery": 20,
+        "arcane_arts": 15
+      },
+      "transition_bonus": {
+        "spell_sword_damage": 0.25,
+        "magic_weapon_bonus": 0.15
+      }
+    },
+    "arcane_to_reality_bender": {
+      "from": "arcane",
+      "to": "reality_bender",
+      "requirements": {
+        "arcane_arts": 25,
+        "world_resonance": 20
+      },
+      "transition_bonus": {
+        "reality_manipulation": 0.30,
+        "will_magic": 0.25
+      }
+    },
+    "stealth_to_shadow_lord": {
+      "from": "stealth",
+      "to": "shadow_lord",
+      "requirements": {
+        "emotional_intelligence": 25,
+        "arcane_arts": 15
+      },
+      "transition_bonus": {
+        "shadow_magic": 0.35,
+        "void_affinity": 0.25
+      }
+    }
+  }
+} 

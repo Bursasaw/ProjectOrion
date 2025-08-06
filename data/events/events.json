@@ -1,0 +1,163 @@
+{
+	"events": {
+		"crystal_discovery": {
+			"name": "Crystal Discovery",
+			"description": "You discover a cluster of magical crystals glowing with arcane energy.",
+			"type": "discovery",
+			"location": "Crystal Caverns",
+			"world": "Aethra",
+			"rewards": {
+				"items": ["magic_crystal"],
+				"experience": 50
+			},
+			"requirements": {
+				"location": "Crystal Caverns"
+			}
+		},
+		"void_rift_encounter": {
+			"name": "Void Rift Encounter",
+			"description": "A void rift opens nearby, releasing dangerous void creatures.",
+			"type": "random_encounter",
+			"location": "Void Rift",
+			"world": "Nokturn",
+			"combat": {
+				"enemies": ["void_creature", "void_creature"],
+				"difficulty": "hard"
+			},
+			"rewards": {
+				"items": ["void_essence"],
+				"experience": 200
+			}
+		},
+		"ancient_puzzle": {
+			"name": "Ancient Puzzle",
+			"description": "An ancient mechanism blocks your path. Can you solve its riddle?",
+			"type": "puzzle",
+			"location": "Ancient Library",
+			"world": "Elysion",
+			"puzzle": {
+				"type": "riddle",
+				"question": "What is the source of all magic?",
+				"answer": "balance",
+				"hints": ["Think about the ancient alliance", "What keeps the worlds together?"]
+			},
+			"rewards": {
+				"items": ["ancient_scroll"],
+				"experience": 100
+			}
+		},
+		"shadow_trap": {
+			"name": "Shadow Trap",
+			"description": "You step into a shadow trap that drains your energy.",
+			"type": "trap",
+			"location": "Shadow Forest",
+			"world": "Nokturn",
+			"effects": {
+				"damage": 20,
+				"status": "shadowed"
+			},
+			"avoidance": {
+				"skill": "stealth",
+				"difficulty": 15
+			}
+		},
+		"treasure_chest": {
+			"name": "Hidden Treasure",
+			"description": "You find a hidden treasure chest with valuable items.",
+			"type": "treasure",
+			"location": "Dragon Spire",
+			"world": "Krynn",
+			"rewards": {
+				"items": ["dragon_scale", "gold_coins"],
+				"gold": 500,
+				"experience": 150
+			}
+		},
+		"wisdom_insight": {
+			"name": "Wisdom Insight",
+			"description": "A moment of clarity reveals ancient knowledge.",
+			"type": "discovery",
+			"location": "Arcanum Sanctum",
+			"world": "Terra",
+			"rewards": {
+				"experience": 25,
+				"skill_points": 1
+			}
+		},
+		"time_anomaly": {
+			"name": "Time Anomaly",
+			"description": "A temporal distortion affects your perception of time.",
+			"type": "environmental",
+			"location": "Time Sands",
+			"world": "Sylithar",
+			"effects": {
+				"time_dilation": 2.0,
+				"duration": 300
+			}
+		},
+		"tech_malfunction": {
+			"name": "Tech Malfunction",
+			"description": "A technological device malfunctions, creating a hazard.",
+			"type": "trap",
+			"location": "Tech Nexus",
+			"world": "Tauron",
+			"effects": {
+				"damage": 30,
+				"status": "shocked"
+			},
+			"avoidance": {
+				"skill": "technology",
+				"difficulty": 20
+			}
+		},
+		"reality_shift": {
+			"name": "Reality Shift",
+			"description": "The fabric of reality warps around you.",
+			"type": "environmental",
+			"location": "Reality Nexus",
+			"world": "Aelria",
+			"effects": {
+				"reality_distortion": true,
+				"duration": 180
+			}
+		},
+		"crystal_discovery_archeum": {
+			"name": "Ancient Crystal Formation",
+			"description": "You discover a cluster of ancient crystals that seem to pulse with arcane energy.",
+			"type": "discovery",
+			"location": "Arcanum Sanctum",
+			"world": "Aethra",
+			"rewards": {
+				"items": ["magic_crystal"],
+				"experience": 75,
+				"gold": 50
+			},
+			"requirements": {
+				"location": "Arcanum Sanctum"
+			}
+		},
+		"shadow_whispers": {
+			"name": "Shadow Whispers",
+			"description": "Dark whispers echo through the shadows, revealing hidden knowledge.",
+			"type": "discovery",
+			"location": "Nokturn Market",
+			"world": "Nokturn",
+			"rewards": {
+				"items": ["shadow_crystal"],
+				"experience": 80,
+				"reputation": {"Nokturn": 15}
+			}
+		},
+		"void_echo": {
+			"name": "Void Echo",
+			"description": "A strange echo from the void reveals the location of a hidden rift.",
+			"type": "discovery",
+			"location": "Void Rift",
+			"world": "Nokturn",
+			"rewards": {
+				"items": ["void_essence"],
+				"experience": 120
+			}
+		}
+	}
+} 

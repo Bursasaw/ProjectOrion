@@ -1,0 +1,574 @@
+
+
+
+Arcane Origins: Before The Veil
+MORPH STUDIOS
+Rhys Morgan | Game Design Document | 21/06/2024 
+Contents
+Game Overview	2
+Elevator Pitch	2
+Concept	2
+Overview	2
+Theme and setting	2
+Story	5
+Backstory	5
+Key Plot Elements	6
+Characters	8
+Arius / MC / The Seeker	8
+Gameplay, Mechanics, Skills & Abilities, Misc	10
+Gameplay &Mechanics	10
+Core Gameplay	10
+Core Mechanics	11
+Open World Mechanics	13
+RPG Elements	14
+RPG Stats & Gameplay	16
+GUI	18
+Main Interface Layout - Iteration 1	18
+Inventory Management - Iteration 2	19
+Character Stats	22
+Core Stats	22
+Skills & Abilities	23
+Misc	34
+Cheats & Easter Eggs	34
+
+
+Game Overview
+ELEVATOR PITCH
+Dive into "Arcanum Origins: Before the Veil," an interactive fiction RPG where the mysteries of magic's dawn unfold in your hands. Set in a realm where magic breathes life into the very fabric of existence, yet remains ungoverned and wild, you embark on a journey through a world on the cusp of transformation. As a seeker of truth in an age before the arcane was tamed, your decisions shape the destiny of magic and its place among mortals.
+In "Arcanum Origins," every choice carves a path through a rich tapestry of lore, revealing secrets of ancient power and the origins of a magical governance yet to be. With Twine's intricate narrative design, Ink's dynamic storytelling, and Godot's immersive visuals, this game invites you to explore diverse storylines where your actions determine the fate of magic and its practitioners.
+From untamed wilderness teeming with arcane mysteries to the first stones laid in the foundation of what will become the greatest sanctum of magical knowledge, your journey is one of discovery, conflict, and legacy. Will you unlock the secrets of the arcane, forge alliances with beings of power, or lead the charge against the forces that seek to control the magic you hold dear?
+"Arcanum Origins: Before the Veil" is not just a game; it's a gateway to a universe where the drumbeat of destiny calls. With RPG elements that reward exploration and decisions that lead to multiple endings, your adventure is unique, echoing the untold stories of a world where magic and fate are intertwined. Step into the role of the arbiter of arcane mysteries, and leave your mark on the annals of history.
+CONCEPT
+Overview
+•	Genre: Text-Based RPG
+•	Target audience:
+o	Age: 15-30
+o	Gender: Everyone
+•	Monetization: Paid Game
+•	Platforms & system requirements: 
+o	Potato PC
+o	NO MAC SUPPORT
+Theme and setting
+Theme: The Dawn of Magic
+"Arcanum Origins: Before the Veil" explores the primal and untamed essence of magic at the dawn of its existence, focusing on the pivotal era before magic was governed and structured. This theme delves into the dichotomy between chaos and order, freedom and control, examining how the raw forces of magic can be both a blessing and a curse to those who wield it and those who are subjected to its whims. The narrative probes deep philosophical questions about power, responsibility, and the nature of destiny, encouraging players to reflect on the impact of their choices in a world where every action reverberates through the fabric of magical law and society.
+Setting: A Universe of Untamed Arcana
+Nokturn, The Shadow Realm: A mysterious and enigmatic dimension where shadows weave the fabric of existence. Nokturn is a nexus of sorts, a crossroads for those daring to travel between worlds or tap into the dark energies that pervade the cosmos. It's a realm where secrets are power, and the unseen forces of magic are most potent. The inhabitants of Nokturn, if any, are adept at manipulating the essence of shadow, using it to cloak their activities from the prying eyes of other realms.
+Elysion, The Cradle of the Ancients: This world is a vast archive of ancient wisdom and magic, where the ruins of civilizations long gone still pulse with arcane energy. Elysion is the birthplace of the first magi, beings who deciphered the cosmos's secrets and laid down the foundations of magical governance. The world is fraught with challenges, as ancient guardians protect the knowledge of the ages, offering it only to those who prove themselves worthy.
+Sylithar, The Desert of Glass: A radiant and harsh landscape where the ground itself reflects the sky, creating a maze of light and mirage. The magic here is solar-based, drawing power from the relentless sun. The inhabitants have mastered the art of glass magic, crafting items and constructs that harness the sun's energy for life and combat. Sylithar's secrets are hidden in plain sight, protected by the blinding light of day and the treacherous sands that shift endlessly.
+Terra, The Primal Heart: A world brimming with life in its most primal and untamed form, Terra is a testament to the raw power of creation. Here, magic and nature are inseparable, and the inhabitants live in symbiosis with the land. Terra's dense jungles, towering mountains, and deep oceans are home to creatures and spirits that embody the essence of elemental magic. It's a world where the balance between growth and decay holds the key to understanding the life force that permeates the universe.
+Aethra, The Skybound Archipelago: A world of floating islands and endless skies, where the magic of the air reigns supreme. The people of Aethra have adapted to a life among the clouds, building their homes on suspended landmasses and traveling on the backs of majestic air beasts. Magic here is focused on the manipulation of wind, weather, and the very currents of the air, making Aethra a place of boundless freedom and aerial beauty.
+Ombra, The Veiled Depths: A realm shrouded in perpetual twilight, where the magic of dusk and dawn holds sway. Ombra is a world of contrasts, where the fleeting moments between day and night stretch into eternity. The magic of Ombra is subtle yet powerful, dealing with transitions, thresholds, and the blending of light and shadow. Its inhabitants are masters of illusion and transformation, guardians of the secrets that lie in the in-between.
+Krynn, The Dragon Dominion: In this world, dragons are not just creatures of legend but the reigning sovereigns, ruling over vast empires where magic is interwoven with the elemental forces of nature. Krynn's landscapes are as varied as its draconic rulers, from fiery volcanoes serving as homes to fire dragons to deep, crystal-clear lakes housing their water counterparts. Magic here is a force of raw power, often manifesting through elemental manipulation and draconic pacts. The inhabitants, a mix of various races, live under the protection and dominion of these mighty beings, learning to harness the elemental magic that permeates their world.
+Tauron, The Nexus of Flesh and Machine: A world where the boundaries between organic and synthetic life blur, Tauron is a testament to the advanced civilizations that once sought to transcend their mortal coils through technology. Here, the residents have integrated magic with technology to create a society where organic and mechanical not only coexist but are interdependent. The magic of Tauron involves the animation and enchantment of machinery, as well as the enhancement of organic beings, creating a unique ecosystem of cyborg entities and living machines. The landscape is dotted with towering cities of steel and glass, surrounded by lush, genetically engineered forests.
+Aelria, The Realm of Manifested Will: In Aelria, the fabric of reality responds to the collective will and imagination of its inhabitants. This world is a canvas for the most potent sorcerers and dreamers, where cities float in the sky, not by technology or elemental magic, but simply because it is willed so. The magic of Aelria is one of creation and manipulation, bound only by the imagination and strength of will of its users. Here, the impossible becomes possible, and the landscape is ever-changing, reflecting the desires and fears of its people.
+Multiverse Lore:
+The multiverse serves as a canvas for the exploration of magic's infinite expressions. Each world is connected by the Veil, a thin membrane of reality that seekers of magic can traverse, discovering the diverse ways in which magic manifests and influences life and civilization across the universe.
+Multiverse Dynamics
+These worlds are connected through the Veil, a metaphysical boundary that separates and unites the myriad dimensions of magic. The Veil's nature is as enigmatic as the realms it envelops, and its manipulation or traversal requires mastery of the arcane.
+As a seeker of truth and power in "Arcanum Origins: Before the Veil," your journey across these worlds will reveal the multifaceted nature of magic. From the shadowy corridors of Nokturn to the vibrant life force of Terra, each realm offers unique challenges, allies, and enemies. The decisions you make will not only shape your destiny but also the future of magic across the multiverse.
+Cultural and Societal Impact:
+In each world, societies have evolved around the unique aspects of their native magic. From the druidic circles of Veridia, worshipping the life-giving force of nature, to the technomancer societies of Sylithar, harnessing solar energies for advancement—magic shapes politics, religion, and daily life. The game explores how different cultures perceive and interact with magic, setting the stage for a rich narrative of conflict, alliance, and discovery.
+The Dawn of Governance:
+The backdrop to the adventure is a universe at a tipping point, where the unbridled forces of magic begin to threaten the fabric of reality itself. Players will encounter factions and individuals who seek to establish the first universal laws of magic, sparking debates and conflicts over freedom, safety, and the future of arcane power.
+"Arcanum Origins: Before the Veil" invites players to witness the birth of a magically interconnected universe, challenging them to leave their mark on a world where the destiny of magic and the fate of its many worlds hang in the balance.
+Story
+BACKSTORY
+In the boundless expanse of the multiverse, where worlds float like islands in the sea of creation, magic was as diverse as the stars themselves. But there was a time, a forgotten epoch, when the fabric of reality trembled on the brink of unraveling, threatened by the unbridled forces of arcane power. This era, known only to a few, was the dawn of "Arcanum Origins: Before the Veil."
+The Forgotten Epoch
+Long before the Veil was woven, a boundary to separate and safeguard the myriad realms of magic, there existed a primordial harmony. Magic flowed freely, its essence touching every corner of existence. However, this harmony was fragile, threatened by entities and forces that sought to dominate and reshape the multiverse according to their will.
+The Catalyst of Change
+The world of Aelria, where reality yielded to the desires of its inhabitants, became the epicenter of a cataclysmic event. A consortium of the realm's most powerful sorcerers, driven by ambition and hubris, attempted to create a nexus of power that would allow them to access the raw energies of the multiverse. Their experiment, fueled by the collective will and magic of a thousand minds, breached the boundaries between worlds, creating rifts in the fabric of reality.
+The Emergence of the Veil
+The consequences were immediate and devastating. Energies from the void beyond reality poured in, threatening to consume the multiverse in chaos. It was then that the ancient dragons of Krynn, the techno-mages of Tauron, and the guardians of Elysion came together, forming an unlikely alliance. Recognizing the threat to all existence, they combined their powers to create the Veil, a protective barrier that would prevent such calamities by regulating the flow of magic between worlds.
+The Legacy of the Seekers
+In the aftermath, the need for individuals who could navigate the complexities of this new multiversal order became apparent. The Seekers were born—beings adept at traversing the Veil, mediating conflicts, and ensuring the balance of magic across the realms. They were scholars, warriors, and diplomats, chosen from all worlds for their wisdom and courage.
+The Heart of the Story
+"Arcanum Origins: Before the Veil" follows the journey of a young Seeker, the player character, who uncovers fragments of this forgotten epoch. Driven by visions and whispers from the Veil itself, the Seeker embarks on a quest across the worlds of Nokturn, Elysion, Sylithar, Terra, Aethra, Ombra, Krynn, Tauron, and Aelria. Each realm holds a piece of the puzzle, revealing the true nature of the Veil, the ancient alliance that forged it, and the looming threat that seeks to tear it apart once more.
+The Echoes of the Past
+As the Seeker, players will navigate the delicate politics of dragon courts, delve into the ruins of ancient techno-magical civilizations, and explore realms where the very fabric of reality bends to the will of its inhabitants. They will confront the remnants of the consortium that nearly doomed the multiverse, now seeking to harness the breaches they once created for their own ends.
+The Call to Adventure
+"Arcanum Origins: Before the Veil" is not just a journey through worlds but a quest to shape the future of the multiverse. The player's decisions will determine the fate of the Veil, the balance of magic, and the destiny of all realms. In a universe where the past is key to the future, the legacy of the Seeker will either be the salvation of the multiverse or the catalyst for its unraveling.
+KEY PLOT ELEMENTS
+1. The Awakening of the Seeker
+•	Inciting Incident: The game begins with the player experiencing a series of mysterious visions, hinting at a growing imbalance within the Veil. These visions lead the Seeker to discover an ancient artifact linked to the origins of the Veil, setting them on a path to uncover the truths of the forgotten epoch.
+2. The Rifts Between Worlds
+•	Major Plot Point: As the story unfolds, the Seeker encounters rifts in the Veil that threaten the stability of the multiverse. Investigating these rifts reveals they are not natural phenomena but the result of a dark force seeking to harness their power for its own ends. The Seeker must navigate the politics and dangers of each world to close these rifts and protect the realms.
+3. The Alliance of the Ancients
+•	Character Development: The Seeker learns of the ancient alliance between the dragons of Krynn, the techno-mages of Tauron, and the guardians of Elysion that first created the Veil. Rekindling this alliance becomes a crucial objective, requiring the Seeker to earn the trust and support of these powerful entities and their worlds.
+4. The Legacy of Aelria
+•	Plot Twist: The Seeker's journey leads them to Aelria, where they uncover the truth about the cataclysmic event that necessitated the creation of the Veil. Here, they face a moral dilemma when they learn that the consortium responsible for the event was not entirely malevolent and that their actions were driven by a desire to free the multiverse from an even greater, unseen threat.
+5. The Shadows of Nokturn
+•	Dark Revelation: In the realm of shadows, the Seeker encounters the Nameless, beings who have existed since before the Veil's creation. The Nameless reveal that the current disturbances are merely symptoms of a deeper, more ancient malady—a force that seeks not just to control the Veil but to consume the essence of magic itself.
+6. The Quest for the Nexus Keys
+•	Adventure and Exploration: To strengthen the Veil and counter the emerging threat, the Seeker must gather the Nexus Keys, artifacts scattered across the worlds that, when united, have the power to repair and reinforce the Veil's fabric. This quest takes the Seeker to the farthest reaches of the multiverse, from the floating islands of Aethra to the twilight realm of Ombra.
+7. The Eclipse of Terra
+•	Climactic Confrontation: The campaign against the dark force culminates on Terra, where the final Nexus Key is hidden. Here, the Seeker rallies the allies they've made across the multiverse for a stand against the entity behind the rifts. The battle not only tests the Seeker's strength and resolve but also the bonds they've forged with the worlds and characters they've encountered.
+8. The Rebirth of the Veil
+•	Resolution: With the Nexus Keys assembled and the dark force vanquished, the Seeker and their allies perform a ritual to seal the rifts and reinforce the Veil. This act does not just restore balance but also transforms the Veil, evolving it into a living entity that can protect the multiverse with greater autonomy. The Seeker's role in this transformation marks them as a pivotal figure in the annals of the multiverse.
+9. The Legacy Continues
+•	Epilogue and Future Quests: In the aftermath, the Seeker is faced with a choice: return to a life before their journey began or embrace their role as a guardian of the multiverse. The game concludes with hints at future adventures and challenges, setting the stage for potential expansions or sequels.
+Characters
+ARIUS / MC / THE SEEKER
+Arius, the Seeker
+•	Origin: Born under the rare celestial alignment in Terra, Arius was always attuned to the Veil's whispers. Orphaned in a conflict fueled by dark magic, Arius was raised by the Order of the Nexus, an ancient sect dedicated to maintaining balance across the multiverse.
+•	Motivation: Driven by visions of the Veil's fractures and a deep-seated desire to prevent the chaos that once claimed his family, Arius seeks to mend the breaches, uncovering truths that challenge his beliefs about magic, power, and his destiny.
+Arius's Expanded Backstory
+Early Years and Training:
+•	A Unique Birth: Arius was born during a convergence of celestial bodies, a phenomenon prophesied to herald the arrival of a being capable of navigating the complexities of the Veil. His birth, under this rare alignment, imbued him with an innate connection to the Veil, making him sensitive to its fluctuations and tears.
+•	Orphaned and Raised by the Order: The conflict that orphaned Arius was no mere skirmish but a calculated strike by a shadowy faction aiming to destabilize the multiverse by targeting those aligned with the Veil's prophecy. The Order of the Nexus, understanding the significance of his survival, took him in, raising him not just as a ward but as a symbol of hope and balance.
+The Path to Corruption:
+•	A Mission Gone Wrong: As Arius grew, so did his abilities and his determination to protect the Veil. Sent on a crucial mission to investigate anomalies within the Veil, Arius vanished, his fate unknown. Rumors emerged of his fall, corrupted by the very forces he sought to combat, turning against the Order and the multiverse.
+•	The Truth Behind the Shadows: Unbeknownst to many, Arius's disappearance was a strategic move. He had discovered a looming threat far greater than the rifts tearing through the Veil—a primordial entity seeking not just dominion but the annihilation of the multiverse's fabric. Understanding the need for preparation and the gathering of unconventional allies, Arius chose exile, diving into the darkest corners of the multiverse to seek knowledge and power that could turn the tide against the impending doom.
+The Return and the Fight for Redemption:
+•	A Universe Changed: Arius returned to a multiverse wary of his motives and questioning his allegiance. Old allies viewed him with suspicion, and whispers of his supposed fall had sown seeds of doubt. Yet, Arius, bearing the weight of his unseen battle, sought to rally forces against the true threat, his actions often misunderstood, painting him as a figure of contention.
+•	The Revelation: In the climax, as the forces of the multiverse stand divided, the true extent of Arius's sacrifice and the nature of his quest come to light. His journey through the shadows, the alliances forged with beings of power and entities once considered adversaries, were all part of a grand strategy to fortify the multiverse against the primordial entity.
+The Legacy of Arius:
+•	A Universe Forged Anew: With the revelation of Arius's true mission, the multiverse unites, leading to an epic confrontation where the fabric of reality itself is at stake. Arius's strategy, combining the diverse magics and technologies of the multiverse, channels the collective power against the entity, sealing it away and reinforcing the Veil.
+•	The Seeker's Sacrifice: In the aftermath, Arius is not the same. His connection to the Veil has deepened, making him a guardian between worlds, but at the cost of never truly belonging to any. His legacy is one of unity, sacrifice, and the understanding that sometimes, the greatest heroes are those who walk in the shadows, shaping the fate of the universe from afar.
+Gameplay, Mechanics, Skills & Abilities, Misc
+GAMEPLAY &MECHANICS
+Core Gameplay
+Narrative Exploration: At its heart, the game is driven by its story. Players navigate the multiverse through a combination of text-based narrative and interactive choices presented via the GUI. Each choice impacts the story's direction, leading to different outcomes and branching paths. The GUI complements this by visually representing changes in the environment, characters, and key plot points.
+Character Interaction: Players interact with a wide array of characters, each with unique backgrounds, motives, and potential relationships with the player. Dialogues are rich and varied, offering choices that affect the player's standing with these characters, influence the storyline, and unlock different questlines. Character portraits and emotional cues are displayed through the GUI, enhancing engagement and immersion.
+Combat and Challenges: Combat integrates traditional IF choices with real-time strategy elements. Players choose their actions or spells from a GUI, with decisions reflecting in the narrative’s outcome. Some battles may incorporate puzzles or environmental interactions, requiring players to solve challenges under pressure. The GUI displays relevant stats, time constraints, and environmental factors, making combat a dynamic part of the experience.
+Magic and Skills System: Players develop their abilities through a skill tree represented in the GUI. This system allows for customization of the protagonist's magical and physical abilities, influenced by the player's choices and interactions throughout the game. Skills can unlock new narrative paths, combat strategies, and interactions with the world and its inhabitants.
+Inventory and Crafting: The GUI provides an intuitive interface for managing inventory and crafting. Players collect resources and items that can be combined or used to create new objects or spells. This system is crucial for solving puzzles, advancing the plot, or preparing for specific challenges.
+Visual and Audio Integration
+Immersive Environments: Each realm in the multiverse has a distinct visual theme represented in the game's backgrounds and UI elements. This visual diversity enhances the sense of exploration and discovery, making each world feel unique.
+Character Visuals: Detailed artwork for characters, including expressions and costumes that reflect their personalities and changes over time, adds depth to interactions and helps players form connections with the narrative's key figures.
+Soundscapes and Music: Audio cues and a dynamic soundtrack complement the visual and narrative elements, enhancing the atmosphere of each world and the emotional weight of key story moments. Combat sequences, magical encounters, and pivotal decisions are underscored with specific themes to heighten immersion.
+Interface Design
+User-Friendly GUI: The interface is designed to be intuitive, allowing easy navigation through the story, quick access to inventory and skills, and clear presentation of choices. It's optimized for both accessibility and immersion, ensuring players of all experience levels can fully engage with the game.
+Dynamic Elements: The GUI features dynamic elements that react to the player's progress and choices. This could include changing landscapes, evolving character portraits, and updates to the world map reflecting the story's development.
+Accessibility Features: Text size adjustments, colorblind modes, and optional voice-over narrations ensure the game is accessible to a wide audience, including players with visual or auditory impairments.
+Core Mechanics
+Choice-Driven Narrative
+•	Branching Paths: The core narrative progresses through player choices, each with tangible consequences on the story's direction, character relationships, and world state. The GUI visually represents these branching paths, offering players a clear understanding of pivotal moments.
+•	Dynamic Dialogue System: Dialogue options change based on character development, past choices, and player skills. The GUI displays dialogue trees and emotional responses, enhancing the depth of interactions.
+2. Combat System
+•	Hybrid Combat Mechanics: Combining turn-based strategy with interactive elements, the combat system allows for traditional RPG battles, puzzle-based encounters, and environmental interactions. The GUI displays character stats, turn order, and available actions, with interactive elements for spell casting or special maneuvers.
+•	Adaptive Enemy AI: Enemies adapt to player strategies, requiring players to evolve their combat approach. The AI's complexity is visually represented in the GUI, offering cues about enemy states and potential counteractions.
+3. Exploration and Discovery
+•	Interactive World Map: Players navigate the multiverse using an interactive map that updates based on story progression and discoveries. Each world offers unique environments to explore, with hidden areas unlocked by narrative progress or specific skills.
+•	Environmental Puzzles: Puzzles are integrated into the world and its lore, requiring players to use their inventory, skills, and knowledge of the narrative to solve. The GUI aids in puzzle interaction, providing clues and feedback on player actions.
+4. Skill and Magic System
+•	Customizable Skill Trees: Players develop their character through a skill tree that branches into different magic and abilities. The GUI allows for easy navigation of skill options, showing potential upgrades and their narrative or combat effects.
+•	Magic Crafting: Combining items and spells to create new magical effects is a key mechanic, with the GUI facilitating the crafting process through an intuitive interface that displays recipes, ingredients, and crafting outcomes.
+5. Inventory and Resource Management
+•	Intuitive Inventory Management: The GUI provides a streamlined inventory system that categorizes items and resources, making it easy to manage and access in and out of combat.
+•	Resource Gathering: Players collect resources across the multiverse, each with unique properties. The GUI displays resource locations, properties, and uses within the crafting system.
+6. Character Development and Relationships
+•	Morality and Reputation: Player actions affect their morality and reputation among the multiverse's factions. The GUI tracks these metrics, influencing dialogue options, quests, and character interactions.
+•	Relationship Dynamics: Building or damaging relationships with key characters alters the game's course. The GUI reflects these dynamics through dialogue changes and potential story branches.
+7. Accessibility and Customization
+•	Accessibility Options: The game includes features like text size adjustment, colorblind modes, and key remapping to ensure accessibility. The GUI integrates these options seamlessly, allowing players to customize their gameplay experience.
+•	Visual and Audio Customization: Players can adjust GUI elements, visual effects, and audio settings to suit their preferences, enhancing personal immersion and comfort.
+Open World Mechanics
+Non-Linear Narrative Structure
+•	Branching Storylines: The core narrative is designed with multiple branches that allow players to explore different story paths based on their choices. This structure ensures that while there are key plot points, the route to these moments can vary significantly, providing a unique experience for each playthrough.
+•	Dynamic Quest System: Quests are designed to be discovered and undertaken in various orders, depending on the player's exploration and interactions. Main quests drive the overarching story, while side quests delve into the lore of the worlds, character backstories, and hidden secrets.
+World Exploration
+•	Interactive World Map: The GUI features an interactive map of the multiverse, allowing players to select destinations across different realms. Each location offers unique narrative content, challenges, and opportunities for exploration.
+•	Environmental Descriptions: Rich, detailed text descriptions bring each location to life, offering clues for exploration, puzzle-solving, and resource gathering. The narrative includes interactive elements that allow players to engage with the environment, influencing their surroundings and uncovering new paths or secrets.
+Player Agency and Freedom
+•	Character-Driven Exploration: Players have the freedom to choose where to go and what quests to undertake. This freedom supports a personalized narrative experience, where players' decisions directly impact the world and its inhabitants.
+•	Open-Ended Quests: Quests are designed with multiple solutions, allowing players to use their skills, knowledge, and resources to complete objectives in ways that align with their character's development and play style.
+Mechanics for an Open-World Feel
+•	Dynamic Events: The game world feels alive with random events and encounters that vary based on the player's location and previous choices. These events can lead to new quests, challenges, or unexpected twists in the narrative.
+•	Resource Management and Crafting: Players gather resources from different worlds, which can be used in crafting systems for creating items, spells, or potions. This mechanic encourages exploration of the game's diverse environments to collect rare materials.
+Integrating RPG Elements with IF
+•	Skill and Ability Checks: Text-based challenges and encounters often require players to make decisions influenced by their character's skills and abilities. Success or failure can open new narrative branches, affect the outcome of quests, or alter interactions with other characters.
+•	Combat and Strategy: While combat is described narratively, it incorporates strategic elements such as choosing attacks, spells, and defensive actions. The outcomes are determined by underlying mechanics that consider player skills, enemy strengths, and environmental factors.
+Accessibility and Replayability
+•	Accessible Navigation: The GUI is designed to facilitate easy navigation through the game's open world, with clear markers for quests, points of interest, and unexplored areas, making the vast narrative landscape manageable and engaging.
+•	Multiple Endings and Outcomes: The open-world design and branching narrative ensure high replayability, with different paths leading to various endings. Players are encouraged to explore alternate decisions in subsequent playthroughs to discover new content and outcomes.
+RPG Elements
+Character Development
+Skill Trees and Abilities: The game features an extensive skill tree system, allowing players to tailor the Seeker's abilities to their playstyle. This includes:
+•	Magic Skills: Branches dedicated to different types of magic (elemental, dark, light, etc.), each with unique abilities, spells, and passive buffs. As players progress, they unlock more powerful spells and synergies between different magic types.
+•	Combat Skills: Focus on enhancing physical abilities, weapon proficiency, and defensive tactics. This includes mastering different combat styles, unlocking special attacks, and improving resilience against different types of damage.
+•	Utility Skills: Skills that improve exploration capabilities, such as lockpicking, stealth, or enhanced mobility. These skills unlock new paths in the narrative and alternative approaches to challenges.
+Character Progression: Experience points (XP) are gained through completing quests, exploring new locations, and overcoming enemies or challenges. Leveling up allows players to invest in their skill tree, enhancing their abilities and adapting their strategy to the evolving narrative and combat challenges.
+Inventory and Equipment
+Dynamic Inventory System: Players collect a wide range of items, from quest-specific objects to resources for crafting. The inventory system is intuitive, categorizing items for easy management and access during critical moments.
+Equipment and Customization: Armor, weapons, and magical artifacts significantly impact gameplay, offering stat boosts, unique abilities, or other advantages. Players can customize their loadout to suit their strategy, combining equipment effects with their skill choices for powerful synergies.
+Crafting and Alchemy: Utilizing resources gathered across the multiverse, players can craft potions, spells, and equipment. The crafting system is deep and interactive, with recipes that can be discovered or learned through quests. Experimentation is encouraged, with some combinations yielding unexpected results.
+World Interaction and Exploration
+Exploration Rewards: The multiverse is rich with secrets, hidden locations, and rare resources. Exploration is rewarded with XP, items, and lore that deepens the narrative context. Skills from the utility branch enhance exploration capabilities, allowing access to previously unreachable areas.
+Environmental Interaction: The game world is dynamic, with environmental puzzles and challenges that require creative use of skills and abilities to overcome. This includes manipulating elements, using magic to alter physical structures, or applying combat skills in non-traditional ways.
+Dialogue and Quest Choices: Interactions with NPCs and quest decisions significantly impact the game world. Choices can lead to different alliances, open up new areas for exploration, or alter the balance of power in key locations. The narrative depth ensures that these choices feel meaningful, with long-term consequences that are reflected in the world.
+Combat and Strategy
+Varied Combat Systems: Reflecting the diversity of the multiverse, combat encounters can vary significantly. Players might engage in traditional turn-based battles, strategic use of the environment, or even puzzles that require quick thinking rather than brute force.
+Enemy Diversity: Enemies are not just obstacles but integral to the lore of each world. They vary in abilities, weaknesses, and tactics, requiring players to adapt their approach and utilize the full range of their skills and equipment.
+Strategic Depth: The game encourages strategic planning, both in pre-combat preparation and real-time decisions. This includes setting traps, choosing the right spells for the encounter, and managing resources effectively.
+Morality and Consequences
+Moral Choices: Many decisions in the game carry moral weight, affecting the Seeker's reputation and alliances. The game avoids clear-cut right and wrong choices, instead presenting dilemmas that reflect the complexity of the multiverse's politics and cultures.
+Reputation System: Actions and decisions impact how factions and characters perceive the Seeker. This can affect quest availability, support in key battles, and even the ending of the game.
+RPG Stats & Gameplay
+Core Stats
+Core stats form the foundation of your character's abilities and influence all aspects of gameplay, from combat to dialogue. Common core stats include:
+1.	Strength (STR): Affects physical damage, carrying capacity, and certain physical challenges.
+2.	Dexterity (DEX): Influences accuracy, evasion, and ability to perform tasks requiring finesse.
+3.	Constitution (CON): Determines health points (HP) and resilience against physical ailments.
+4.	Intelligence (INT): Governs magic damage, number of magic points (MP), and success in tasks requiring knowledge.
+5.	Wisdom (WIS): Affects magic defense, MP regeneration, and insight into mystical or lore-based challenges.
+6.	Charisma (CHA): Influences interactions with NPCs, persuasion success, and leadership in group scenarios.
+Secondary Stats
+Secondary stats are derived from core stats and gameplay actions, providing more specific attributes:
+1.	Health Points (HP): The character's life force. Depletion results in defeat or death. Derived from CON.
+2.	Magic Points (MP): Used to cast spells. Derived from INT and WIS.
+3.	Attack Power (AP): Determines the damage dealt in physical attacks. Derived from STR.
+4.	Magic Power (MPow): Determines the damage or effectiveness of spells. Derived from INT.
+5.	Defense (DEF): Reduces damage taken from physical attacks. Derived from CON and DEX.
+6.	Magic Defense (MDEF): Reduces damage or effects from magical attacks. Derived from WIS.
+7.	Speed (SPD): Influences turn order in combat and evasion rates. Derived from DEX.
+Skills and Abilities
+Skills and abilities are specific actions or enhancements characters can learn or improve upon. They can be divided into categories such as:
+1.	Combat Skills: Direct attack moves, defensive stances, or techniques that provide strategic advantages in battle.
+2.	Magic Spells: Ranging from offensive spells to healing and support spells. Each spell costs MP to use.
+3.	Passive Skills: Continuously active effects that provide benefits, such as increased HP regeneration or resistance to certain types of damage.
+4.	Crafting Abilities: Skills related to creating items, potions, or equipment, enhancing the crafting system's depth.
+Equipment and Items
+The equipment and items system allows players to customize their character's capabilities and appearance.
+1.	Weapons: Varying types (swords, staves, bows) influence attack power and may have additional effects or abilities.
+2.	Armor: Protective gear that increases defense and may offer special bonuses or resistances.
+3.	Accessories: Items that provide various bonuses or effects, from stat boosts to protection against conditions like poison.
+4.	Consumables: Potions, scrolls, and other one-time-use items that restore HP/MP, cure ailments, or provide temporary buffs.
+Crafting System
+A comprehensive crafting system lets players create items, equipment, or potions using resources collected throughout the game.
+1.	Recipes: Blueprints for creating specific items, which can be found, earned, or purchased.
+2.	Resources: Materials gathered in the world, from simple herbs to rare magical components.
+3.	Crafting Stations: Specific locations or tools required for certain types of crafting, such as blacksmithing or alchemy.
+Quest System
+The quest system drives the narrative and offers players goals and rewards.
+1.	Main Quests: Advance the central storyline and are necessary for game progression.
+2.	Side Quests: Optional quests that explore subplots, character backstories, or world lore, offering additional rewards and insights.
+3.	Dynamic Quests: Quests that appear based on player actions or world events, adding an element of unpredictability and immersion.
+Exploration and Interaction
+Exploration is key in an open-world RPG, with various mechanics to enrich the experience:
+1.	Interactive Map: Allows players to navigate the multiverse, highlighting points of interest and quests.
+2.	Environmental Puzzles: Challenges that require using skills or abilities to progress, revealing secrets or unlocking new areas.
+3.	Dialogue System: Complex interactions with NPCs, where player choices can influence outcomes, relationships, and world state.
+Combat Mechanics
+Combat combines strategy and skill, with mechanics including:
+1.	Turn-Based System: Players and enemies take turns executing actions based on speed stats.
+2.	Active Time Battle (ATB): A hybrid system where actions are chosen in real-time but executed based on a timing bar, adding urgency to combat decisions.
+3.	Environmental Factors: The battlefield's layout and elements can affect combat strategies and outcomes.
+GUI
+Main Interface Layout - Iteration 1
+Screen Division:
+•	Narrative Panel: Occupies the central portion of the screen, displaying the ongoing narrative, dialogue options, and immediate choices. Text is dynamically adjusted for readability, with key phrases or choices highlighted.
+•	Environmental Context: Surrounds the narrative panel or appears as a hover-over element, providing descriptions of locations, characters, and objects that the player can interact with.
+•	Action Bar: Located at the bottom or side of the screen, offering quick access to common commands (e.g., inventory, map, skills) and context-specific actions (e.g., talk, examine, use).
+Interactive Map
+Functionality:
+•	World Selection: The map showcases the multiverse layout, with worlds represented as distinct nodes. Players can select a world to zoom into more detailed maps of regions, cities, and points of interest.
+•	Exploration Markers: Unexplored areas are subtly highlighted. Once discovered, locations offer brief descriptions and icons indicating available quests, resources, or significant NPCs.
+•	Dynamic Updates: The map updates in real-time based on narrative progression, displaying changes in world states, unlocked areas, and new points of interest.
+Skill Trees and Abilities
+Layout:
+•	Skill Categories: Skills are organized into branching trees for Magic, Combat, and Utility, each with a visually distinct theme. Players navigate through these branches to view available and upcoming skills.
+•	Ability Details: Hovering over a skill reveals its effects, requirements, and synergy with other skills. Unlocked skills are brightly highlighted, while locked ones maintain a subdued appearance.
+Interaction:
+•	Skill Progression: Players allocate skill points directly through the interface, with confirmations prompts to prevent accidental selections. Progression paths show potential future unlocks, encouraging strategic planning.
+•	Customization: The GUI allows for the reassignment of skill points (subject to in-game resources or conditions), enabling players to experiment with different builds.
+Inventory Management - Iteration 2
+Design:
+•	Categorization: Items are automatically sorted into categories (e.g., Weapons, Potions, Resources) for easy navigation. Each category has custom icons for quick identification.
+•	Item Information: Clicking on an item brings up a detailed description, its effects, and possible uses or crafting recipes it's involved in.
+1. Main Interface
+•	Narrative Display: The central part of the screen is dedicated to the narrative text, displaying the story, dialogue, and descriptions. The text box is designed for readability, with adjustable font size and color settings for accessibility.
+•	Choice Buttons: Below the narrative display, choices are presented as buttons or links. Players can click to select their desired path, with some choices displaying conditional color coding or icons to indicate alignment with skills or moral decisions.
+•	Character HUD: A minimalistic heads-up display (HUD) shows essential character information (health, mana/magic points, and a simplified morality/reputation gauge) at the screen's top or side, depending on layout preferences.
+2. Skill Trees and Abilities
+•	Accessible via a Menu or Hotkey: Players access their skill tree through a dedicated menu button or hotkey, bringing up a full-screen or overlay display.
+•	Visual Tree Layout: Skills are organized in a branching tree format, with lines connecting related skills. Each branch represents a different aspect of the character's abilities (e.g., Combat, Magic, Utility).
+•	Interactive Nodes: Each skill or ability is represented by a node that players can click to view details, prerequisites, and effects. Unlocked skills are highlighted, while locked skills are dimmed but display what's needed to unlock them.
+•	Progression and Customization: Players allocate skill points directly in this interface to unlock or enhance skills, with the GUI updating in real-time to reflect new abilities or upgrades.
+3. Interactive Map
+•	World Selection: The map interface features a galaxy or multiverse view, with each world represented by an icon. Hovering over an icon reveals the world's name and a brief description.
+•	Zoom and Exploration: Players can zoom in on selected worlds to explore regions or points of interest. Clickable markers indicate locations, quests, and events, with icons differentiating between types.
+•	Dynamic Updates: The map updates as players progress, with new locations appearing and some areas changing based on narrative developments. Event markers may appear dynamically, indicating ongoing quests or challenges.
+4. Combat Interface
+•	Action Bar: At the bottom or side of the screen, an action bar displays available actions during combat, including attack options, spells, items, and defensive maneuvers. Icons represent actions, with tooltips providing detail on hover.
+•	Turn Indicator: A visual indicator shows the turn order, including player characters and enemies, allowing for strategic planning.
+•	Environmental Interaction: When applicable, elements in the environment that can be interacted with during combat are highlighted. Players can select these options from their action bar to use the environment to their advantage.
+•	Status Effects: Both player characters and enemies have icons indicating current status effects (buffs, debuffs), with duration bars showing how long effects will last.
+5. Inventory and Crafting
+•	Tabbed Interface: The inventory is organized into tabs (e.g., All, Weapons, Potions, Resources), allowing for easy navigation. A separate tab or interface handles crafting, with recipes and craftable items listed.
+•	Item Details: Clicking on an item reveals its details, including stats, effects, and any lore-related information. Crafting items show required resources and potential outcomes.
+•	Drag-and-Drop: Players can drag items to equip or use them, enhancing interactivity. In crafting, resources can be dragged into a crafting slot to combine them.
+6. Dialogue and Interaction
+•	Dialogue Box: Character portraits accompany text during conversations, reflecting the speaker's emotions and reactions. The dialogue box includes response options, with some choices displaying icons indicating consequences or alignment with skills.
+•	Quick Access to Character Stats: During dialogues requiring skill checks, players can quickly access a summary of their relevant stats or abilities to make informed decisions.
+7. Accessibility Features
+•	Customization Options: Players can adjust text size, color schemes, and interface layout to suit their preferences and needs. Options for screen readers or voice-over support enhance accessibility for visually impaired players.
+•	Help and Tutorial: Interactive tutorials and a help section guide players through the GUI elements and gameplay mechanics, ensuring a smooth onboarding process.
+
+CHARACTER STATS
+Core Stats
+Core stats serve as the foundation of a character's abilities, directly influencing secondary stats and overall performance in various gameplay aspects. Each core stat starts with a base value, which can be increased through leveling up, equipment, and specific in-game actions or decisions.
+1.	Strength (STR): Base value: 10. Improved by leveling up, choosing specific training or challenges that enhance physical prowess, and equipment like weapons or strength-enhancing gear.
+2.	Dexterity (DEX): Base value: 10. Increased through agility training, quests requiring precision, and gear like lightweight armor or gloves that enhance finesse.
+3.	Constitution (CON): Base value: 10. Boosted by enduring harsh conditions, completing endurance challenges, and equipping defensive armor.
+4.	Intelligence (INT): Base value: 10. Enhanced by studying ancient texts, solving puzzles, and wearing artifacts or robes that boost magical affinity.
+5.	Wisdom (WIS): Base value: 10. Grows through experiences that expand the character's worldview, meditative quests, and gear like amulets or rings imbued with ancient knowledge.
+6.	Charisma (CHA): Base value: 10. Increased by successfully navigating social challenges, leading teams in quests, and equipping items that enhance personal allure or command.
+Secondary Stats
+Secondary stats are derived from core stats and are directly affected by them. They play a specific role in combat, exploration, and interactions within the game.
+1.	Health Points (HP): Base value: 100 + (CON * 10). HP increases with CON and can be further boosted by gear and passive skills focused on vitality.
+2.	Magic Points (MP): Base value: 50 + (INT * 5). MP grows with INT and can be enhanced by wisdom-influenced traits, spells that increase mana efficiency, and magical artifacts.
+3.	Attack Power (AP): Base value: STR * 2. Influenced by STR and specific combat training. Weapons and combat gear can further increase AP.
+4.	Magic Power (MPow): Base value: INT * 2. Affected by INT and the mastery of magical disciplines. Can be enhanced with enchanted weapons and arcane items.
+5.	Defense (DEF): Base value: CON * 1.5. Armor and defensive skills increase DEF, providing better resilience against physical attacks.
+6.	Magic Defense (MDEF): Base value: WIS * 1.5. Increased by protective spells, wisdom-related skills, and magical armor that guards against spells.
+7.	Speed (SPD): Base value: DEX * 1.2. Improved by agility training, speed-enhancing gear, and skills that boost reflexes or movement.
+Improvements and Interactions
+•	Leveling Up: Allocating points to core stats upon leveling up allows players to customize their character's development. The increase in core stats directly boosts secondary stats.
+•	Equipment: Items and gear provide temporary or permanent boosts to both core and secondary stats. Specialized equipment can also unlock unique abilities or enhance existing skills.
+•	Skills and Abilities: Investing in skills not only offers new combat or exploration options but can also provide stat boosts. For example, a combat skill might increase AP, while a survival skill could enhance HP regeneration.
+•	Quests and Decisions: Choices made during quests can lead to stat increases. Successfully navigating a diplomatic encounter might boost CHA, while uncovering ancient wisdom could increase WIS.
+Skills & Abilities
+Skills
+Combat Skills
+1.	Blade Mastery
+o	Stats: +5% to Attack Power (AP) per level
+o	Description: Increases proficiency with bladed weapons, enhancing damage dealt in melee combat. Higher levels unlock special attacks that can bypass enemy defenses.
+o	Levels: Up to 5
+2.	Arcane Bolt
+o	Stats: Base damage of 15 MPow + (INT * 1.5) per cast
+o	Description: Conjures a bolt of pure magical energy aimed at a single target. Damage increases with the caster's intelligence and skill level.
+o	Levels: Up to 5
+Melee Combat Skills
+1.	Riposte
+o	Stats: Counterattack chance 15% + 5% per level when successfully blocking.
+o	Description: Masters the art of the counterattack, providing a chance to immediately retaliate with a powerful strike after blocking an attack. Higher levels increase counterattack damage and chance.
+2.	Berserker's Fury
+o	Stats: +10% AP for each 10% HP missing.
+o	Description: The lower the character's HP, the higher the damage output. This skill taps into the primal rage of combat, increasing attack power significantly as health declines.
+Ranged Combat Skills
+1.	Piercing Shot
+o	Stats: Ignores 20% of target's DEF + additional 5% per level.
+o	Description: Fires a meticulously aimed shot that can pierce through enemy defenses, dealing damage directly. Ideal for heavily armored foes.
+2.	Volley
+o	Stats: Hits 3-5 targets within a small area for 75% of normal attack damage.
+o	Description: Unleashes a barrage of arrows or projectiles, hitting multiple enemies at once. Damage and area of effect increase with skill level.
+Magic Combat Skills
+1.	Lightning Chain
+o	Stats: Base damage of 20 MPow + (INT * 2), chaining up to 3 enemies.
+o	Description: Conjures a bolt of lightning that arcs between enemies, dealing damage to each. The number of targets and damage increase with skill level.
+2.	Frost Barrier
+o	Stats: Reduces incoming damage by 20% and slows attackers' SPD by 10% for 5 seconds.
+o	Description: Creates a protective barrier of frost around the caster, reducing damage from attacks and slowing the movement and attack speed of enemies who make contact.
+Hybrid Combat Skills
+1.	Spectral Blades
+o	Stats: Summons ethereal blades that deal 15 MPow + (DEX * 1.5) as magical slashing damage.
+o	Description: Combines physical dexterity with arcane power to manifest spectral blades that attack independently of the caster, targeting nearby enemies.
+2.	Elemental Infusion
+o	Stats: Adds 20% of INT as elemental damage (fire, ice, or lightning) to physical attacks.
+o	Description: Temporarily enchants the character's weapon with elemental energy, allowing physical attacks to deal additional magic damage based on the caster's intelligence and chosen element.
+Specialized Combat Skills
+1.	Shadow Assault
+o	Stats: Teleports behind an enemy to deliver a critical strike for 150% AP.
+o	Description: Utilizes the shadows to instantly close the distance between the caster and their target, executing a surprise attack that deals significant damage.
+2.	Arcane Explosion
+o	Stats: Deals area of effect damage of 30 MPow + (INT * 3) around the caster.
+o	Description: Releases a burst of raw magical energy, damaging all enemies in close proximity. The explosion radius and damage scale with the caster's intelligence.
+Advanced Melee Skills
+1.	Whirlwind Slash
+o	Stats: Hits all enemies within a short radius for 120% of normal attack damage.
+o	Description: A rapid, spinning attack that damages all nearby enemies, useful for crowd control. Damage increases with the player's strength and skill level.
+2.	Guardian Stance
+o	Stats: Increases DEF by 30%, reduces SPD by 10%.
+o	Description: Assumes a defensive posture that significantly boosts defense at the cost of speed, ideal for tanking and protecting allies in combat.
+Precision Ranged Skills
+1.	Eagle Eye
+o	Stats: Next ranged attack gains +50% accuracy and +25% critical hit chance.
+o	Description: Focuses the character's aim to ensure the next shot is devastatingly precise. Particularly effective against evasive targets.
+2.	Silencing Shot
+o	Stats: Deals normal attack damage and silences the target for 5 seconds, preventing spell casting.
+o	Description: A specialized arrow or projectile that disrupts the target's ability to cast spells, useful for neutralizing magic-using enemies.
+Elemental Magic Skills
+1.	Inferno
+o	Stats: Engulfs a target area in flames, dealing 40 MPow + (INT * 2.5) damage over 5 seconds to all enemies within.
+o	Description: Summons a fierce conflagration that continuously damages enemies caught in the blaze, with the area and duration increasing with skill level.
+2.	Glacial Spike
+o	Stats: Instantly deals 30 MPow + (INT * 2) damage to a single target and freezes them for 3 seconds.
+o	Description: Conjures a sharp spike of ice that impales an enemy, dealing significant damage and temporarily immobilizing them.
+Support and Healing Skills
+1.	Aura of Vitality
+o	Stats: Heals the caster and nearby allies for 5 HP + (WIS * 1.5) per second for 10 seconds.
+o	Description: Radiates a healing energy that gradually restores health to the caster and allies, making it crucial for sustained fights.
+2.	Blessing of Might
+o	Stats: Increases AP and MPow of all allies by 15% for 30 seconds.
+o	Description: Bestows a magical enhancement on allies, boosting their physical and magical offensive capabilities temporarily.
+Stealth and Subterfuge Skills
+1.	Veil of Shadows
+o	Stats: Grants invisibility for 5 seconds or until the player attacks.
+o	Description: Envelops the character in shadows, rendering them invisible to enemies. Attacking or using skills breaks the invisibility.
+2.	Toxic Blade
+o	Stats: Coats the weapon with poison, adding 10% of the character's DEX as poison damage over 5 seconds on hit.
+o	Description: Applies a deadly toxin to the character's blade, dealing additional damage over time. The effect and duration of the poison increase with the character's dexterity and skill level.
+Area Control and Crowd Management Skills
+1.	Gravity Well
+o	Stats: Pulls all enemies within a medium radius towards the center, dealing 20 MPow + (INT * 1.5) damage.
+o	Description: Creates a concentrated area of intense gravity that draws enemies in, making them easy targets for area-of-effect attacks.
+2.	Thunderclap
+o	Stats: Stuns all nearby enemies for 2 seconds and deals 25 MPow + (STR * 1.5) damage.
+o	Description: Unleashes a powerful shockwave that stuns and damages nearby enemies, with the stun duration and damage scaling with the character's strength.
+Utility Skills
+1.	Shadow Step
+o	Stats: Reduces enemy detection range by 10% per level
+o	Description: Allows the user to move silently, reducing the chance of detection by enemies. Higher levels increase stealth effectiveness and reduce cooldowns on stealth-based attacks.
+o	Levels: Up to 3
+2.	Lorekeeper
+o	Stats: +10% to XP gained from exploration and puzzle-solving per level
+o	Description: Enhances the character's ability to gather knowledge from ancient texts and the environment, increasing the experience points gained from exploration and successful puzzle resolution.
+o	Levels: Up to 3
+Magic Spells
+1.	Healing Wave
+o	Stats: Restores 20 HP + (WIS * 2) per level to all party members
+o	Description: Summons a wave of healing energy that restores health to the caster and their allies. The amount of health restored increases with the caster's wisdom.
+o	Levels: Up to 4
+2.	Firestorm
+o	Stats: Base damage of 30 MPow + (INT * 2) to all enemies
+o	Description: Calls down a storm of fire upon all enemies, dealing significant damage. The damage increases with the caster's intelligence and skill level.
+o	Levels: Up to 4
+Passive Skills
+1.	Elemental Resistance
+o	Stats: Reduces elemental damage taken by 5% per level
+o	Description: The character gains increased resistance to elemental damage (fire, ice, lightning, etc.), reducing the damage taken from such attacks.
+o	Levels: Up to 3
+2.	Quick Learner
+o	Stats: +5% to all XP gains per level
+o	Description: Increases the rate at which the character gains experience points from all sources, allowing for faster leveling and skill acquisition.
+o	Levels: Up to 3
+Crafting Abilities
+1.	Master Alchemist
+o	Stats: Increases potency of crafted potions by 10% per level
+o	Description: Enhances the character's skill in alchemy, resulting in more potent potions. Higher levels unlock rare recipes and reduce resource requirements for crafting.
+o	Levels: Up to 3
+2.	Artificer's Touch
+o	Stats: Reduces crafting time for weapons and armor by 20% per level
+o	Description: Improves the character's efficiency in crafting weapons and armor, reducing the time and resources needed. Higher levels may unlock exclusive enhancements for crafted items.
+o	Levels: Up to 3
+Abilities
+Active Abilities
+1.	Time Dilation
+o	Effect: Let's you attack twice in quick succession.
+o	Usage: Consumes 50% of current MP.
+o	Cooldown: 120 seconds.
+o	Description: A powerful ability that momentarily alters the flow of time, allowing the caster to move and act rapidly compared to their foes. Ideal for escaping dangerous situations or launching a flurry of attacks.
+2.	Empower Weapon
+o	Effect: Temporarily enchants the caster's weapon to deal additional magical damage equal to 20% of their INT on hit.
+o	Usage: Consumes 30 MP.
+o	Duration: 15 seconds.
+o	Cooldown: 60 seconds.
+o	Description: Infuses the caster's weapon with raw magical energy, significantly increasing its damage output for a short period. Useful for quickly downing tough enemies.
+Passive Abilities
+1.	Arcane Resilience
+o	Effect: Reduces incoming magical damage by 15%.
+o	Description: The caster's deep understanding of arcane forces grants them a natural resistance to magical attacks, diminishing the damage they receive from spells.
+2.	Fleetfoot
+o	Effect: Increases movement speed by 20% when not in combat.
+o	Description: The caster's agility and reflexes are honed, allowing them to move swiftly across the battlefield or terrain, enhancing exploration and positioning in skirmishes.
+Special Actions
+1.	Mark of the Void
+o	Effect: Marks an enemy, increasing all damage they receive from the caster by 25% for 10 seconds.
+o	Usage: Consumes 20 MP.
+o	Cooldown: 30 seconds.
+o	Description: The caster brands an enemy with a sigil of the void, weakening their defenses against the caster's attacks. Perfect for focusing down priority targets in group battles.
+2.	Aetherial Step
+o	Effect: Teleports the caster to any visible location within a short distance.
+o	Usage: Consumes 40 MP.
+o	Cooldown: 45 seconds.
+o	Description: Bends space to instantly move the caster to a new position, bypassing obstacles and positioning them strategically. Useful for evasion or closing the gap to enemies.
+Utility Abilities
+1.	Nature's Bounty
+o	Effect: Reveals all resource nodes in the vicinity for 60 seconds.
+o	Usage: Consumes 10% of current MP.
+o	Cooldown: 90 seconds.
+o	Description: The caster attunes themselves to the natural world, revealing hidden resources nearby. Essential for gatherers and crafters seeking rare materials.
+2.	Ward of Light
+o	Effect: Creates a protective barrier around the caster that absorbs up to 50 HP worth of damage.
+o	Usage: Consumes 25 MP.
+o	Duration: Until broken or 30 seconds have passed.
+o	Cooldown: 60 seconds.
+o	Description: Conjures a shield of pure light that guards the caster against physical and magical attacks, providing a buffer against incoming damage.
+Elemental Abilities
+1.	Solar Flare
+o	Effect: Emits a powerful burst of light, blinding all enemies in front of the caster, reducing their accuracy by 50% for 5 seconds.
+o	Usage: Consumes 30 MP.
+o	Cooldown: 50 seconds.
+o	Description: Harnesses the raw power of the sun to unleash a blinding flare, useful for disorienting enemies in battle and creating opportunities for attack or retreat.
+2.	Earth's Grasp
+o	Effect: Summons earthen hands from the ground to immobilize a target enemy for 3 seconds.
+o	Usage: Consumes 25 MP.
+o	Cooldown: 40 seconds.
+o	Description: Calls upon the strength of the earth to hold an enemy in place, preventing movement and escape, ideal for setting up devastating combos.
+Defensive Abilities
+1.	Mirror Shield
+o	Effect: Reflects 25% of all direct magical damage back to the attacker for 10 seconds.
+o	Usage: Consumes 35 MP.
+o	Cooldown: 70 seconds.
+o	Description: Creates a magical barrier that not only protects the caster but also reflects a portion of incoming magical attacks, turning the enemy's power against them.
+2.	Phantom Veil
+o	Effect: Grants a 15% chance to evade physical attacks entirely for 8 seconds.
+o	Usage: Consumes 20 MP.
+o	Cooldown: 55 seconds.
+o	Description: Enshrouds the caster in a veil of shadows, making them difficult to hit with physical attacks, excellent for avoiding damage during critical moments.
+Support Abilities
+1.	Harmony
+o	Effect: Increases MP regeneration rate for all allies by 50% for 10 seconds.
+o	Usage: Consumes 40 MP.
+o	Cooldown: 120 seconds.
+o	Description: Sings an ancient melody that harmonizes the party's energies, rapidly restoring their magical power and enabling sustained spellcasting.
+2.	Guiding Light
+o	Effect: Reveals hidden traps and enemies within a large radius for 15 seconds.
+o	Usage: Consumes 15 MP.
+o	Cooldown: 90 seconds.
+o	Description: Illuminates the area with a guiding light, uncovering hidden dangers and providing strategic advantage in both combat and exploration.
+Strategic Abilities
+1.	Temporal Rift
+o	Effect: Creates a zone where all actions are slowed by 30% (except for the caster) for 6 seconds.
+o	Usage: Consumes 50 MP.
+o	Cooldown: 100 seconds.
+o	Description: Distorts time within a designated area, slowing enemies' movements and actions, allowing the caster and allies to outmaneuver and outpace foes.
+2.	Nether Swap
+o	Effect: Instantly swaps positions with a target ally or enemy within a medium range.
+o	Usage: Consumes 30 MP.
+o	Cooldown: 60 seconds.
+o	Description: Manipulates spatial dimensions to exchange places with another, used for repositioning in battle, escaping danger, or displacing enemies.
+Exploration Abilities
+1.	Windwalk
+o	Effect: Increases movement speed by 100% when not in combat for 15 seconds.
+o	Usage: Consumes 10% of current MP.
+o	Cooldown: 30 seconds.
+o	Description: Calls upon the wind to grant swift passage, enhancing speed dramatically for short bursts, ideal for exploration or reaching distant objectives quickly.
+2.	Spectral Sight
+o	Effect: Allows the caster to see through walls and obstacles, revealing hidden paths and items for 10 seconds.
+o	Usage: Consumes 25 MP.
+o	Cooldown: 80 seconds.
+o	Description: Enhances the caster's vision to perceive ethereal and hidden elements of the world, uncovering secrets that would otherwise remain concealed.
+MISC
+Cheats & Easter Eggs
+Cheats
+Implementation Considerations:
+•	Accessibility Cheats: These could include codes or menu options that don't necessarily make the game easier but make it more accessible to a wider audience. Examples might be unlimited time for decisions requiring quick responses, or an "auto-success" for skill checks, catering to players more interested in story progression than gameplay challenge.
+•	Gameplay Cheats: Traditional cheats might offer unlimited health, mana, or resources, or unlock all skills from the start. These should be implemented in such a way that they don't detract from the game's narrative experience but offer a different way to explore the game's worlds and stories.
+•	Activation Mechanism: Cheats can be activated through a hidden menu accessible by a specific key combination or by entering secret codes found within the game world. This menu could also include warnings about potential impacts on the gameplay experience, such as disabling achievements or altering the narrative flow.
+Balancing and Integration:
+•	Cheats should be balanced to ensure they don't undermine the core gameplay mechanics or narrative immersion. They could be disabled by default in critical narrative junctures to preserve story integrity.
+•	Consider implementing a system where using certain cheats might lead to unique narrative branches or reactions from characters, integrating the cheats into the game's world as rare or forbidden knowledge.
+Easter Eggs
+Types and Themes:
+•	Narrative Easter Eggs: Hidden stories, lore pieces, or references to the broader universe that players can uncover. These could be linked to specific actions, dialogue choices, or exploration achievements, rewarding curiosity and thorough exploration.
+•	Homages and References: Easter eggs that reference other games, literature, or media within the genre, offering a wink to fans and adding layers of cultural texture to the game world.
+•	Cosmetic Changes: Fun and quirky cosmetic changes to the game's interface, character appearances, or environments that can be triggered under specific conditions, adding a light-hearted element to the gameplay.
+Discovery Mechanisms:
+•	Easter eggs can be discovered through a variety of mechanisms, such as exploring hidden locations, interacting with seemingly mundane objects in specific ways, or completing quests in unconventional manners.
+•	Some Easter eggs might only be found by combining items or knowledge from across different worlds, encouraging cross-world exploration and experimentation.
+Community Engagement:
+•	Easter eggs and cheats can serve as a means of engaging the community, sparking discussions and shared experiences as players collaborate to uncover all the secrets the game has to offer.
+•	Consider hosting community events or challenges centered around discovering certain Easter eggs, fostering a sense of community and shared discovery.
+

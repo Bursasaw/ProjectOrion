@@ -1,0 +1,501 @@
+extends Node
+class_name TeamCoordinationAI
+
+# Team Coordination AI System
+# Enables AI to coordinate actions with allies
+
+signal team_strategy_selected(strategy_name, team_members)
+signal coordinated_action_performed(action, actor, target, coordination_bonus)
+signal team_synergy_activated(synergy_type, team_members, bonus)
+
+# Team Strategy Types
+enum TeamStrategy {
+	AGGRESSIVE,      # Focus on damage and elimination
+	DEFENSIVE,       # Focus on survival and protection
+	ELEMENTAL_SYNERGY, # Coordinate elemental attacks
+	SUPPORT_FOCUS,   # Focus on healing and buffing
+	BALANCED,        # Balanced approach
+	ADAPTIVE         # Change based on situation
+}
+
+# Coordination Levels
+enum CoordinationLevel {
+	NONE,           # No coordination
+	BASIC,          # Basic awareness
+	COORDINATED,    # Coordinated actions
+	SYNERGISTIC,    # Full synergy
+	MASTER          # Perfect coordination
+}
+
+# Team Configuration
+var current_strategy: TeamStrategy = TeamStrategy.BALANCED
+var coordination_level: CoordinationLevel = CoordinationLevel.BASIC
+var team_members: Array[CombatActor] = []
+var strategy_weights: Dictionary = {}
+
+# Synergy Systems
+var elemental_synergies: Dictionary = {}
+var class_synergies: Dictionary = {}
+var faction_synergies: Dictionary = {}
+
+# Coordination Memory
+var coordination_history: Array[Dictionary] = []
+var successful_combinations: Dictionary = {}
+
+func _ready():
+	"""Initialize the team coordination system"""
+	print("TeamCoordinationAI: Initialized")
+	initialize_synergy_systems()
+
+func initialize_synergy_systems():
+	"""Initialize all synergy systems"""
+	# Elemental synergies
+	elemental_synergies = {
+		"fire_ice": {"damage_multiplier": 1.5, "description": "Fire and ice create steam"},
+		"lightning_water": {"damage_multiplier": 2.0, "description": "Lightning conducts through water"},
+		"earth_wind": {"damage_multiplier": 1.3, "description": "Wind carries earth particles"},
+		"shadow_light": {"damage_multiplier": 1.8, "description": "Shadow and light create contrast"},
+		"void_tech": {"damage_multiplier": 1.6, "description": "Void corrupts technology"}
+	}
+	
+	# Class synergies
+	class_synergies = {
+		"warrior_mage": {"attack_bonus": 2, "magic_bonus": 2, "description": "Warrior protects mage"},
+		"cleric_rogue": {"healing_bonus": 1.5, "critical_bonus": 0.1, "description": "Cleric supports rogue"},
+		"mage_cleric": {"magic_bonus": 3, "healing_bonus": 1.3, "description": "Mage and cleric combine magic"},
+		"warrior_rogue": {"attack_bonus": 3, "critical_bonus": 0.15, "description": "Warrior and rogue coordinate attacks"}
+	}
+	
+	# Faction synergies
+	faction_synergies = {
+		"same_faction": {"morale_bonus": 1.2, "coordination_bonus": 1.3, "description": "Faction loyalty"},
+		"allied_factions": {"coordination_bonus": 1.1, "description": "Allied factions cooperate"},
+		"enemy_factions": {"penalty": 0.8, "description": "Enemy factions conflict"}
+	}
+	
+	print("TeamCoordinationAI: Synergy systems initialized")
+
+func set_team_members(members: Array[CombatActor]):
+	"""Set the current team members"""
+	team_members = members
+	print("TeamCoordinationAI: Team set with %d members" % team_members.size())
+	
+	# Analyze team composition
+	analyze_team_composition()
+
+func analyze_team_composition():
+	"""Analyze the current team composition for synergies"""
+	var composition = {
+		"classes": {},
+		"elements": {},
+		"factions": {},
+		"health_levels": {"high": 0, "medium": 0, "low": 0}
+	}
+	
+	for member in team_members:
+		# Count classes
+		if member.has_method("get_character_class"):
+			var character_class = member.get_character_class().to_lower()
+			if not composition["classes"].has(character_class):
+				composition["classes"][character_class] = 0
+			composition["classes"][character_class] += 1
+		
+		# Count elements
+		if member.has_method("get_elemental_affinity"):
+			var element = member.get_elemental_affinity()
+			if not composition["elements"].has(element):
+				composition["elements"][element] = 0
+			composition["elements"][element] += 1
+		
+		# Count factions
+		if member.has_method("get_faction"):
+			var faction = member.get_faction()
+			if not composition["factions"].has(faction):
+				composition["factions"][faction] = 0
+			composition["factions"][faction] += 1
+		
+		# Analyze health levels
+		var health_ratio = float(member.health_points) / float(member.max_health_points)
+		if health_ratio > 0.7:
+			composition["health_levels"]["high"] += 1
+		elif health_ratio > 0.3:
+			composition["health_levels"]["medium"] += 1
+		else:
+			composition["health_levels"]["low"] += 1
+	
+	print("TeamCoordinationAI: Team composition analyzed")
+	return composition
+
+func select_team_strategy(enemies: Array) -> TeamStrategy:
+	"""Select the best team strategy based on situation"""
+	var composition = analyze_team_composition()
+	var enemy_count = enemies.size()
+	var team_count = team_members.size()
+	
+	# Calculate strategy scores
+	var strategy_scores = {}
+	
+	# Aggressive strategy
+	var aggressive_score = 0.0
+	if team_count > enemy_count:
+		aggressive_score += 20
+	if composition["health_levels"]["high"] > composition["health_levels"]["low"]:
+		aggressive_score += 15
+	if composition["classes"].has("warrior") and composition["classes"]["warrior"] > 0:
+		aggressive_score += 10
+	strategy_scores[TeamStrategy.AGGRESSIVE] = aggressive_score
+	
+	# Defensive strategy
+	var defensive_score = 0.0
+	if team_count < enemy_count:
+		defensive_score += 25
+	if composition["health_levels"]["low"] > 0:
+		defensive_score += 20
+	if composition["classes"].has("cleric") and composition["classes"]["cleric"] > 0:
+		defensive_score += 15
+	strategy_scores[TeamStrategy.DEFENSIVE] = defensive_score
+	
+	# Elemental synergy strategy
+	var elemental_score = 0.0
+	for element in composition["elements"]:
+		if composition["elements"][element] > 1:
+			elemental_score += 15
+	if composition["classes"].has("mage") and composition["classes"]["mage"] > 0:
+		elemental_score += 10
+	strategy_scores[TeamStrategy.ELEMENTAL_SYNERGY] = elemental_score
+	
+	# Support focus strategy
+	var support_score = 0.0
+	if composition["classes"].has("cleric") and composition["classes"]["cleric"] > 0:
+		support_score += 20
+	if composition["health_levels"]["low"] > 0:
+		support_score += 15
+	strategy_scores[TeamStrategy.SUPPORT_FOCUS] = support_score
+	
+	# Balanced strategy (default)
+	strategy_scores[TeamStrategy.BALANCED] = 10.0
+	
+	# Select best strategy
+	var best_strategy = TeamStrategy.BALANCED
+	var best_score = -INF
+	
+	for strategy in strategy_scores:
+		if strategy_scores[strategy] > best_score:
+			best_score = strategy_scores[strategy]
+			best_strategy = strategy
+	
+	current_strategy = best_strategy
+	var strategy_name = TeamStrategy.keys()[best_strategy]
+	team_strategy_selected.emit(strategy_name, team_members)
+	
+	# Emit synergy activation if applicable
+	if best_strategy == TeamStrategy.ELEMENTAL_SYNERGY:
+		var synergy_bonus = 1.5
+		team_synergy_activated.emit("elemental", team_members, synergy_bonus)
+	
+	print("TeamCoordinationAI: Selected strategy: %s (score: %.1f)" % [strategy_name, best_score])
+	return best_strategy
+
+func coordinate_team_actions(enemies: Array) -> Dictionary:
+	"""Coordinate actions for all team members"""
+	var coordinated_actions = {}
+	var strategy = select_team_strategy(enemies)
+	
+	for member in team_members:
+		var action = select_coordinated_action(member, strategy, enemies)
+		coordinated_actions[member] = action
+	
+	return coordinated_actions
+
+func select_coordinated_action(member: CombatActor, strategy: TeamStrategy, enemies: Array) -> CombatAction:
+	"""Select an action for a team member based on strategy"""
+	var available_actions = member.get_available_actions()
+	if available_actions.size() == 0:
+		return null
+	
+	match strategy:
+		TeamStrategy.AGGRESSIVE:
+			return select_aggressive_action(available_actions, member, enemies)
+		TeamStrategy.DEFENSIVE:
+			return select_defensive_action(available_actions, member, enemies)
+		TeamStrategy.ELEMENTAL_SYNERGY:
+			return select_elemental_action(available_actions, member, enemies)
+		TeamStrategy.SUPPORT_FOCUS:
+			return select_support_action(available_actions, member, enemies)
+		TeamStrategy.BALANCED:
+			return select_balanced_action(available_actions, member, enemies)
+		TeamStrategy.ADAPTIVE:
+			return select_adaptive_action(available_actions, member, enemies)
+	
+	return available_actions[0]  # Fallback
+
+func select_aggressive_action(actions: Array, _member: CombatActor, enemies: Array) -> CombatAction:
+	"""Select aggressive action for team member"""
+	var best_action = null
+	var best_score = -INF
+	
+	for action in actions:
+		var score = 0.0
+		
+		# Prioritize high damage actions
+		score += action.power * 0.5
+		
+		# Prioritize attack actions
+		if action.action_type == CombatAction.ActionType.ATTACK:
+			score += 20
+		
+		# Consider elemental advantage
+		if action.element != "":
+			for enemy in enemies:
+				if enemy.has_method("get_elemental_affinity"):
+					var enemy_element = enemy.get_elemental_affinity()
+					var effectiveness = get_elemental_effectiveness(action.element, enemy_element)
+					score += effectiveness * 10
+		
+		# Consider critical chance
+		score += action.critical_chance * 50
+		
+		if score > best_score:
+			best_score = score
+			best_action = action
+	
+	return best_action
+
+func select_defensive_action(actions: Array, _member: CombatActor, _enemies: Array) -> CombatAction:
+	"""Select defensive action for team member"""
+	var best_action = null
+	var best_score = -INF
+	
+	for action in actions:
+		var score = 0.0
+		
+		# Prioritize healing and buff actions
+		if action.action_type == CombatAction.ActionType.HEAL:
+			score += 30
+		elif action.action_type == CombatAction.ActionType.BUFF:
+			score += 25
+		
+		# Consider defensive spells
+		if action.name.to_lower().contains("shield") or action.name.to_lower().contains("protect"):
+			score += 20
+		
+		# Consider support actions
+		if action.name.to_lower().contains("heal") or action.name.to_lower().contains("cure"):
+			score += 15
+		
+		# Avoid offensive actions when defensive
+		if action.action_type == CombatAction.ActionType.ATTACK:
+			score *= 0.5
+		
+		if score > best_score:
+			best_score = score
+			best_action = action
+	
+	return best_action
+
+func select_elemental_action(actions: Array, member: CombatActor, _enemies: Array) -> CombatAction:
+	"""Select elemental action for team member"""
+	var best_action = null
+	var best_score = -INF
+	
+	for action in actions:
+		var score = 0.0
+		
+		# Prioritize elemental actions
+		if action.element != "":
+			score += 15
+			
+			# Check for elemental synergies with team
+			for ally in team_members:
+				if ally != member and ally.has_method("get_elemental_affinity"):
+					var ally_element = ally.get_elemental_affinity()
+					var synergy_key = "%s_%s" % [action.element, ally_element]
+					if elemental_synergies.has(synergy_key):
+						score += elemental_synergies[synergy_key]["damage_multiplier"] * 10
+		
+		# Consider spell actions
+		if action.action_type == CombatAction.ActionType.SPELL:
+			score += 10
+		
+		if score > best_score:
+			best_score = score
+			best_action = action
+	
+	return best_action
+
+func select_support_action(actions: Array, _member: CombatActor, _enemies: Array) -> CombatAction:
+	"""Select support action for team member"""
+	var best_action = null
+	var best_score = -INF
+	
+	for action in actions:
+		var score = 0.0
+		
+		# Prioritize healing actions
+		if action.action_type == CombatAction.ActionType.HEAL:
+			score += 40
+		
+		# Prioritize buff actions
+		if action.action_type == CombatAction.ActionType.BUFF:
+			score += 30
+		
+		# Consider support spells
+		if action.name.to_lower().contains("heal") or action.name.to_lower().contains("cure"):
+			score += 25
+		
+		# Consider protective spells
+		if action.name.to_lower().contains("shield") or action.name.to_lower().contains("protect"):
+			score += 20
+		
+		# Avoid offensive actions when supporting
+		if action.action_type == CombatAction.ActionType.ATTACK:
+			score *= 0.3
+		
+		if score > best_score:
+			best_score = score
+			best_action = action
+	
+	return best_action
+
+func select_balanced_action(actions: Array, _member: CombatActor, enemies: Array) -> CombatAction:
+	"""Select balanced action for team member"""
+	var best_action = null
+	var best_score = -INF
+	
+	for action in actions:
+		var score = 0.0
+		
+		# Base action effectiveness
+		score += action.power * 0.3
+		
+		# Consider action type balance
+		match action.action_type:
+			CombatAction.ActionType.ATTACK:
+				score += 15
+			CombatAction.ActionType.SPELL:
+				score += 12
+			CombatAction.ActionType.HEAL:
+				score += 18
+			CombatAction.ActionType.BUFF:
+				score += 16
+		
+		# Consider elemental advantage
+		if action.element != "":
+			for enemy in enemies:
+				if enemy.has_method("get_elemental_affinity"):
+					var enemy_element = enemy.get_elemental_affinity()
+					var effectiveness = get_elemental_effectiveness(action.element, enemy_element)
+					score += effectiveness * 8
+		
+		if score > best_score:
+			best_score = score
+			best_action = action
+	
+	return best_action
+
+func select_adaptive_action(actions: Array, member: CombatActor, enemies: Array) -> CombatAction:
+	"""Select adaptive action based on current situation"""
+	var health_ratio = float(member.health_points) / float(member.max_health_points)
+	
+	if health_ratio < 0.3:
+		# Low health - prioritize defensive actions
+		return select_defensive_action(actions, member, enemies)
+	elif health_ratio > 0.7 and enemies.size() < team_members.size():
+		# High health and advantage - prioritize aggressive actions
+		return select_aggressive_action(actions, member, enemies)
+	else:
+		# Balanced situation
+		return select_balanced_action(actions, member, enemies)
+
+func calculate_team_synergy_bonus(action: CombatAction, actor: CombatActor, target: CombatActor) -> float:
+	"""Calculate team synergy bonus for an action"""
+	var synergy_bonus = 1.0
+	
+	# Class synergy
+	if actor.has_method("get_character_class") and target.has_method("get_character_class"):
+		var actor_class = actor.get_character_class().to_lower()
+		var target_class = target.get_character_class().to_lower()
+		var synergy_key = "%s_%s" % [actor_class, target_class]
+		
+		if class_synergies.has(synergy_key):
+			var synergy = class_synergies[synergy_key]
+			if action.action_type == CombatAction.ActionType.ATTACK and synergy.has("attack_bonus"):
+				synergy_bonus += synergy["attack_bonus"] * 0.1
+			elif action.action_type == CombatAction.ActionType.HEAL and synergy.has("healing_bonus"):
+				synergy_bonus += synergy["healing_bonus"] * 0.1
+	
+	# Elemental synergy
+	if action.element != "" and actor.has_method("get_elemental_affinity"):
+		var actor_element = actor.get_elemental_affinity()
+		var synergy_key = "%s_%s" % [action.element, actor_element]
+		
+		if elemental_synergies.has(synergy_key):
+			var synergy = elemental_synergies[synergy_key]
+			synergy_bonus += synergy["damage_multiplier"] * 0.1
+	
+	# Faction synergy
+	if actor.has_method("get_faction") and target.has_method("get_faction"):
+		var actor_faction = actor.get_faction()
+		var target_faction = target.get_faction()
+		
+		if actor_faction == target_faction:
+			var synergy = faction_synergies["same_faction"]
+			synergy_bonus += synergy["coordination_bonus"] * 0.1
+	
+	return synergy_bonus
+
+func apply_team_coordination(action: CombatAction, actor: CombatActor, target: CombatActor):
+	"""Apply team coordination effects to an action"""
+	var coordination_bonus = calculate_team_synergy_bonus(action, actor, target)
+	
+	# Apply coordination bonus
+	action.power = int(action.power * coordination_bonus)
+	
+	# Record coordination
+	var coordination_data = {
+		"action": action.name,
+		"actor": actor.character_name,
+		"target": target.character_name,
+		"coordination_bonus": coordination_bonus,
+		"strategy": TeamStrategy.keys()[current_strategy],
+		"timestamp": Time.get_unix_time_from_system()
+	}
+	
+	coordination_history.append(coordination_data)
+	
+	# Keep history manageable
+	if coordination_history.size() > 50:
+		coordination_history.pop_front()
+	
+	coordinated_action_performed.emit(action, actor, target, coordination_bonus)
+	
+	print("TeamCoordinationAI: Applied coordination bonus %.2fx to %s" % [coordination_bonus, action.name])
+
+func get_elemental_effectiveness(attack_element: String, defense_element: String) -> float:
+	"""Get elemental effectiveness multiplier"""
+	var combat_manager = get_node("/root/CombatManager")
+	if combat_manager and combat_manager.elemental_effectiveness.has(attack_element):
+		var effectiveness = combat_manager.elemental_effectiveness[attack_element]
+		return effectiveness.get(defense_element, 1.0)
+	return 1.0
+
+func get_coordination_statistics() -> Dictionary:
+	"""Get team coordination statistics"""
+	return {
+		"current_strategy": TeamStrategy.keys()[current_strategy],
+		"coordination_level": CoordinationLevel.keys()[coordination_level],
+		"team_members": team_members.size(),
+		"coordination_history_size": coordination_history.size(),
+		"successful_combinations": successful_combinations.size()
+	}
+
+func set_coordination_level(level: CoordinationLevel):
+	"""Set the coordination level"""
+	coordination_level = level
+	print("TeamCoordinationAI: Coordination level set to %s" % CoordinationLevel.keys()[level])
+
+func clear_coordination_history():
+	"""Clear coordination history"""
+	coordination_history.clear()
+	successful_combinations.clear()
+	print("TeamCoordinationAI: Coordination history cleared") 

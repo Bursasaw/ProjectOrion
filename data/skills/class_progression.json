@@ -1,0 +1,890 @@
+{
+  "version": "0.13.0",
+  "class_tiers": {
+    "base_classes": {
+      "unlock_level": 1,
+      "classes": {
+        "warrior": {
+          "id": "warrior",
+          "name": "Warrior",
+          "description": "A master of physical combat and weapon techniques",
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["utility_expertise"],
+          "base_stats": {
+            "health": 100,
+            "mana": 50,
+            "strength": 15,
+            "intelligence": 8,
+            "agility": 10,
+            "charisma": 8
+          },
+          "skill_bonuses": {
+            "combat_mastery": 0.25,
+            "utility_expertise": 0.10
+          },
+          "unlock_requirements": ["level_1"]
+        },
+        "mage": {
+          "id": "mage",
+          "name": "Mage",
+          "description": "A master of arcane arts and elemental magic",
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "base_stats": {
+            "health": 70,
+            "mana": 120,
+            "strength": 6,
+            "intelligence": 18,
+            "agility": 8,
+            "charisma": 10
+          },
+          "skill_bonuses": {
+            "arcane_arts": 0.25,
+            "emotional_intelligence": 0.10
+          },
+          "unlock_requirements": ["level_1"]
+        },
+        "rogue": {
+          "id": "rogue",
+          "name": "Rogue",
+          "description": "A master of stealth and precision strikes",
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "base_stats": {
+            "health": 80,
+            "mana": 60,
+            "strength": 8,
+            "intelligence": 10,
+            "agility": 18,
+            "charisma": 12
+          },
+          "skill_bonuses": {
+            "combat_mastery": 0.20,
+            "emotional_intelligence": 0.15
+          },
+          "unlock_requirements": ["level_1"]
+        },
+        "healer": {
+          "id": "healer",
+          "name": "Healer",
+          "description": "A master of healing and support magic",
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "base_stats": {
+            "health": 90,
+            "mana": 100,
+            "strength": 8,
+            "intelligence": 12,
+            "agility": 8,
+            "charisma": 16
+          },
+          "skill_bonuses": {
+            "emotional_intelligence": 0.25,
+            "arcane_arts": 0.10
+          },
+          "unlock_requirements": ["level_1"]
+        },
+        "explorer": {
+          "id": "explorer",
+          "name": "Explorer",
+          "description": "A master of exploration and world interaction",
+          "primary_skill_tree": "utility_expertise",
+          "secondary_skill_trees": ["world_resonance"],
+          "base_stats": {
+            "health": 85,
+            "mana": 70,
+            "strength": 10,
+            "intelligence": 10,
+            "agility": 14,
+            "charisma": 10
+          },
+          "skill_bonuses": {
+            "utility_expertise": 0.25,
+            "world_resonance": 0.10
+          },
+          "unlock_requirements": ["level_1"]
+        },
+        "technomancer": {
+          "id": "technomancer",
+          "name": "Technomancer",
+          "description": "A master of technology and fusion magic",
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["utility_expertise"],
+          "base_stats": {
+            "health": 75,
+            "mana": 110,
+            "strength": 7,
+            "intelligence": 16,
+            "agility": 9,
+            "charisma": 11
+          },
+          "skill_bonuses": {
+            "arcane_arts": 0.20,
+            "utility_expertise": 0.15
+          },
+          "unlock_requirements": ["level_1"]
+        },
+        "dragon_knight": {
+          "id": "dragon_knight",
+          "name": "Dragon Knight",
+          "description": "A warrior with dragon blood and fire magic",
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["arcane_arts"],
+          "base_stats": {
+            "health": 110,
+            "mana": 80,
+            "strength": 16,
+            "intelligence": 9,
+            "agility": 11,
+            "charisma": 12
+          },
+          "skill_bonuses": {
+            "combat_mastery": 0.25,
+            "arcane_arts": 0.10
+          },
+          "unlock_requirements": ["level_1"]
+        },
+        "shadow_walker": {
+          "id": "shadow_walker",
+          "name": "Shadow Walker",
+          "description": "A master of shadows and void magic",
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "base_stats": {
+            "health": 75,
+            "mana": 90,
+            "strength": 7,
+            "intelligence": 14,
+            "agility": 16,
+            "charisma": 14
+          },
+          "skill_bonuses": {
+            "emotional_intelligence": 0.25,
+            "arcane_arts": 0.10
+          },
+          "unlock_requirements": ["level_1"]
+        },
+        "reality_weaver": {
+          "id": "reality_weaver",
+          "name": "Reality Weaver",
+          "description": "A master of reality manipulation and will magic",
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["world_resonance"],
+          "base_stats": {
+            "health": 70,
+            "mana": 130,
+            "strength": 5,
+            "intelligence": 20,
+            "agility": 9,
+            "charisma": 15
+          },
+          "skill_bonuses": {
+            "arcane_arts": 0.30,
+            "world_resonance": 0.15
+          },
+          "unlock_requirements": ["level_1"]
+        },
+        "void_mage": {
+          "id": "void_mage",
+          "name": "Void Mage",
+          "description": "A master of void magic and dimensional travel",
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["world_resonance"],
+          "base_stats": {
+            "health": 65,
+            "mana": 140,
+            "strength": 4,
+            "intelligence": 22,
+            "agility": 8,
+            "charisma": 13
+          },
+          "skill_bonuses": {
+            "arcane_arts": 0.35,
+            "world_resonance": 0.20
+          },
+          "unlock_requirements": ["level_1"]
+        }
+      }
+    },
+    "advanced_classes": {
+      "unlock_level": 10,
+      "classes": {
+        "berserker": {
+          "id": "berserker",
+          "name": "Berserker",
+          "description": "A warrior who channels rage into devastating power",
+          "prerequisites": ["warrior", "combat_mastery_10"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "combat_mastery": 0.35,
+            "emotional_intelligence": 0.15,
+            "rage_bonus": 0.25
+          }
+        },
+        "battlemage": {
+          "id": "battlemage",
+          "name": "Battlemage",
+          "description": "A warrior-mage who combines physical and magical combat",
+          "prerequisites": ["warrior", "mage", "combat_mastery_8", "arcane_arts_8"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "combat_mastery": 0.25,
+            "arcane_arts": 0.25,
+            "spell_sword_bonus": 0.30
+          }
+        },
+        "assassin": {
+          "id": "assassin",
+          "name": "Assassin",
+          "description": "A rogue who specializes in deadly precision strikes",
+          "prerequisites": ["rogue", "combat_mastery_8", "emotional_intelligence_8"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "combat_mastery": 0.30,
+            "emotional_intelligence": 0.20,
+            "stealth_bonus": 0.25
+          }
+        },
+        "cleric": {
+          "id": "cleric",
+          "name": "Cleric",
+          "description": "A healer who channels divine power for healing and protection",
+          "prerequisites": ["healer", "emotional_intelligence_10"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "emotional_intelligence": 0.35,
+            "arcane_arts": 0.15,
+            "divine_bonus": 0.25
+          }
+        },
+        "ranger": {
+          "id": "ranger",
+          "name": "Ranger",
+          "description": "An explorer who masters ranged combat and wilderness survival",
+          "prerequisites": ["explorer", "utility_expertise_10"],
+          "primary_skill_tree": "utility_expertise",
+          "secondary_skill_trees": ["combat_mastery"],
+          "skill_bonuses": {
+            "utility_expertise": 0.35,
+            "combat_mastery": 0.15,
+            "ranged_bonus": 0.25
+          }
+        },
+        "cyber_mage": {
+          "id": "cyber_mage",
+          "name": "Cyber Mage",
+          "description": "A technomancer who fuses technology with magic",
+          "prerequisites": ["technomancer", "arcane_arts_10"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["utility_expertise"],
+          "skill_bonuses": {
+            "arcane_arts": 0.30,
+            "utility_expertise": 0.20,
+            "tech_magic_bonus": 0.25
+          }
+        },
+        "dragon_lord": {
+          "id": "dragon_lord",
+          "name": "Dragon Lord",
+          "description": "A dragon knight who commands fire and dragon magic",
+          "prerequisites": ["dragon_knight", "combat_mastery_8", "arcane_arts_8"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "combat_mastery": 0.30,
+            "arcane_arts": 0.25,
+            "dragon_magic_bonus": 0.30
+          }
+        },
+        "shadow_lord": {
+          "id": "shadow_lord",
+          "name": "Shadow Lord",
+          "description": "A shadow walker who commands darkness and void",
+          "prerequisites": ["shadow_walker", "emotional_intelligence_10"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "emotional_intelligence": 0.35,
+            "arcane_arts": 0.20,
+            "shadow_magic_bonus": 0.30
+          }
+        },
+        "reality_bender": {
+          "id": "reality_bender",
+          "name": "Reality Bender",
+          "description": "A reality weaver who manipulates the fabric of existence",
+          "prerequisites": ["reality_weaver", "arcane_arts_10"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "arcane_arts": 0.35,
+            "world_resonance": 0.25,
+            "reality_magic_bonus": 0.30
+          }
+        },
+        "void_lord": {
+          "id": "void_lord",
+          "name": "Void Lord",
+          "description": "A void mage who commands the space between worlds",
+          "prerequisites": ["void_mage", "arcane_arts_10"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "arcane_arts": 0.40,
+            "world_resonance": 0.25,
+            "void_magic_bonus": 0.35
+          }
+        }
+      }
+    },
+    "master_classes": {
+      "unlock_level": 25,
+      "classes": {
+        "warlord": {
+          "id": "warlord",
+          "name": "Warlord",
+          "description": "A master of battlefield tactics and leadership",
+          "prerequisites": ["berserker", "battlemage", "combat_mastery_20"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "combat_mastery": 0.45,
+            "emotional_intelligence": 0.20,
+            "leadership_bonus": 0.30
+          }
+        },
+        "archmage": {
+          "id": "archmage",
+          "name": "Archmage",
+          "description": "A master of all forms of magic and reality manipulation",
+          "prerequisites": ["battlemage", "cleric", "arcane_arts_20"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "arcane_arts": 0.45,
+            "emotional_intelligence": 0.20,
+            "reality_manipulation": 0.30
+          }
+        },
+        "shadowblade": {
+          "id": "shadowblade",
+          "name": "Shadowblade",
+          "description": "A master of stealth and psychological warfare",
+          "prerequisites": ["assassin", "emotional_intelligence_20"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "combat_mastery": 0.35,
+            "emotional_intelligence": 0.30,
+            "shadow_bonus": 0.35
+          }
+        },
+        "high_priest": {
+          "id": "high_priest",
+          "name": "High Priest",
+          "description": "A master of divine magic and spiritual leadership",
+          "prerequisites": ["cleric", "emotional_intelligence_20"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "emotional_intelligence": 0.45,
+            "arcane_arts": 0.20,
+            "divine_power": 0.30
+          }
+        },
+        "pathfinder": {
+          "id": "pathfinder",
+          "name": "Pathfinder",
+          "description": "A master of exploration and world manipulation",
+          "prerequisites": ["ranger", "utility_expertise_20"],
+          "primary_skill_tree": "utility_expertise",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "utility_expertise": 0.45,
+            "world_resonance": 0.20,
+            "world_mastery": 0.30
+          }
+        },
+        "cyber_lord": {
+          "id": "cyber_lord",
+          "name": "Cyber Lord",
+          "description": "A master of technology and digital magic",
+          "prerequisites": ["cyber_mage", "arcane_arts_20"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["utility_expertise"],
+          "skill_bonuses": {
+            "arcane_arts": 0.40,
+            "utility_expertise": 0.25,
+            "digital_magic": 0.35
+          }
+        },
+        "dragon_emperor": {
+          "id": "dragon_emperor",
+          "name": "Dragon Emperor",
+          "description": "A master of dragon magic and fire manipulation",
+          "prerequisites": ["dragon_lord", "combat_mastery_20"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "combat_mastery": 0.40,
+            "arcane_arts": 0.30,
+            "dragon_emperor_magic": 0.35
+          }
+        },
+        "shadow_emperor": {
+          "id": "shadow_emperor",
+          "name": "Shadow Emperor",
+          "description": "A master of shadows and void manipulation",
+          "prerequisites": ["shadow_lord", "emotional_intelligence_20"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "emotional_intelligence": 0.45,
+            "arcane_arts": 0.25,
+            "shadow_emperor_magic": 0.35
+          }
+        },
+        "reality_emperor": {
+          "id": "reality_emperor",
+          "name": "Reality Emperor",
+          "description": "A master of reality manipulation and creation",
+          "prerequisites": ["reality_bender", "arcane_arts_20"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "arcane_arts": 0.50,
+            "world_resonance": 0.30,
+            "reality_emperor_magic": 0.40
+          }
+        },
+        "void_emperor": {
+          "id": "void_emperor",
+          "name": "Void Emperor",
+          "description": "A master of void magic and dimensional manipulation",
+          "prerequisites": ["void_lord", "arcane_arts_20"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "arcane_arts": 0.55,
+            "world_resonance": 0.30,
+            "void_emperor_magic": 0.40
+          }
+        }
+      }
+    },
+    "prestige_classes": {
+      "unlock_level": 50,
+      "classes": {
+        "war_god": {
+          "id": "war_god",
+          "name": "War God",
+          "description": "A legendary warrior who transcends mortal combat",
+          "prerequisites": ["warlord", "combat_mastery_40"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "combat_mastery": 0.60,
+            "emotional_intelligence": 0.25,
+            "divine_combat": 0.40
+          }
+        },
+        "reality_weaver": {
+          "id": "reality_weaver",
+          "name": "Reality Weaver",
+          "description": "A master of reality manipulation and creation",
+          "prerequisites": ["archmage", "arcane_arts_40"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "arcane_arts": 0.60,
+            "emotional_intelligence": 0.25,
+            "reality_creation": 0.40
+          }
+        },
+        "death_dealer": {
+          "id": "death_dealer",
+          "name": "Death Dealer",
+          "description": "A master of death and psychological manipulation",
+          "prerequisites": ["shadowblade", "emotional_intelligence_40"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["combat_mastery"],
+          "skill_bonuses": {
+            "emotional_intelligence": 0.60,
+            "combat_mastery": 0.25,
+            "death_magic": 0.40
+          }
+        },
+        "divine_avatar": {
+          "id": "divine_avatar",
+          "name": "Divine Avatar",
+          "description": "A manifestation of divine power and spiritual transcendence",
+          "prerequisites": ["high_priest", "emotional_intelligence_40"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "emotional_intelligence": 0.60,
+            "arcane_arts": 0.25,
+            "divine_transcendence": 0.40
+          }
+        },
+        "world_walker": {
+          "id": "world_walker",
+          "name": "World Walker",
+          "description": "A master of dimensional travel and world manipulation",
+          "prerequisites": ["pathfinder", "utility_expertise_40"],
+          "primary_skill_tree": "utility_expertise",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "utility_expertise": 0.60,
+            "world_resonance": 0.25,
+            "dimensional_mastery": 0.40
+          }
+        },
+        "digital_god": {
+          "id": "digital_god",
+          "name": "Digital God",
+          "description": "A master of digital reality and technological transcendence",
+          "prerequisites": ["cyber_lord", "arcane_arts_40"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["utility_expertise"],
+          "skill_bonuses": {
+            "arcane_arts": 0.55,
+            "utility_expertise": 0.30,
+            "digital_transcendence": 0.40
+          }
+        },
+        "dragon_god": {
+          "id": "dragon_god",
+          "name": "Dragon God",
+          "description": "A master of dragon magic and fire transcendence",
+          "prerequisites": ["dragon_emperor", "combat_mastery_40"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "combat_mastery": 0.55,
+            "arcane_arts": 0.35,
+            "dragon_transcendence": 0.40
+          }
+        },
+        "shadow_god": {
+          "id": "shadow_god",
+          "name": "Shadow God",
+          "description": "A master of shadows and void transcendence",
+          "prerequisites": ["shadow_emperor", "emotional_intelligence_40"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "emotional_intelligence": 0.60,
+            "arcane_arts": 0.30,
+            "shadow_transcendence": 0.40
+          }
+        },
+        "reality_god": {
+          "id": "reality_god",
+          "name": "Reality God",
+          "description": "A master of reality manipulation and creation transcendence",
+          "prerequisites": ["reality_emperor", "arcane_arts_40"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "arcane_arts": 0.65,
+            "world_resonance": 0.35,
+            "reality_transcendence": 0.45
+          }
+        },
+        "void_god": {
+          "id": "void_god",
+          "name": "Void God",
+          "description": "A master of void magic and dimensional transcendence",
+          "prerequisites": ["void_emperor", "arcane_arts_40"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "arcane_arts": 0.70,
+            "world_resonance": 0.35,
+            "void_transcendence": 0.45
+          }
+        }
+      }
+    },
+    "legendary_classes": {
+      "unlock_level": 75,
+      "classes": {
+        "cosmic_warrior": {
+          "id": "cosmic_warrior",
+          "name": "Cosmic Warrior",
+          "description": "A warrior who transcends reality itself",
+          "prerequisites": ["war_god", "combat_mastery_60"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "combat_mastery": 0.80,
+            "emotional_intelligence": 0.30,
+            "cosmic_combat": 0.50
+          }
+        },
+        "dimensional_sage": {
+          "id": "dimensional_sage",
+          "name": "Dimensional Sage",
+          "description": "A master of dimensional magic and reality creation",
+          "prerequisites": ["reality_weaver", "arcane_arts_60"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "arcane_arts": 0.80,
+            "emotional_intelligence": 0.30,
+            "dimensional_magic": 0.50
+          }
+        },
+        "phantom_lord": {
+          "id": "phantom_lord",
+          "name": "Phantom Lord",
+          "description": "A master of shadows and psychological transcendence",
+          "prerequisites": ["death_dealer", "emotional_intelligence_60"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["combat_mastery"],
+          "skill_bonuses": {
+            "emotional_intelligence": 0.80,
+            "combat_mastery": 0.30,
+            "phantom_power": 0.50
+          }
+        },
+        "celestial_guardian": {
+          "id": "celestial_guardian",
+          "name": "Celestial Guardian",
+          "description": "A guardian of cosmic balance and spiritual harmony",
+          "prerequisites": ["divine_avatar", "emotional_intelligence_60"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "emotional_intelligence": 0.80,
+            "arcane_arts": 0.30,
+            "celestial_power": 0.50
+          }
+        },
+        "void_walker": {
+          "id": "void_walker",
+          "name": "Void Walker",
+          "description": "A master of the void and dimensional transcendence",
+          "prerequisites": ["world_walker", "utility_expertise_60"],
+          "primary_skill_tree": "utility_expertise",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "utility_expertise": 0.80,
+            "world_resonance": 0.30,
+            "void_mastery": 0.50
+          }
+        },
+        "digital_transcendent": {
+          "id": "digital_transcendent",
+          "name": "Digital Transcendent",
+          "description": "A master of digital reality and technological transcendence",
+          "prerequisites": ["digital_god", "arcane_arts_60"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["utility_expertise"],
+          "skill_bonuses": {
+            "arcane_arts": 0.75,
+            "utility_expertise": 0.35,
+            "digital_transcendence": 0.50
+          }
+        },
+        "dragon_transcendent": {
+          "id": "dragon_transcendent",
+          "name": "Dragon Transcendent",
+          "description": "A master of dragon magic and fire transcendence",
+          "prerequisites": ["dragon_god", "combat_mastery_60"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "combat_mastery": 0.75,
+            "arcane_arts": 0.40,
+            "dragon_transcendence": 0.50
+          }
+        },
+        "shadow_transcendent": {
+          "id": "shadow_transcendent",
+          "name": "Shadow Transcendent",
+          "description": "A master of shadows and void transcendence",
+          "prerequisites": ["shadow_god", "emotional_intelligence_60"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "emotional_intelligence": 0.80,
+            "arcane_arts": 0.35,
+            "shadow_transcendence": 0.50
+          }
+        },
+        "reality_transcendent": {
+          "id": "reality_transcendent",
+          "name": "Reality Transcendent",
+          "description": "A master of reality manipulation and creation transcendence",
+          "prerequisites": ["reality_god", "arcane_arts_60"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "arcane_arts": 0.85,
+            "world_resonance": 0.40,
+            "reality_transcendence": 0.55
+          }
+        },
+        "void_transcendent": {
+          "id": "void_transcendent",
+          "name": "Void Transcendent",
+          "description": "A master of void magic and dimensional transcendence",
+          "prerequisites": ["void_god", "arcane_arts_60"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "arcane_arts": 0.90,
+            "world_resonance": 0.40,
+            "void_transcendence": 0.55
+          }
+        }
+      }
+    },
+    "mythic_classes": {
+      "unlock_level": 100,
+      "classes": {
+        "cosmic_emperor": {
+          "id": "cosmic_emperor",
+          "name": "Cosmic Emperor",
+          "description": "A being who transcends all reality and commands cosmic forces",
+          "prerequisites": ["cosmic_warrior", "combat_mastery_80"],
+          "primary_skill_tree": "combat_mastery",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "combat_mastery": 1.0,
+            "emotional_intelligence": 0.40,
+            "cosmic_emperor_power": 0.60
+          }
+        },
+        "reality_creator": {
+          "id": "reality_creator",
+          "name": "Reality Creator",
+          "description": "A being who can create and destroy entire realities",
+          "prerequisites": ["dimensional_sage", "arcane_arts_80"],
+          "primary_skill_tree": "arcane_arts",
+          "secondary_skill_trees": ["emotional_intelligence"],
+          "skill_bonuses": {
+            "arcane_arts": 1.0,
+            "emotional_intelligence": 0.40,
+            "reality_creation": 0.60
+          }
+        },
+        "phantom_emperor": {
+          "id": "phantom_emperor",
+          "name": "Phantom Emperor",
+          "description": "A being who exists beyond shadows and reality",
+          "prerequisites": ["phantom_lord", "emotional_intelligence_80"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["combat_mastery"],
+          "skill_bonuses": {
+            "emotional_intelligence": 1.0,
+            "combat_mastery": 0.40,
+            "phantom_emperor_power": 0.60
+          }
+        },
+        "celestial_emperor": {
+          "id": "celestial_emperor",
+          "name": "Celestial Emperor",
+          "description": "A being who embodies the balance of all cosmic forces",
+          "prerequisites": ["celestial_guardian", "emotional_intelligence_80"],
+          "primary_skill_tree": "emotional_intelligence",
+          "secondary_skill_trees": ["arcane_arts"],
+          "skill_bonuses": {
+            "emotional_intelligence": 1.0,
+            "arcane_arts": 0.40,
+            "celestial_emperor_power": 0.60
+          }
+        },
+        "void_emperor": {
+          "id": "void_emperor",
+          "name": "Void Emperor",
+          "description": "A being who commands the void between all realities",
+          "prerequisites": ["void_walker", "utility_expertise_80"],
+          "primary_skill_tree": "utility_expertise",
+          "secondary_skill_trees": ["world_resonance"],
+          "skill_bonuses": {
+            "utility_expertise": 1.0,
+            "world_resonance": 0.40,
+            "void_emperor_power": 0.60
+          }
+        }
+      }
+    }
+  },
+  "multi_class_system": {
+    "primary_class": {
+      "effectiveness": 1.0,
+      "description": "Main progression path with full skill effectiveness"
+    },
+    "secondary_class": {
+      "effectiveness": 0.5,
+      "description": "Secondary path with 50% skill effectiveness"
+    },
+    "tertiary_class": {
+      "effectiveness": 0.25,
+      "description": "Tertiary path with 25% skill effectiveness"
+    }
+  },
+  "class_combinations": {
+    "warrior_mage": {
+      "name": "Warrior-Mage",
+      "description": "Combine physical combat with magical abilities",
+      "classes": ["warrior", "mage"],
+      "bonus_effects": {
+        "spell_sword_damage": 0.25,
+        "magic_weapon_bonus": 0.15
+      }
+    },
+    "rogue_healer": {
+      "name": "Rogue-Healer",
+      "description": "Combine stealth with healing abilities",
+      "classes": ["rogue", "healer"],
+      "bonus_effects": {
+        "stealth_healing": 0.25,
+        "shadow_medicine": 0.15
+      }
+    },
+    "explorer_mage": {
+      "name": "Explorer-Mage",
+      "description": "Combine exploration with magical abilities",
+      "classes": ["explorer", "mage"],
+      "bonus_effects": {
+        "magical_exploration": 0.25,
+        "elemental_mastery": 0.15
+      }
+    },
+    "technomancer_void_mage": {
+      "name": "Technomancer-Void Mage",
+      "description": "Combine technology with void magic",
+      "classes": ["technomancer", "void_mage"],
+      "bonus_effects": {
+        "tech_void_magic": 0.30,
+        "digital_void_manipulation": 0.20
+      }
+    },
+    "dragon_knight_reality_weaver": {
+      "name": "Dragon Knight-Reality Weaver",
+      "description": "Combine dragon magic with reality manipulation",
+      "classes": ["dragon_knight", "reality_weaver"],
+      "bonus_effects": {
+        "dragon_reality_magic": 0.30,
+        "fire_reality_manipulation": 0.20
+      }
+    },
+    "shadow_walker_void_mage": {
+      "name": "Shadow Walker-Void Mage",
+      "description": "Combine shadows with void magic",
+      "classes": ["shadow_walker", "void_mage"],
+      "bonus_effects": {
+        "shadow_void_magic": 0.35,
+        "void_stealth": 0.25
+      }
+    }
+  }
+} 

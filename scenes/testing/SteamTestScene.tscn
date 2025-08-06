@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://steam_test_001"]
+
+[ext_resource type="Script" path="res://scripts/testing/SteamTest.gd" id="1_steam_test"]
+
+[node name="SteamTest" type="Node"]
+script = ExtResource("1_steam_test") 

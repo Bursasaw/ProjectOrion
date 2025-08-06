@@ -1,0 +1,123 @@
+{
+	"worlds": {
+		"Terra": {
+			"name": "Terra",
+			"description": "The Primal Heart - A world of ancient forests and mystical energies",
+			"theme": "nature",
+			"difficulty": 1,
+			"magic_level": "high",
+			"locations": ["Arcanum Sanctum", "Ancient Grove", "Crystal Caverns", "Mystic Springs"],
+			"enemies": ["Forest Sprite", "Crystal Guardian", "Ancient Treant"],
+			"items": ["Nature Essence", "Crystal Shard", "Healing Herb"],
+			"weather": "temperate",
+			"effects": ["enhanced_magic", "nature_affinity"]
+		},
+		"Nokturn": {
+			"name": "Nokturn",
+			"description": "The Shadow Realm - A world of eternal darkness and shadow magic",
+			"theme": "darkness",
+			"difficulty": 3,
+			"magic_level": "very_high",
+			"locations": ["Shadow Keep", "Void Depths", "Eclipse Tower", "Nightmare Forest"],
+			"enemies": ["Shadow Stalker", "Void Wraith", "Dark Mage"],
+			"items": ["Shadow Essence", "Void Crystal", "Dark Rune"],
+			"weather": "eternal_night",
+			"effects": ["shadow_affinity", "enhanced_dark_magic"]
+		},
+		"Elysion": {
+			"name": "Elysion",
+			"description": "The Cradle of the Ancients - A world of divine light and ancient wisdom",
+			"theme": "light",
+			"difficulty": 5,
+			"magic_level": "divine",
+			"locations": ["Temple of Light", "Celestial Gardens", "Divine Library", "Ascension Peak"],
+			"enemies": ["Light Guardian", "Divine Sentinel", "Ancient Sage"],
+			"items": ["Light Essence", "Divine Crystal", "Sacred Scroll"],
+			"weather": "eternal_day",
+			"effects": ["light_affinity", "enhanced_healing"]
+		},
+		"Sylithar": {
+			"name": "Sylithar",
+			"description": "The Desert of Glass - A world of crystalline structures and time magic",
+			"theme": "crystal",
+			"difficulty": 4,
+			"magic_level": "very_high",
+			"locations": ["Crystal Palace", "Time Sands", "Mirror Maze", "Fractal Canyon"],
+			"enemies": ["Crystal Golem", "Time Weaver", "Mirror Phantom"],
+			"items": ["Time Crystal", "Mirror Shard", "Fractal Essence"],
+			"weather": "crystalline",
+			"effects": ["time_affinity", "enhanced_reflection"]
+		},
+		"Aethra": {
+			"name": "Aethra",
+			"description": "The Skybound Archipelago - A world of floating islands and wind magic",
+			"theme": "air",
+			"difficulty": 2,
+			"magic_level": "high",
+			"locations": ["Sky Citadel", "Wind Temple", "Cloud Gardens", "Storm Peak"],
+			"enemies": ["Wind Spirit", "Storm Drake", "Cloud Walker"],
+			"items": ["Wind Essence", "Storm Crystal", "Cloud Fragment"],
+			"weather": "windy",
+			"effects": ["wind_affinity", "enhanced_mobility"]
+		},
+		"Ombra": {
+			"name": "Ombra",
+			"description": "The Veiled Depths - A world of mystery and illusion magic",
+			"theme": "illusion",
+			"difficulty": 6,
+			"magic_level": "very_high",
+			"locations": ["Mist Palace", "Illusion Garden", "Veil Chamber", "Mystery Depths"],
+			"enemies": ["Illusionist", "Mist Phantom", "Veil Walker"],
+			"items": ["Mist Essence", "Illusion Crystal", "Veil Fragment"],
+			"weather": "misty",
+			"effects": ["illusion_affinity", "enhanced_stealth"]
+		},
+		"Krynn": {
+			"name": "Krynn",
+			"description": "The Dragon Dominion - A world of dragons and fire magic",
+			"theme": "dragon",
+			"difficulty": 7,
+			"magic_level": "legendary",
+			"locations": ["Dragon Peak", "Fire Temple", "Lava Caverns", "Wyrm's Lair"],
+			"enemies": ["Young Dragon", "Fire Drake", "Dragon Mage"],
+			"items": ["Dragon Scale", "Fire Essence", "Wyrm Crystal"],
+			"weather": "fiery",
+			"effects": ["dragon_affinity", "enhanced_fire_magic"]
+		},
+		"Tauron": {
+			"name": "Tauron",
+			"description": "The Nexus of Flesh and Machine - A world of technology and fusion magic",
+			"theme": "technology",
+			"difficulty": 8,
+			"magic_level": "fusion",
+			"locations": ["Tech Nexus", "Fusion Core", "Machine Temple", "Cyber Garden"],
+			"enemies": ["Tech Golem", "Fusion Being", "Cyber Mage"],
+			"items": ["Tech Essence", "Fusion Crystal", "Cyber Fragment"],
+			"weather": "technological",
+			"effects": ["tech_affinity", "enhanced_fusion"]
+		},
+		"Aelria": {
+			"name": "Aelria",
+			"description": "The Realm of Manifested Will - A world where thoughts become reality",
+			"theme": "reality",
+			"difficulty": 9,
+			"magic_level": "reality",
+			"locations": ["Will Palace", "Reality Nexus", "Thought Garden", "Manifestation Core"],
+			"enemies": ["Reality Weaver", "Thought Phantom", "Will Manifestation"],
+			"items": ["Reality Essence", "Will Crystal", "Thought Fragment"],
+			"weather": "manifested",
+			"effects": ["reality_affinity", "enhanced_manifestation"]
+		}
+	},
+	"connections": {
+		"Terra": ["Nokturn", "Aethra", "Sylithar"],
+		"Nokturn": ["Terra", "Ombra", "Krynn"],
+		"Elysion": ["Terra", "Aethra", "Aelria"],
+		"Sylithar": ["Terra", "Aethra", "Tauron"],
+		"Aethra": ["Terra", "Sylithar", "Elysion"],
+		"Ombra": ["Nokturn", "Krynn", "Aelria"],
+		"Krynn": ["Nokturn", "Ombra", "Tauron"],
+		"Tauron": ["Sylithar", "Krynn", "Aelria"],
+		"Aelria": ["Elysion", "Ombra", "Tauron"]
+	}
+} 

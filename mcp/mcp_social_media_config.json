@@ -1,0 +1,61 @@
+{
+  "mcp_social_media": {
+    "platforms": {
+      "twitter": {
+        "enabled": true,
+        "content_types": [
+          "development_updates",
+          "technical_highlights",
+          "code_snippets",
+          "achievement_announcements",
+          "system_demonstrations"
+        ],
+        "posting_schedule": {
+          "daily": 2,
+          "weekly_technical": 1,
+          "achievement_posts": "immediate"
+        }
+      },
+      "reddit": {
+        "enabled": true,
+        "subreddits": [
+          "r/gamedev",
+          "r/indiegaming",
+          "r/godot",
+          "r/programming"
+        ],
+        "content_types": [
+          "technical_articles",
+          "development_journey",
+          "system_showcases",
+          "achievement_posts"
+        ],
+        "posting_schedule": {
+          "weekly_technical": 1,
+          "monthly_showcase": 1,
+          "achievement_posts": "immediate"
+        }
+      },
+      "discord": {
+        "enabled": true,
+        "servers": [
+          "game_dev_communities",
+          "godot_community",
+          "indie_dev_servers"
+        ],
+        "content_types": [
+          "progress_updates",
+          "technical_discussions",
+          "community_engagement",
+          "achievement_shares"
+        ]
+      }
+    },
+    "content_generation": {
+      "automated_posts": true,
+      "technical_deep_dives": true,
+      "progress_tracking": true,
+      "achievement_announcements": true
+    }
+  }
+} 

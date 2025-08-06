@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dftdaqe82spgp"]
+
+[ext_resource type="PackedScene" uid="uid://bqxvn8yqxqxqx" path="res://scenes/ui/MainMenu.tscn" id="1_0x0x0"]
+[ext_resource type="PackedScene" path="res://scenes/ui/GameUI.tscn" id="2_0x0x0"]
+[ext_resource type="PackedScene" path="res://scenes/testing/TestBot.tscn" id="3_test_bot"]
+[ext_resource type="Script" uid="uid://nsb51rdajjxw" path="res://scripts/testing/TestRunner.gd" id="4_test_runner"]
+
+[node name="Main" type="Node"]
+
+[node name="MainMenu" parent="." instance=ExtResource("1_0x0x0")]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameUI" parent="." instance=ExtResource("2_0x0x0")]
+visible = false
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TestBot" parent="." instance=ExtResource("3_test_bot")]
+
+[node name="TestRunner" type="Node" parent="."]
+script = ExtResource("4_test_runner")

@@ -1,0 +1,581 @@
+{
+  "version": "0.13.0",
+  "achievement_categories": {
+    "combat_achievements": {
+      "name": "Combat Achievements",
+      "description": "Achievements for mastering combat and defeating enemies",
+      "achievements": {
+        "weapon_master": {
+          "id": "weapon_master",
+          "name": "Weapon Master",
+          "description": "Master all weapon types",
+          "category": "combat_achievements",
+          "tiers": [
+            {
+              "name": "Apprentice",
+              "description": "Master 3 weapon types",
+              "requirement": "weapons_mastered",
+              "requirement_value": 3,
+              "reward": {
+                "skill_points": 5,
+                "experience": 1000,
+                "title": "Apprentice Weapon Master"
+              }
+            },
+            {
+              "name": "Expert",
+              "description": "Master 5 weapon types",
+              "requirement": "weapons_mastered",
+              "requirement_value": 5,
+              "reward": {
+                "skill_points": 10,
+                "experience": 2500,
+                "title": "Expert Weapon Master"
+              }
+            },
+            {
+              "name": "Master",
+              "description": "Master all weapon types",
+              "requirement": "weapons_mastered",
+              "requirement_value": 8,
+              "reward": {
+                "skill_points": 20,
+                "experience": 5000,
+                "title": "Weapon Master",
+                "unique_ability": "weapon_fusion"
+              }
+            }
+          ]
+        },
+        "combo_master": {
+          "id": "combo_master",
+          "name": "Combo Master",
+          "description": "Execute devastating combo chains",
+          "category": "combat_achievements",
+          "tiers": [
+            {
+              "name": "Chain Fighter",
+              "description": "Execute a 10-hit combo",
+              "requirement": "max_combo_hits",
+              "requirement_value": 10,
+              "reward": {
+                "skill_points": 3,
+                "experience": 500,
+                "title": "Chain Fighter"
+              }
+            },
+            {
+              "name": "Combo Artist",
+              "description": "Execute a 25-hit combo",
+              "requirement": "max_combo_hits",
+              "requirement_value": 25,
+              "reward": {
+                "skill_points": 8,
+                "experience": 1500,
+                "title": "Combo Artist"
+              }
+            },
+            {
+              "name": "Combo Master",
+              "description": "Execute a 50-hit combo",
+              "requirement": "max_combo_hits",
+              "requirement_value": 50,
+              "reward": {
+                "skill_points": 15,
+                "experience": 3000,
+                "title": "Combo Master",
+                "unique_ability": "infinite_combo"
+              }
+            }
+          ]
+        },
+        "boss_slayer": {
+          "id": "boss_slayer",
+          "name": "Boss Slayer",
+          "description": "Defeat legendary bosses",
+          "category": "combat_achievements",
+          "tiers": [
+            {
+              "name": "Boss Hunter",
+              "description": "Defeat 5 legendary bosses",
+              "requirement": "bosses_defeated",
+              "requirement_value": 5,
+              "reward": {
+                "skill_points": 10,
+                "experience": 2000,
+                "title": "Boss Hunter"
+              }
+            },
+            {
+              "name": "Boss Slayer",
+              "description": "Defeat 15 legendary bosses",
+              "requirement": "bosses_defeated",
+              "requirement_value": 15,
+              "reward": {
+                "skill_points": 20,
+                "experience": 5000,
+                "title": "Boss Slayer"
+              }
+            },
+            {
+              "name": "Boss Master",
+              "description": "Defeat all legendary bosses",
+              "requirement": "bosses_defeated",
+              "requirement_value": 25,
+              "reward": {
+                "skill_points": 30,
+                "experience": 10000,
+                "title": "Boss Master",
+                "unique_ability": "boss_essence"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "exploration_achievements": {
+      "name": "Exploration Achievements",
+      "description": "Achievements for discovering the world and its secrets",
+      "achievements": {
+        "world_explorer": {
+          "id": "world_explorer",
+          "name": "World Explorer",
+          "description": "Discover all locations in the world",
+          "category": "exploration_achievements",
+          "tiers": [
+            {
+              "name": "Adventurer",
+              "description": "Discover 10 locations",
+              "requirement": "locations_discovered",
+              "requirement_value": 10,
+              "reward": {
+                "skill_points": 5,
+                "experience": 1000,
+                "title": "Adventurer"
+              }
+            },
+            {
+              "name": "Explorer",
+              "description": "Discover 25 locations",
+              "requirement": "locations_discovered",
+              "requirement_value": 25,
+              "reward": {
+                "skill_points": 10,
+                "experience": 2500,
+                "title": "Explorer"
+              }
+            },
+            {
+              "name": "World Explorer",
+              "description": "Discover all locations",
+              "requirement": "locations_discovered",
+              "requirement_value": 50,
+              "reward": {
+                "skill_points": 20,
+                "experience": 5000,
+                "title": "World Explorer",
+                "unique_ability": "world_sense"
+              }
+            }
+          ]
+        },
+        "treasure_hunter": {
+          "id": "treasure_hunter",
+          "name": "Treasure Hunter",
+          "description": "Find hidden treasures and rare items",
+          "category": "exploration_achievements",
+          "tiers": [
+            {
+              "name": "Treasure Seeker",
+              "description": "Find 20 hidden treasures",
+              "requirement": "treasures_found",
+              "requirement_value": 20,
+              "reward": {
+                "skill_points": 5,
+                "experience": 1000,
+                "title": "Treasure Seeker"
+              }
+            },
+            {
+              "name": "Treasure Hunter",
+              "description": "Find 50 hidden treasures",
+              "requirement": "treasures_found",
+              "requirement_value": 50,
+              "reward": {
+                "skill_points": 15,
+                "experience": 3000,
+                "title": "Treasure Hunter"
+              }
+            },
+            {
+              "name": "Treasure Master",
+              "description": "Find all hidden treasures",
+              "requirement": "treasures_found",
+              "requirement_value": 100,
+              "reward": {
+                "skill_points": 25,
+                "experience": 7500,
+                "title": "Treasure Master",
+                "unique_ability": "treasure_sense"
+              }
+            }
+          ]
+        },
+        "pathfinder": {
+          "id": "pathfinder",
+          "name": "Pathfinder",
+          "description": "Complete secret paths and challenges",
+          "category": "exploration_achievements",
+          "tiers": [
+            {
+              "name": "Path Seeker",
+              "description": "Complete 5 secret paths",
+              "requirement": "secret_paths_completed",
+              "requirement_value": 5,
+              "reward": {
+                "skill_points": 8,
+                "experience": 1500,
+                "title": "Path Seeker"
+              }
+            },
+            {
+              "name": "Pathfinder",
+              "description": "Complete 15 secret paths",
+              "requirement": "secret_paths_completed",
+              "requirement_value": 15,
+              "reward": {
+                "skill_points": 20,
+                "experience": 4000,
+                "title": "Pathfinder"
+              }
+            },
+            {
+              "name": "Path Master",
+              "description": "Complete all secret paths",
+              "requirement": "secret_paths_completed",
+              "requirement_value": 30,
+              "reward": {
+                "skill_points": 30,
+                "experience": 10000,
+                "title": "Path Master",
+                "unique_ability": "path_sight"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "social_achievements": {
+      "name": "Social Achievements",
+      "description": "Achievements for building relationships and influence",
+      "achievements": {
+        "diplomat": {
+          "id": "diplomat",
+          "name": "Diplomat",
+          "description": "Resolve conflicts peacefully",
+          "category": "social_achievements",
+          "tiers": [
+            {
+              "name": "Peacemaker",
+              "description": "Resolve 10 conflicts peacefully",
+              "requirement": "conflicts_resolved_peacefully",
+              "requirement_value": 10,
+              "reward": {
+                "skill_points": 5,
+                "experience": 1000,
+                "title": "Peacemaker"
+              }
+            },
+            {
+              "name": "Diplomat",
+              "description": "Resolve 25 conflicts peacefully",
+              "requirement": "conflicts_resolved_peacefully",
+              "requirement_value": 25,
+              "reward": {
+                "skill_points": 15,
+                "experience": 3000,
+                "title": "Diplomat"
+              }
+            },
+            {
+              "name": "Master Diplomat",
+              "description": "Resolve all conflicts peacefully",
+              "requirement": "conflicts_resolved_peacefully",
+              "requirement_value": 50,
+              "reward": {
+                "skill_points": 25,
+                "experience": 7500,
+                "title": "Master Diplomat",
+                "unique_ability": "peace_aura"
+              }
+            }
+          ]
+        },
+        "leader": {
+          "id": "leader",
+          "name": "Leader",
+          "description": "Recruit and lead followers",
+          "category": "social_achievements",
+          "tiers": [
+            {
+              "name": "Follower",
+              "description": "Recruit 10 followers",
+              "requirement": "followers_recruited",
+              "requirement_value": 10,
+              "reward": {
+                "skill_points": 8,
+                "experience": 1500,
+                "title": "Follower"
+              }
+            },
+            {
+              "name": "Leader",
+              "description": "Recruit 25 followers",
+              "requirement": "followers_recruited",
+              "requirement_value": 25,
+              "reward": {
+                "skill_points": 20,
+                "experience": 4000,
+                "title": "Leader"
+              }
+            },
+            {
+              "name": "Master Leader",
+              "description": "Recruit 50 followers",
+              "requirement": "followers_recruited",
+              "requirement_value": 50,
+              "reward": {
+                "skill_points": 30,
+                "experience": 10000,
+                "title": "Master Leader",
+                "unique_ability": "leadership_aura"
+              }
+            }
+          ]
+        },
+        "legend": {
+          "id": "legend",
+          "name": "Legend",
+          "description": "Achieve maximum reputation in all factions",
+          "category": "social_achievements",
+          "tiers": [
+            {
+              "name": "Respected",
+              "description": "Achieve maximum reputation in 3 factions",
+              "requirement": "factions_max_reputation",
+              "requirement_value": 3,
+              "reward": {
+                "skill_points": 10,
+                "experience": 2000,
+                "title": "Respected"
+              }
+            },
+            {
+              "name": "Legend",
+              "description": "Achieve maximum reputation in 7 factions",
+              "requirement": "factions_max_reputation",
+              "requirement_value": 7,
+              "reward": {
+                "skill_points": 25,
+                "experience": 6000,
+                "title": "Legend"
+              }
+            },
+            {
+              "name": "Living Legend",
+              "description": "Achieve maximum reputation in all factions",
+              "requirement": "factions_max_reputation",
+              "requirement_value": 10,
+              "reward": {
+                "skill_points": 40,
+                "experience": 15000,
+                "title": "Living Legend",
+                "unique_ability": "legendary_presence"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "crafting_achievements": {
+      "name": "Crafting Achievements",
+      "description": "Achievements for mastering crafting and creation",
+      "achievements": {
+        "master_craftsman": {
+          "id": "master_craftsman",
+          "name": "Master Craftsman",
+          "description": "Craft legendary items and equipment",
+          "category": "crafting_achievements",
+          "tiers": [
+            {
+              "name": "Apprentice Craftsman",
+              "description": "Craft 10 legendary items",
+              "requirement": "legendary_items_crafted",
+              "requirement_value": 10,
+              "reward": {
+                "skill_points": 8,
+                "experience": 1500,
+                "title": "Apprentice Craftsman"
+              }
+            },
+            {
+              "name": "Expert Craftsman",
+              "description": "Craft 25 legendary items",
+              "requirement": "legendary_items_crafted",
+              "requirement_value": 25,
+              "reward": {
+                "skill_points": 20,
+                "experience": 4000,
+                "title": "Expert Craftsman"
+              }
+            },
+            {
+              "name": "Master Craftsman",
+              "description": "Craft 50 legendary items",
+              "requirement": "legendary_items_crafted",
+              "requirement_value": 50,
+              "reward": {
+                "skill_points": 30,
+                "experience": 10000,
+                "title": "Master Craftsman",
+                "unique_ability": "master_crafting"
+              }
+            }
+          ]
+        },
+        "innovator": {
+          "id": "innovator",
+          "name": "Innovator",
+          "description": "Create unique item combinations",
+          "category": "crafting_achievements",
+          "tiers": [
+            {
+              "name": "Experimenter",
+              "description": "Create 5 unique item combinations",
+              "requirement": "unique_combinations_created",
+              "requirement_value": 5,
+              "reward": {
+                "skill_points": 5,
+                "experience": 1000,
+                "title": "Experimenter"
+              }
+            },
+            {
+              "name": "Innovator",
+              "description": "Create 15 unique item combinations",
+              "requirement": "unique_combinations_created",
+              "requirement_value": 15,
+              "reward": {
+                "skill_points": 15,
+                "experience": 3000,
+                "title": "Innovator"
+              }
+            },
+            {
+              "name": "Master Innovator",
+              "description": "Create 30 unique item combinations",
+              "requirement": "unique_combinations_created",
+              "requirement_value": 30,
+              "reward": {
+                "skill_points": 25,
+                "experience": 7500,
+                "title": "Master Innovator",
+                "unique_ability": "innovation_mastery"
+              }
+            }
+          ]
+        },
+        "artisan": {
+          "id": "artisan",
+          "name": "Artisan",
+          "description": "Master all crafting disciplines",
+          "category": "crafting_achievements",
+          "tiers": [
+            {
+              "name": "Craftsperson",
+              "description": "Master 3 crafting disciplines",
+              "requirement": "crafting_disciplines_mastered",
+              "requirement_value": 3,
+              "reward": {
+                "skill_points": 10,
+                "experience": 2000,
+                "title": "Craftsperson"
+              }
+            },
+            {
+              "name": "Artisan",
+              "description": "Master 7 crafting disciplines",
+              "requirement": "crafting_disciplines_mastered",
+              "requirement_value": 7,
+              "reward": {
+                "skill_points": 25,
+                "experience": 6000,
+                "title": "Artisan"
+              }
+            },
+            {
+              "name": "Master Artisan",
+              "description": "Master all crafting disciplines",
+              "requirement": "crafting_disciplines_mastered",
+              "requirement_value": 10,
+              "reward": {
+                "skill_points": 40,
+                "experience": 15000,
+                "title": "Master Artisan",
+                "unique_ability": "artisan_mastery"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "achievement_rewards": {
+    "skill_points": {
+      "description": "Points that can be spent on skill trees",
+      "max_per_achievement": 40
+    },
+    "experience": {
+      "description": "Experience points for character progression",
+      "max_per_achievement": 15000
+    },
+    "title": {
+      "description": "Displayable title for the player",
+      "unique": true
+    },
+    "unique_ability": {
+      "description": "Special abilities unlocked by achievements",
+      "unique": true
+    }
+  },
+  "progress_tracking": {
+    "combat_stats": [
+      "weapons_mastered",
+      "max_combo_hits",
+      "bosses_defeated",
+      "damage_dealt",
+      "enemies_defeated"
+    ],
+    "exploration_stats": [
+      "locations_discovered",
+      "treasures_found",
+      "secret_paths_completed",
+      "areas_explored",
+      "world_events_participated"
+    ],
+    "social_stats": [
+      "conflicts_resolved_peacefully",
+      "followers_recruited",
+      "factions_max_reputation",
+      "relationships_built",
+      "influence_exerted"
+    ],
+    "crafting_stats": [
+      "legendary_items_crafted",
+      "unique_combinations_created",
+      "crafting_disciplines_mastered",
+      "materials_gathered",
+      "techniques_learned"
+    ]
+  }
+} 

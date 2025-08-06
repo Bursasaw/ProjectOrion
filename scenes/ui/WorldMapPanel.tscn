@@ -1,0 +1,187 @@
+[gd_scene load_steps=2 format=3 uid="uid://world_map_panel_001"]
+
+[ext_resource type="Script" path="res://scripts/ui/WorldMapPanel.gd" id="1_0"]
+
+[node name="WorldMapPanel" type="Panel"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_0")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.05, 0.05, 0.1, 0.95)
+
+[node name="MapContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+
+[node name="Title" type="Label" parent="MapContainer"]
+layout_mode = 2
+text = "World Map"
+horizontal_alignment = 1
+
+[node name="WorldTabs" type="TabContainer" parent="MapContainer"]
+layout_mode = 2
+
+[node name="Terra" type="VBoxContainer" parent="MapContainer/WorldTabs"]
+layout_mode = 2
+
+[node name="TerraMap" type="RichTextLabel" parent="MapContainer/WorldTabs/Terra"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "[center]Terra - The First World[/center]
+
+[center]┌─────────────────────────────────────┐
+│                                         │
+│              [color=yellow]Arcanum Sanctum[/color]              │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=blue]Crystal Spire[/color]                 │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=green]Nokturn Market[/color]               │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=red]Void Rift[/color]                    │
+│                                         │
+└─────────────────────────────────────┘[/center]
+
+[center]Current Location: [color=yellow]Arcanum Sanctum[/color][/center]"
+
+[node name="Archeum" type="VBoxContainer" parent="MapContainer/WorldTabs"]
+layout_mode = 2
+
+[node name="ArcheumMap" type="RichTextLabel" parent="MapContainer/WorldTabs/Archeum"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "[center]Archeum - The Second World[/center]
+
+[center]┌─────────────────────────────────────┐
+│                                         │
+│              [color=yellow]Ancient Library[/color]              │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=blue]Mystic Tower[/color]                  │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=green]Scholar's Guild[/color]              │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=red]Forbidden Archive[/color]              │
+│                                         │
+└─────────────────────────────────────┘[/center]
+
+[center]Status: [color=red]Locked[/color][/center]"
+
+[node name="Nexus" type="VBoxContainer" parent="MapContainer/WorldTabs"]
+layout_mode = 2
+
+[node name="NexusMap" type="RichTextLabel" parent="MapContainer/WorldTabs/Nexus"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "[center]Nexus - The Third World[/center]
+
+[center]┌─────────────────────────────────────┐
+│                                         │
+│              [color=yellow]Central Hub[/color]                  │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=blue]Trade District[/color]                │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=green]Residential Quarter[/color]          │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=red]Government Center[/color]              │
+│                                         │
+└─────────────────────────────────────┘[/center]
+
+[center]Status: [color=red]Locked[/color][/center]"
+
+[node name="Void" type="VBoxContainer" parent="MapContainer/WorldTabs"]
+layout_mode = 2
+
+[node name="VoidMap" type="RichTextLabel" parent="MapContainer/WorldTabs/Void"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "[center]Void - The Fourth World[/center]
+
+[center]┌─────────────────────────────────────┐
+│                                         │
+│              [color=yellow]Void Entrance[/color]               │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=blue]Void Depths[/color]                   │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=green]Void Chamber[/color]                 │
+│                     ▲                   │
+│                     │                   │
+│                     │                   │
+│              [color=red]Void Core[/color]                      │
+│                                         │
+└─────────────────────────────────────┘[/center]
+
+[center]Status: [color=red]Locked[/color][/center]"
+
+[node name="Legend" type="VBoxContainer" parent="MapContainer"]
+layout_mode = 2
+
+[node name="LegendTitle" type="Label" parent="MapContainer/Legend"]
+layout_mode = 2
+text = "Legend:"
+horizontal_alignment = 1
+
+[node name="LegendItems" type="HBoxContainer" parent="MapContainer/Legend"]
+layout_mode = 2
+
+[node name="CurrentLocation" type="Label" parent="MapContainer/Legend/LegendItems"]
+layout_mode = 2
+text = "🟡 Current Location"
+
+[node name="AvailableLocation" type="Label" parent="MapContainer/Legend/LegendItems"]
+layout_mode = 2
+text = "🔵 Available"
+
+[node name="LockedLocation" type="Label" parent="MapContainer/Legend/LegendItems"]
+layout_mode = 2
+text = "🔴 Locked"
+
+[node name="CompletedLocation" type="Label" parent="MapContainer/Legend/LegendItems"]
+layout_mode = 2
+text = "🟢 Completed"
+
+[node name="ButtonContainer" type="HBoxContainer" parent="MapContainer"]
+layout_mode = 2
+
+[node name="TravelButton" type="Button" parent="MapContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Travel"
+
+[node name="CloseButton" type="Button" parent="MapContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Close" 

@@ -1,0 +1,23 @@
+{
+  "mcp_github": {
+    "repository": "Project Orion",
+    "automation": {
+      "readme_updates": true,
+      "commit_messages": true,
+      "issue_templates": true,
+      "release_notes": true,
+      "documentation_updates": true
+    },
+    "content_generation": {
+      "technical_highlights": true,
+      "progress_tracking": true,
+      "achievement_announcements": true,
+      "system_documentation": true
+    },
+    "scheduled_tasks": {
+      "daily_updates": true,
+      "weekly_progress": true,
+      "monthly_achievements": true
+    }
+  }
+} 
