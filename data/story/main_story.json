@@ -1,0 +1,314 @@
+{
+	"prologue": {
+		"name": "The Awakening",
+		"description": "Arius awakens in the Arcanum Sanctum, drawn by mysterious visions.",
+		"nodes": {
+			"start": {
+				"text": "You awaken in the Arcanum Sanctum, the ancient seat of magical knowledge. Visions of a fractured Veil haunt your dreams, and a sense of urgency fills your being. The air crackles with untamed magic, and you know your journey as a Seeker has begun.",
+				"choices": [
+					{
+						"text": "Examine your surroundings",
+						"next_node": "examine_sanctum",
+						"effects": {"exploration": 1}
+					},
+					{
+						"text": "Seek out the Elder Magus",
+						"next_node": "find_elder",
+						"effects": {"social": 1}
+					},
+					{
+						"text": "Meditate on your visions",
+						"next_node": "meditation",
+						"effects": {"magic": 1}
+					}
+				]
+			},
+			"examine_sanctum": {
+				"text": "The Sanctum's ancient halls are lined with magical artifacts and glowing crystals. You notice strange fluctuations in the magical energy around you, confirming your visions of the Veil's instability.",
+				"choices": [
+					{
+						"text": "Investigate the magical fluctuations",
+						"next_node": "investigate_magic",
+						"effects": {"magic": 2, "exploration": 1}
+					},
+					{
+						"text": "Continue to find the Elder Magus",
+						"next_node": "find_elder",
+						"effects": {"social": 1}
+					}
+				]
+			},
+			"find_elder": {
+				"text": "You find Elder Magus Thalor in his study, surrounded by ancient tomes. His weathered face shows concern as he looks up from his reading.",
+				"choices": [
+					{
+						"text": "Tell him about your visions",
+						"next_node": "share_visions",
+						"effects": {"social": 2, "quest": "sanctum_trials"}
+					},
+					{
+						"text": "Ask about the Sanctum's history",
+						"next_node": "ask_history",
+						"effects": {"knowledge": 1}
+					}
+				]
+			},
+			"meditation": {
+				"text": "As you meditate, the visions become clearer. You see rifts in the Veil, dark forces gathering, and the need for a Seeker to restore balance.",
+				"choices": [
+					{
+						"text": "Focus on the rifts",
+						"next_node": "focus_rifts",
+						"effects": {"magic": 2, "quest": "investigate_rifts"}
+					},
+					{
+						"text": "Seek guidance from the Elder",
+						"next_node": "find_elder",
+						"effects": {"social": 1}
+					}
+				]
+			},
+			"investigate_magic": {
+				"text": "The magical fluctuations lead you to a hidden chamber. Ancient runes glow with power, and you sense the presence of something... otherworldly.",
+				"choices": [
+					{
+						"text": "Study the runes",
+						"next_node": "study_runes",
+						"effects": {"magic": 3, "knowledge": 2}
+					},
+					{
+						"text": "Report to the Elder",
+						"next_node": "find_elder",
+						"effects": {"social": 2}
+					}
+				]
+			},
+			"share_visions": {
+				"text": "Elder Thalor listens intently to your visions. His eyes widen with recognition. 'The Veil is indeed fracturing,' he says. 'You must begin your training immediately.'",
+				"choices": [
+					{
+						"text": "Accept the training",
+						"next_node": "accept_training",
+						"effects": {"quest": "sanctum_trials", "social": 1}
+					},
+					{
+						"text": "Ask about the Veil",
+						"next_node": "ask_about_veil",
+						"effects": {"knowledge": 2}
+					}
+				]
+			},
+			"ask_history": {
+				"text": "The Elder tells you of the Sanctum's ancient purpose - to train Seekers who can navigate the Veil and maintain balance between worlds.",
+				"choices": [
+					{
+						"text": "Ask to become a Seeker",
+						"next_node": "accept_training",
+						"effects": {"quest": "sanctum_trials", "social": 2}
+					},
+					{
+						"text": "Learn more about the Veil",
+						"next_node": "ask_about_veil",
+						"effects": {"knowledge": 1}
+					}
+				]
+			},
+			"focus_rifts": {
+				"text": "Your magical senses reveal the true nature of the rifts - they are tears in reality itself, growing larger with each passing moment.",
+				"choices": [
+					{
+						"text": "Seek training to close them",
+						"next_node": "accept_training",
+						"effects": {"quest": "sanctum_trials", "magic": 2}
+					},
+					{
+						"text": "Investigate further",
+						"next_node": "investigate_magic",
+						"effects": {"magic": 1, "exploration": 1}
+					}
+				]
+			},
+			"accept_training": {
+				"text": "Elder Thalor nods approvingly. 'The first trial awaits you in the Chamber of Elements. Prove your worth, and you shall begin your journey as a Seeker.'",
+				"choices": [
+					{
+						"text": "Enter the Chamber of Elements",
+						"next_node": "chapter_1_start",
+						"effects": {"quest": "sanctum_trials"}
+					}
+				]
+			},
+			"ask_about_veil": {
+				"text": "The Elder explains that the Veil is the barrier between worlds, and its fracturing threatens all of existence. Only Seekers can traverse and repair it.",
+				"choices": [
+					{
+						"text": "Begin training",
+						"next_node": "accept_training",
+						"effects": {"quest": "sanctum_trials", "knowledge": 1}
+					}
+				]
+			},
+			"study_runes": {
+				"text": "The runes speak of ancient prophecies - of a Seeker who will restore the Veil. You feel a deep connection to these words.",
+				"choices": [
+					{
+						"text": "Return to the Elder with this knowledge",
+						"next_node": "find_elder",
+						"effects": {"social": 2, "knowledge": 2}
+					}
+				]
+			}
+		}
+	},
+	"chapter_1": {
+		"name": "The First Trials",
+		"description": "Begin your training as a Seeker and face the first challenges.",
+		"nodes": {
+			"start": {
+				"text": "You stand before the Chamber of Elements, the first trial of the Sanctum. The air hums with elemental energy as you prepare to prove your worth as a Seeker.",
+				"choices": [
+					{
+						"text": "Enter the chamber",
+						"next_node": "trial_chamber",
+						"effects": {"quest": "sanctum_trials"}
+					}
+				]
+			},
+			"trial_chamber": {
+				"text": "Inside the chamber, three elemental orbs float before you - fire, water, and earth. Each pulses with power, waiting for you to choose your path.",
+				"choices": [
+					{
+						"text": "Channel fire magic",
+						"next_node": "fire_trial",
+						"effects": {"magic": 1, "element": "fire"}
+					},
+					{
+						"text": "Channel water magic",
+						"next_node": "water_trial",
+						"effects": {"magic": 1, "element": "water"}
+					},
+					{
+						"text": "Channel earth magic",
+						"next_node": "earth_trial",
+						"effects": {"magic": 1, "element": "earth"}
+					}
+				]
+			},
+			"fire_trial": {
+				"text": "Flames dance around you as you channel the power of fire. The heat is intense, but you feel a connection to the raw energy of creation.",
+				"choices": [
+					{
+						"text": "Master the flames",
+						"next_node": "fire_mastery",
+						"effects": {"magic": 3, "element": "fire"}
+					}
+				]
+			},
+			"water_trial": {
+				"text": "Cool water flows through your being as you channel its power. You feel the fluidity and adaptability of water magic.",
+				"choices": [
+					{
+						"text": "Embrace the flow",
+						"next_node": "water_mastery",
+						"effects": {"magic": 3, "element": "water"}
+					}
+				]
+			},
+			"earth_trial": {
+				"text": "The solid strength of earth fills you as you channel its power. You feel grounded and unshakeable.",
+				"choices": [
+					{
+						"text": "Stand firm",
+						"next_node": "earth_mastery",
+						"effects": {"magic": 3, "element": "earth"}
+					}
+				]
+			},
+			"fire_mastery": {
+				"text": "You have mastered the flames! Fire magic now flows through you with ease. The Elder appears, impressed by your control.",
+				"choices": [
+					{
+						"text": "Continue to the next trial",
+						"next_node": "next_trial",
+						"effects": {"quest": "sanctum_trials", "magic": 2}
+					}
+				]
+			},
+			"water_mastery": {
+				"text": "You have mastered the flow of water! Water magic now responds to your will. The Elder appears, impressed by your adaptability.",
+				"choices": [
+					{
+						"text": "Continue to the next trial",
+						"next_node": "next_trial",
+						"effects": {"quest": "sanctum_trials", "magic": 2}
+					}
+				]
+			},
+			"earth_mastery": {
+				"text": "You have mastered the strength of earth! Earth magic now anchors your power. The Elder appears, impressed by your stability.",
+				"choices": [
+					{
+						"text": "Continue to the next trial",
+						"next_node": "next_trial",
+						"effects": {"quest": "sanctum_trials", "magic": 2}
+					}
+				]
+			},
+			"next_trial": {
+				"text": "The Elder leads you to the Chamber of Knowledge, where you must prove your understanding of the Veil and its mysteries.",
+				"choices": [
+					{
+						"text": "Enter the Chamber of Knowledge",
+						"next_node": "knowledge_trial",
+						"effects": {"quest": "sanctum_trials"}
+					}
+				]
+			},
+			"knowledge_trial": {
+				"text": "Ancient texts and magical diagrams surround you. The Elder asks you to demonstrate your understanding of the Veil's nature.",
+				"choices": [
+					{
+						"text": "Explain the Veil as a barrier between worlds",
+						"next_node": "knowledge_success",
+						"effects": {"knowledge": 3, "quest": "sanctum_trials"}
+					},
+					{
+						"text": "Describe the Veil as a living entity",
+						"next_node": "knowledge_success",
+						"effects": {"knowledge": 2, "quest": "sanctum_trials"}
+					}
+				]
+			},
+			"knowledge_success": {
+				"text": "The Elder nods approvingly. 'You have shown both magical aptitude and understanding. You are ready to begin your journey as a Seeker.'",
+				"choices": [
+					{
+						"text": "Accept your role as Seeker",
+						"next_node": "seeker_awakening",
+						"effects": {"quest": "sanctum_trials", "world_access": "Nokturn"}
+					}
+				]
+			},
+			"seeker_awakening": {
+				"text": "As you accept your role, you feel a new awareness awaken within you. The Veil's presence becomes clear, and you sense the other worlds waiting beyond.",
+				"choices": [
+					{
+						"text": "Explore the Sanctum's library",
+						"next_node": "library_exploration",
+						"effects": {"knowledge": 2, "exploration": 1}
+					},
+					{
+						"text": "Practice your new abilities",
+						"next_node": "ability_practice",
+						"effects": {"magic": 2}
+					},
+					{
+						"text": "Prepare for your first journey",
+						"next_node": "journey_preparation",
+						"effects": {"quest": "first_journey"}
+					}
+				]
+			}
+		}
+	}
+} 

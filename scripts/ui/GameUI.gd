@@ -80,10 +80,12 @@ var game_manager
 var save_system
 var dialogue_manager: Node
 var quest_manager: Node
+var narrative_manager: Node
 
 # UI state
 var current_panel: Control = null
 var is_paused: bool = false
+var narrative_active: bool = false
 
 func _ready():
 	# Get game managers
@@ -91,6 +93,7 @@ func _ready():
 	save_system = get_node("/root/SaveSystem")
 	dialogue_manager = get_node("/root/DialogueManager")
 	quest_manager = get_node("/root/QuestManager")
+	narrative_manager = get_node("/root/NarrativeManager")
 	
 	# Connect button signals
 	_connect_button_signals()
@@ -112,6 +115,11 @@ func _ready():
 	_update_player_info()
 	_update_world_info()
 	_add_game_log_message("Welcome to Arcanum Origins: Before the Veil. Your journey begins here...")
+	
+	# Start narrative if available
+	if narrative_manager:
+		narrative_manager.narrative_node_changed.connect(_on_narrative_node_changed)
+		_start_narrative()
 
 func _connect_button_signals():
 	# Top panel buttons
@@ -597,3 +605,82 @@ func show_combat_actions(actions):
 				spell_button.visible = true
 			combat_action_script.ActionType.ITEM:
 				item_button.visible = true 
+
+# Narrative system functions
+func _start_narrative():
+	"""Start the narrative system"""
+	if narrative_manager:
+		narrative_active = true
+		_update_narrative_display()
+
+func _update_narrative_display():
+	"""Update the narrative display with current story content"""
+	if not narrative_manager or not narrative_active:
+		return
+	
+	var current_text = narrative_manager.get_current_text()
+	var choices = narrative_manager.get_available_choices()
+	
+	# Update game log with narrative text
+	game_log.text = current_text
+	
+	# Clear existing action buttons
+	_clear_action_buttons()
+	
+	# Add choice buttons
+	for i in range(choices.size()):
+		var choice = choices[i]
+		var button = Button.new()
+		button.text = choice["text"]
+		button.pressed.connect(_on_narrative_choice_pressed.bind(i))
+		
+		# Add to action buttons container
+		var action_container = get_node("BottomPanel/BottomPanelContainer/ActionButtons")
+		action_container.add_child(button)
+
+func _clear_action_buttons():
+	"""Clear all action buttons"""
+	var action_container = get_node("BottomPanel/BottomPanelContainer/ActionButtons")
+	for child in action_container.get_children():
+		if child != move_button and child != interact_button and child != combat_button and child != cast_button:
+			child.queue_free()
+
+func _on_narrative_choice_pressed(choice_index: int):
+	"""Handle narrative choice selection"""
+	if narrative_manager:
+		var success = narrative_manager.progress_narrative(choice_index)
+		if success:
+			_update_narrative_display()
+			_update_player_info()  # Update stats if they changed
+		else:
+			_add_game_log_message("Failed to progress narrative")
+
+func _on_narrative_node_changed(node_id: String):
+	"""Handle narrative node changes"""
+	_add_game_log_message("Story progressed to: " + node_id)
+	_update_narrative_display()
+
+func _on_move_button_pressed():
+	"""Handle move action - show world map"""
+	if world_map_panel:
+		world_map_panel.show()
+		_add_game_log_message("Opening world map...")
+
+func _on_interact_button_pressed():
+	"""Handle interact action - show dialogue or narrative choices"""
+	if narrative_active and narrative_manager:
+		var choices = narrative_manager.get_available_choices()
+		if choices.size() > 0:
+			_update_narrative_display()
+		else:
+			_add_game_log_message("Nothing to interact with here.")
+	else:
+		_add_game_log_message("Nothing to interact with here.")
+
+func _on_combat_button_pressed():
+	"""Handle combat action"""
+	_add_game_log_message("Combat system not yet implemented.")
+
+func _on_cast_button_pressed():
+	"""Handle cast spell action"""
+	_add_game_log_message("Spell casting not yet implemented.") 
