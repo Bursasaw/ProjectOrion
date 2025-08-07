@@ -2,7 +2,46 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v0.13.0] - 2024-12-19 - "Deep Progression System Implementation"
+## [v0.13.0] - 2024-12-19 - "Alpha Release - Text-Based RPG Foundation"
+
+### Added
+- **Text-Based RPG Foundation**: Complete alpha-ready text-based RPG system
+  - **GameFlowManager.gd**: Complete story progression and scene management system
+  - **EnemyEncounterManager.gd**: Text-based combat system with enemy encounters
+  - **QuestIntegration.gd**: Quest system integration with story progression
+  - **GameInitializer.gd**: Game initialization and system setup
+  - **Story Scenes**: Complete story scenes from Arcanum Sanctum entrance
+  - **Enemy Database**: 50+ enemies with stats, abilities, and loot tables
+  - **Quest System**: 3 main quests with objectives and rewards
+  - **Combat System**: Turn-based combat with attack, spell, item, and flee options
+  - **Save/Load System**: Encrypted save system with game state persistence
+  - **UI Integration**: Complete UI integration with all panels functional
+
+### Technical Details
+- **New Core Systems**: 4 major new systems (GameFlowManager, EnemyEncounterManager, QuestIntegration, GameInitializer)
+- **Story Content**: 5 complete story scenes with branching choices
+- **Enemy System**: 50+ enemies with unique stats and abilities
+- **Quest System**: 3 main quests with automatic triggers and rewards
+- **Combat System**: Complete turn-based combat with damage calculation
+- **UI System**: Fully functional text-based RPG interface
+
+### Alpha Features
+- ✅ **Story Progression**: Text-based narrative with branching choices
+- ✅ **Enemy Encounters**: Turn-based combat with multiple enemy types
+- ✅ **Quest System**: Automatic quest triggers and objective tracking
+- ✅ **Character Progression**: Stats, experience, and leveling system
+- ✅ **Inventory System**: Items, equipment, and crafting materials
+- ✅ **Save/Load System**: Encrypted save system with game state
+- ✅ **World Navigation**: Location-based story progression
+- ✅ **Comprehensive UI**: All panels functional and responsive
+
+### Alpha Status
+- ✅ **Ready for Alpha Testing**: All core systems implemented and functional
+- ✅ **Complete Game Flow**: From story start to combat to quest completion
+- ✅ **Documentation**: Comprehensive alpha testing guide
+- ✅ **Testing Framework**: Complete test coverage for all new systems
+
+## [v0.12.12] - 2024-12-19 - "Deep Progression System Implementation"
 
 ### Added
 - **Complete Deep Progression System**: Full implementation of Jedi Survivor-inspired progression mechanics

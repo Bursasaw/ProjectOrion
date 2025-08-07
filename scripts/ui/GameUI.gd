@@ -80,12 +80,12 @@ var game_manager
 var save_system
 var dialogue_manager: Node
 var quest_manager: Node
-var narrative_manager: Node
+var game_flow_manager: GameFlowManager
+var enemy_encounter_manager: EnemyEncounterManager
 
 # UI state
 var current_panel: Control = null
 var is_paused: bool = false
-var narrative_active: bool = false
 
 func _ready():
 	# Get game managers
@@ -93,7 +93,8 @@ func _ready():
 	save_system = get_node("/root/SaveSystem")
 	dialogue_manager = get_node("/root/DialogueManager")
 	quest_manager = get_node("/root/QuestManager")
-	narrative_manager = get_node("/root/NarrativeManager")
+	game_flow_manager = get_node("/root/GameFlowManager")
+	enemy_encounter_manager = get_node("/root/EnemyEncounterManager")
 	
 	# Connect button signals
 	_connect_button_signals()
@@ -116,10 +117,15 @@ func _ready():
 	_update_world_info()
 	_add_game_log_message("Welcome to Arcanum Origins: Before the Veil. Your journey begins here...")
 	
-	# Start narrative if available
-	if narrative_manager:
-		narrative_manager.narrative_node_changed.connect(_on_narrative_node_changed)
-		_start_narrative()
+	# Connect to game flow manager signals
+	if game_flow_manager:
+		game_flow_manager.scene_changed.connect(_on_scene_changed)
+		game_flow_manager.choice_made.connect(_on_choice_made)
+	
+	# Connect to enemy encounter manager signals
+	if enemy_encounter_manager:
+		enemy_encounter_manager.encounter_started.connect(_on_encounter_started)
+		enemy_encounter_manager.encounter_ended.connect(_on_encounter_ended)
 
 func _connect_button_signals():
 	# Top panel buttons
@@ -403,93 +409,38 @@ func _on_quest_button_pressed():
 
 func _on_move_button_pressed():
 	_add_game_log_message("You begin to move...")
+	# Trigger random encounter chance
+	if enemy_encounter_manager:
+		var current_location = game_manager.get_current_location() if game_manager else "Arcanum Sanctum"
+		var encounter_id = enemy_encounter_manager.get_random_encounter(current_location)
+		if encounter_id != "":
+			enemy_encounter_manager.start_encounter(encounter_id)
 
 func _on_interact_button_pressed():
 	_add_game_log_message("You look around for something to interact with...")
-	
-	# Check if there's a character to interact with
-	if dialogue_manager:
-		# For now, start dialogue with Elder Magus if in Arcanum Sanctum
-		if game_manager and game_manager.get_current_location() == "Arcanum Sanctum":
-			dialogue_manager.start_dialogue("elder_magus")
-			game_manager.change_game_state(GameManager.GameState.DIALOGUE)
-	
-	# Check for world events
-	if game_manager and game_manager.world_events:
-		var current_location = game_manager.get_current_location()
-		var available_events = game_manager.world_events.get_events_for_location(current_location)
-		
-		if available_events.size() > 0:
-			# Trigger a random event
-			var random_event = available_events[randi() % available_events.size()]
-			if game_manager.world_events.trigger_event(random_event, current_location):
-				_add_game_log_message("Something interesting happens...")
-			else:
-				_add_game_log_message("You find nothing of interest.")
-		else:
-			_add_game_log_message("You find nothing of interest.")
+	# Show current scene choices
+	if game_flow_manager:
+		var choices = game_flow_manager.get_available_choices()
+		_show_scene_choices(choices)
 
 func _on_combat_button_pressed():
 	_add_game_log_message("Starting combat...")
-	
-	# Create player combat actor
-	var combat_actor_script = load("res://scripts/characters/CombatActor.gd")
-	var player_actor = combat_actor_script.new()
-	player_actor.character_name = game_manager.player_data.character_name
-	player_actor.character_class = game_manager.player_data.character_class
-	player_actor.level = game_manager.player_data.level
-	
-	# Copy stats from player data
-	var stats = game_manager.player_data.get_stats()
-	player_actor.health_points = stats.get("health_points", 100)
-	player_actor.max_health_points = stats.get("max_health_points", 100)
-	player_actor.magic_points = stats.get("magic_points", 50)
-	player_actor.max_magic_points = stats.get("max_magic_points", 50)
-	player_actor.attack = stats.get("attack", 15)
-	player_actor.defense = stats.get("defense", 10)
-	player_actor.magic_attack = stats.get("magic_attack", 12)
-	player_actor.magic_defense = stats.get("magic_defense", 8)
-	player_actor.speed = stats.get("speed", 10)
-	
-	# Set player data reference
-	player_actor.set_player_data(game_manager.player_data)
-	
-	# Add basic attack action
-	var combat_action_script = load("res://scripts/core/CombatAction.gd")
-	var attack_action = combat_action_script.new()
-	attack_action.name = "Basic Attack"
-	attack_action.action_type = combat_action_script.ActionType.ATTACK
-	attack_action.power = 10
-	attack_action.cost = 0
-	attack_action.cost_type = "none"
-	player_actor.add_action(attack_action)
-	
-	# Create enemies based on location
-	var enemies = []
-	var current_location = game_manager.get_current_location()
-	
-	match current_location:
-		"Arcanum Sanctum":
-			enemies.append(combat_actor_script.create_skeleton())
-		"Nokturn Market":
-			enemies.append(combat_actor_script.create_goblin())
-			enemies.append(combat_actor_script.create_goblin())
-		"Void Rift":
-			enemies.append(combat_actor_script.create_void_creature())
-		_:
-			enemies.append(combat_actor_script.create_goblin())
-	
-	# Start combat
-	var combat_manager = game_manager.get_node("CombatManager")
-	if combat_manager:
-		combat_manager.start_combat(player_actor, enemies)
-		game_manager.change_game_state(GameManager.GameState.COMBAT)
-		_add_game_log_message("Combat started with %d enemies!" % enemies.size())
-	else:
-		_add_game_log_message("Combat system not available")
+	if enemy_encounter_manager and not enemy_encounter_manager.is_encounter_active():
+		# Start a random encounter
+		var current_location = game_manager.get_current_location() if game_manager else "Arcanum Sanctum"
+		var encounter_id = enemy_encounter_manager.get_random_encounter(current_location)
+		if encounter_id != "":
+			enemy_encounter_manager.start_encounter(encounter_id, true)  # Force encounter
+		else:
+			_add_game_log_message("No enemies are nearby.")
 
 func _on_cast_button_pressed():
 	_add_game_log_message("You prepare to cast a spell...")
+	if enemy_encounter_manager and enemy_encounter_manager.is_encounter_active():
+		var result = enemy_encounter_manager.process_combat_action("spell")
+		_add_game_log_message(result.message)
+		if result.damage_taken > 0:
+			_add_game_log_message("You take %d damage!" % result.damage_taken)
 
 func _on_resume_button_pressed():
 	game_manager.change_game_state(GameManager.GameState.PLAYING)
@@ -525,16 +476,39 @@ func _on_quit_button_pressed():
 
 func _on_attack_button_pressed():
 	_add_game_log_message("You prepare to attack!")
+	if enemy_encounter_manager and enemy_encounter_manager.is_encounter_active():
+		var result = enemy_encounter_manager.process_combat_action("attack")
+		_add_game_log_message(result.message)
+		if result.damage_taken > 0:
+			_add_game_log_message("You take %d damage!" % result.damage_taken)
+		if result.damage_taken < 0:
+			_add_game_log_message("You heal %d health!" % abs(result.damage_taken))
 
 func _on_spell_button_pressed():
 	_add_game_log_message("You prepare to cast a spell!")
+	if enemy_encounter_manager and enemy_encounter_manager.is_encounter_active():
+		var result = enemy_encounter_manager.process_combat_action("spell")
+		_add_game_log_message(result.message)
+		if result.damage_taken > 0:
+			_add_game_log_message("You take %d damage!" % result.damage_taken)
 
 func _on_item_button_pressed():
 	_add_game_log_message("You reach for an item...")
+	if enemy_encounter_manager and enemy_encounter_manager.is_encounter_active():
+		var result = enemy_encounter_manager.process_combat_action("item")
+		_add_game_log_message(result.message)
+		if result.damage_taken > 0:
+			_add_game_log_message("You take %d damage!" % result.damage_taken)
+		if result.damage_taken < 0:
+			_add_game_log_message("You heal %d health!" % abs(result.damage_taken))
 
 func _on_flee_button_pressed():
-	game_manager.change_game_state(GameManager.GameState.PLAYING)
 	_add_game_log_message("You attempt to flee from combat!")
+	if enemy_encounter_manager and enemy_encounter_manager.is_encounter_active():
+		var result = enemy_encounter_manager.process_combat_action("flee")
+		_add_game_log_message(result.message)
+		if result.damage_taken > 0:
+			_add_game_log_message("You take %d damage!" % result.damage_taken)
 
 func _on_close_inventory_button_pressed():
 	game_manager.change_game_state(GameManager.GameState.PLAYING)
@@ -606,81 +580,77 @@ func show_combat_actions(actions):
 			combat_action_script.ActionType.ITEM:
 				item_button.visible = true 
 
-# Narrative system functions
-func _start_narrative():
-	"""Start the narrative system"""
-	if narrative_manager:
-		narrative_active = true
-		_update_narrative_display()
-
-func _update_narrative_display():
-	"""Update the narrative display with current story content"""
-	if not narrative_manager or not narrative_active:
-		return
+# Game Flow Manager signal handlers
+func _on_scene_changed(scene_id: String, scene_data: Dictionary):
+	"""Handle scene changes from the game flow manager"""
+	_add_game_log_message("=== " + scene_data.get("name", "Unknown Location") + " ===")
+	_add_game_log_message(scene_data.get("description", ""))
 	
-	var current_text = narrative_manager.get_current_text()
-	var choices = narrative_manager.get_available_choices()
+	# Update location and world info
+	if game_manager:
+		game_manager.update_location(scene_data.get("location", "Unknown"), scene_data.get("world", "Terra"))
+		_update_world_info()
 	
-	# Update game log with narrative text
-	game_log.text = current_text
+	# Show available choices
+	var choices = game_flow_manager.get_available_choices()
+	_show_scene_choices(choices)
+
+func _on_choice_made(choice_id: String, result: Dictionary):
+	"""Handle choice made from the game flow manager"""
+	_add_game_log_message("You chose: " + result.get("text", "Unknown choice"))
+
+func _show_scene_choices(choices: Array):
+	"""Show available choices for the current scene"""
+	# Clear existing choice buttons
+	for child in dialogue_choices.get_children():
+		child.queue_free()
 	
-	# Clear existing action buttons
-	_clear_action_buttons()
+	# Add new choice buttons
+	for choice in choices:
+		var choice_button = Button.new()
+		choice_button.text = choice.get("text", "Unknown")
+		choice_button.pressed.connect(_on_scene_choice_pressed.bind(choice.get("id", "")))
+		dialogue_choices.add_child(choice_button)
 	
-	# Add choice buttons
-	for i in range(choices.size()):
-		var choice = choices[i]
-		var button = Button.new()
-		button.text = choice["text"]
-		button.pressed.connect(_on_narrative_choice_pressed.bind(i))
-		
-		# Add to action buttons container
-		var action_container = get_node("BottomPanel/BottomPanelContainer/ActionButtons")
-		action_container.add_child(button)
+	# Show dialogue panel for choices
+	_show_panel(dialogue_panel)
 
-func _clear_action_buttons():
-	"""Clear all action buttons"""
-	var action_container = get_node("BottomPanel/BottomPanelContainer/ActionButtons")
-	for child in action_container.get_children():
-		if child != move_button and child != interact_button and child != combat_button and child != cast_button:
-			child.queue_free()
+func _on_scene_choice_pressed(choice_id: String):
+	"""Handle scene choice selection"""
+	if game_flow_manager:
+		game_flow_manager.make_choice(choice_id)
+	_show_panel(null)
 
-func _on_narrative_choice_pressed(choice_index: int):
-	"""Handle narrative choice selection"""
-	if narrative_manager:
-		var success = narrative_manager.progress_narrative(choice_index)
-		if success:
-			_update_narrative_display()
-			_update_player_info()  # Update stats if they changed
-		else:
-			_add_game_log_message("Failed to progress narrative")
+# Enemy Encounter Manager signal handlers
+func _on_encounter_started(enemy_data: Dictionary):
+	"""Handle encounter start"""
+	_add_game_log_message("=== ENCOUNTER ===")
+	_add_game_log_message(enemy_encounter_manager.get_encounter_description())
+	_add_game_log_message(enemy_encounter_manager.get_enemy_description())
+	
+	# Show combat panel
+	_show_panel(combat_panel)
+	
+	# Update combat log
+	combat_log.text = "Combat started!\n" + enemy_encounter_manager.get_enemy_description()
 
-func _on_narrative_node_changed(node_id: String):
-	"""Handle narrative node changes"""
-	_add_game_log_message("Story progressed to: " + node_id)
-	_update_narrative_display()
-
-func _on_move_button_pressed():
-	"""Handle move action - show world map"""
-	if world_map_panel:
-		world_map_panel.show()
-		_add_game_log_message("Opening world map...")
-
-func _on_interact_button_pressed():
-	"""Handle interact action - show dialogue or narrative choices"""
-	if narrative_active and narrative_manager:
-		var choices = narrative_manager.get_available_choices()
-		if choices.size() > 0:
-			_update_narrative_display()
-		else:
-			_add_game_log_message("Nothing to interact with here.")
-	else:
-		_add_game_log_message("Nothing to interact with here.")
-
-func _on_combat_button_pressed():
-	"""Handle combat action"""
-	_add_game_log_message("Combat system not yet implemented.")
-
-func _on_cast_button_pressed():
-	"""Handle cast spell action"""
-	_add_game_log_message("Spell casting not yet implemented.") 
+func _on_encounter_ended(result: String, rewards: Dictionary):
+	"""Handle encounter end"""
+	_add_game_log_message("=== ENCOUNTER ENDED ===")
+	
+	match result:
+		"victory":
+			_add_game_log_message("Victory! You defeated the enemy!")
+			if rewards.has("experience"):
+				_add_game_log_message("Gained %d experience!" % rewards.get("experience", 0))
+			if rewards.has("gold"):
+				_add_game_log_message("Found %d gold!" % rewards.get("gold", 0))
+			if rewards.has("items") and rewards.get("items", []).size() > 0:
+				_add_game_log_message("Found items: " + ", ".join(rewards.get("items", [])))
+		"fled":
+			_add_game_log_message("You successfully fled from the encounter!")
+		"defeat":
+			_add_game_log_message("You were defeated...")
+	
+	# Hide combat panel
+	_show_panel(null) 

@@ -1,22 +1,39 @@
-[gd_scene load_steps=5 format=3 uid="uid://dftdaqe82spgp"]
+[gd_scene load_steps=6 format=3 uid="uid://dftdaqe82spgp"]
 
-[ext_resource type="PackedScene" uid="uid://bqxvn8yqxqxqx" path="res://scenes/ui/MainMenu.tscn" id="1_0x0x0"]
-[ext_resource type="PackedScene" path="res://scenes/ui/GameUI.tscn" id="2_0x0x0"]
-[ext_resource type="PackedScene" path="res://scenes/testing/TestBot.tscn" id="3_test_bot"]
-[ext_resource type="Script" uid="uid://nsb51rdajjxw" path="res://scripts/testing/TestRunner.gd" id="4_test_runner"]
+[ext_resource type="PackedScene" path="res://scenes/ui/GameUI.tscn" id="1_game_ui"]
+[ext_resource type="Script" uid="uid://caq8jfmue1umo" path="res://scripts/core/GameFlowManager.gd" id="2_game_flow_manager"]
+[ext_resource type="Script" uid="uid://b048s0l14d3pp" path="res://scripts/core/EnemyEncounterManager.gd" id="3_enemy_encounter_manager"]
+[ext_resource type="Script" uid="uid://bo3ahy86kfmjp" path="res://scripts/core/QuestIntegration.gd" id="4_quest_integration"]
+[ext_resource type="Script" uid="uid://jonmye30h5qf" path="res://scripts/core/GameInitializer.gd" id="5_game_initializer"]
 
 [node name="Main" type="Node"]
 
-[node name="MainMenu" parent="." instance=ExtResource("1_0x0x0")]
+[node name="GameFlowManager" type="Node" parent="."]
+script = ExtResource("2_game_flow_manager")
+
+[node name="EnemyEncounterManager" type="Node" parent="."]
+script = ExtResource("3_enemy_encounter_manager")
+
+[node name="QuestIntegration" type="Node" parent="."]
+script = ExtResource("4_quest_integration")
+
+[node name="GameInitializer" type="Node" parent="."]
+script = ExtResource("5_game_initializer")
+
+[node name="GameUI" parent="." instance=ExtResource("1_game_ui")]
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GameUI" parent="." instance=ExtResource("2_0x0x0")]
-visible = false
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GameManager" type="Node" parent="."]
 
-[node name="TestBot" parent="." instance=ExtResource("3_test_bot")]
+[node name="SaveSystem" type="Node" parent="."]
 
-[node name="TestRunner" type="Node" parent="."]
-script = ExtResource("4_test_runner")
+[node name="DialogueManager" type="Node" parent="."]
+
+[node name="QuestManager" type="Node" parent="."]
+
+[node name="CombatManager" type="Node" parent="."]
+
+[node name="InventoryManager" type="Node" parent="."]
+
+[node name="PlayerData" type="Node" parent="."]
