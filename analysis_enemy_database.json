@@ -1,0 +1,14 @@
+{
+  "files_analyzed": 1,
+  "total_items": 45,
+  "worlds_covered": 0,
+  "optimization_opportunities": [
+    {
+      "file": "enemies.json",
+      "size": 30382,
+      "recommendation": "Consider splitting into smaller files"
+    }
+  ],
+  "missing_content": [],
+  "recommendations": []
+}

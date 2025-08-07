@@ -13,7 +13,7 @@ signal stance_skill_updated(stance_id: String, available_skills: Array[Dictionar
 var available_stances: Dictionary = {}
 var active_stances: Array[String] = []
 var stance_skills: Dictionary = {}
-var cross_stance_synergies: Dictionary = {}
+var cross_stance_synergies: Array = []
 var stance_effects: Dictionary = {}
 
 # Stance switching cooldown
@@ -40,7 +40,7 @@ func load_stance_data():
 	"""Load stance data from the skill system"""
 	var skill_system = get_node_or_null("/root/SkillSystem")
 	if skill_system:
-		available_stances = skill_system.skill_trees.stances
+		available_stances = skill_system.stances
 		cross_stance_synergies = skill_system.cross_tree_synergies
 		print("📚 StanceManager: Loaded ", available_stances.size(), " stances")
 	else:
@@ -54,11 +54,11 @@ func setup_default_stances():
 
 func switch_stance(new_stance: String) -> bool:
 	"""Switch to a new stance (Jedi Survivor style)"""
-	var current_time = Time.get_time_dict_from_system()
-	var time_since_last_switch = current_time.second - last_stance_switch_time
+	var current_time = Time.get_ticks_msec() / 1000.0  # Convert to seconds
+	var time_since_last_switch = current_time - last_stance_switch_time
 	
-	# Check cooldown
-	if time_since_last_switch < stance_switch_cooldown:
+	# Check cooldown (reduced for testing)
+	if time_since_last_switch < 0.5:  # Reduced to 0.5 seconds for testing
 		print("⏳ StanceManager: Stance switch on cooldown")
 		return false
 	
@@ -90,7 +90,7 @@ func switch_stance(new_stance: String) -> bool:
 	check_cross_stance_synergies()
 	
 	# Update cooldown
-	last_stance_switch_time = current_time.second
+	last_stance_switch_time = current_time
 	
 	print("⚔️ StanceManager: Switched to stance: ", new_stance)
 	stance_activated.emit(new_stance, stance_data)
@@ -173,12 +173,14 @@ func update_stance_skills():
 
 func check_cross_stance_synergies():
 	"""Check for cross-stance synergies (Jedi Survivor style)"""
-	for synergy in cross_stance_synergies:
-		var synergy_data = cross_stance_synergies[synergy]
+	for synergy_data in cross_stance_synergies:
+		if not synergy_data.has("stance_requirements"):
+			continue
+		
 		var requirements_met = true
 		
 		# Check if all required stances are active
-		for stance_requirement in synergy_data.get("stance_requirements", []):
+		for stance_requirement in synergy_data.stance_requirements:
 			if not stance_requirement in active_stances:
 				requirements_met = false
 				break
@@ -217,14 +219,14 @@ func get_stance_effect(stance_id: String, skill_tree: String) -> float:
 
 func can_switch_stance() -> bool:
 	"""Check if stance switching is available (not on cooldown)"""
-	var current_time = Time.get_time_dict_from_system()
-	var time_since_last_switch = current_time.second - last_stance_switch_time
+	var current_time = Time.get_ticks_msec() / 1000.0
+	var time_since_last_switch = current_time - last_stance_switch_time
 	return time_since_last_switch >= stance_switch_cooldown
 
 func get_stance_switch_cooldown_remaining() -> float:
 	"""Get remaining cooldown time for stance switching"""
-	var current_time = Time.get_time_dict_from_system()
-	var time_since_last_switch = current_time.second - last_stance_switch_time
+	var current_time = Time.get_ticks_msec() / 1000.0
+	var time_since_last_switch = current_time - last_stance_switch_time
 	var remaining = stance_switch_cooldown - time_since_last_switch
 	return max(0.0, remaining)
 
@@ -257,7 +259,7 @@ func save_stance_data() -> Dictionary:
 		"last_stance_switch_time": last_stance_switch_time
 	}
 
-func load_stance_data(data: Dictionary):
+func load_stance_data_from_save(data: Dictionary):
 	"""Load stance data from persistence"""
 	active_stances = data.get("active_stances", ["combat", "arcane"])
 	stance_effects = data.get("stance_effects", {})
@@ -270,7 +272,7 @@ func load_stance_data(data: Dictionary):
 			activate_stance(stance_id, stance_data)
 	
 	update_stance_skills()
-	print("📚 StanceManager: Stance data loaded")
+	print("📚 StanceManager: Stance data loaded from save")
 
 func reset_stances():
 	"""Reset to default stances"""

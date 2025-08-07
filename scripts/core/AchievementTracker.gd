@@ -106,6 +106,9 @@ func setup_achievement_categories():
 	}
 	
 	crafting_stats = {
+		"items_crafted": 0,
+		"high_quality_crafts": 0,
+		"legendary_crafts": 0,
 		"legendary_items_crafted": 0,
 		"unique_combinations_created": 0,
 		"crafting_disciplines_mastered": 0,
@@ -140,7 +143,7 @@ func check_achievements_for_stat(stat_type: String):
 			var achievement = achievements[category].achievements[achievement_id]
 			
 			for tier in achievement.tiers:
-				if achievement.requirement == stat_type:
+				if tier.requirement == stat_type:
 					check_achievement_completion(achievement_id, tier, stat_type)
 
 func check_achievement_completion(achievement_id: String, tier: Dictionary, stat_type: String):
@@ -219,28 +222,28 @@ func grant_achievement_rewards(achievement_id: String, tier: Dictionary):
 
 func add_achievement_notification(achievement_id: String, tier: Dictionary):
 	"""Add achievement completion to notification queue"""
-	var notification = {
+	var achievement_notification = {
 		"achievement_id": achievement_id,
 		"tier_name": tier.name,
 		"description": tier.description,
 		"rewards": tier.reward
 	}
 	
-	notification_queue.append(notification)
+	notification_queue.append(achievement_notification)
 
 func process_notifications():
 	"""Process achievement notifications with timing"""
 	var current_time = Time.get_time_dict_from_system()
 	
 	if notification_queue.size() > 0 and current_time.second - last_notification_time >= notification_delay:
-		var notification = notification_queue.pop_front()
-		show_achievement_notification(notification)
+		var achievement_notification = notification_queue.pop_front()
+		show_achievement_notification(achievement_notification)
 		last_notification_time = current_time.second
 
-func show_achievement_notification(notification: Dictionary):
+func show_achievement_notification(achievement_notification: Dictionary):
 	"""Show an achievement completion notification"""
-	print("🎉 ACHIEVEMENT UNLOCKED: ", notification.tier_name)
-	print("   Description: ", notification.description)
+	print("🎉 ACHIEVEMENT UNLOCKED: ", achievement_notification.tier_name)
+	print("   Description: ", achievement_notification.description)
 	
 	# Here you would integrate with the UI system to show notifications
 	# For now, we'll just print to console
@@ -255,7 +258,7 @@ func get_achievement_progress(achievement_id: String) -> Dictionary:
 			
 			for tier in achievement.tiers:
 				var tracker_key = achievement_id + "_" + tier.name.to_lower()
-				var stat_type = achievement.requirement
+				var stat_type = tier.requirement
 				
 				var current_progress = 0.0
 				if combat_stats.has(stat_type):
@@ -346,7 +349,7 @@ func save_achievement_data() -> Dictionary:
 		"category_completion": category_completion
 	}
 
-func load_achievement_data(data: Dictionary):
+func load_achievement_data_from_save(data: Dictionary):
 	"""Load achievement data from persistence"""
 	progress_trackers = data.get("progress_trackers", {})
 	completed_achievements = data.get("completed_achievements", [])
@@ -356,7 +359,7 @@ func load_achievement_data(data: Dictionary):
 	crafting_stats = data.get("crafting_stats", {})
 	category_completion = data.get("category_completion", {})
 	
-	print("📚 AchievementTracker: Achievement data loaded")
+	print("📚 AchievementTracker: Achievement data loaded from save")
 
 func reset_achievements():
 	"""Reset all achievement progress (for testing)"""
@@ -373,6 +376,6 @@ func reset_achievements():
 	
 	print("🔄 AchievementTracker: All achievements reset")
 
-func _process(delta):
+func _process(_delta):
 	"""Process achievement notifications"""
 	process_notifications() 

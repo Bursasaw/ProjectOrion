@@ -1,0 +1,137 @@
+{
+  "project_path": "/Users/bursasaw/Documents/Morph Studios/ProjectOrion-0.12.12",
+  "enhanced_agents": {
+    "enemy_database": {
+      "description": "Creates comprehensive enemy databases for all worlds",
+      "focus_areas": [
+        "enemies",
+        "bosses",
+        "elites",
+        "loot_tables"
+      ],
+      "priority": "high",
+      "estimated_duration_hours": 8,
+      "sophistication_level": "expert"
+    },
+    "combat_abilities": {
+      "description": "Creates sophisticated combat abilities and systems",
+      "focus_areas": [
+        "abilities",
+        "combat",
+        "effects",
+        "balance"
+      ],
+      "priority": "high",
+      "estimated_duration_hours": 6,
+      "sophistication_level": "expert"
+    },
+    "content_analysis": {
+      "description": "Analyzes and optimizes all data content",
+      "focus_areas": [
+        "analysis",
+        "optimization",
+        "testing",
+        "quality"
+      ],
+      "priority": "medium",
+      "estimated_duration_hours": 4,
+      "sophistication_level": "expert"
+    },
+    "world_content": {
+      "description": "Creates world-specific content and lore",
+      "focus_areas": [
+        "worlds",
+        "lore",
+        "themes",
+        "atmosphere"
+      ],
+      "priority": "medium",
+      "estimated_duration_hours": 10,
+      "sophistication_level": "expert"
+    },
+    "status_effects": {
+      "description": "Creates comprehensive status effect systems",
+      "focus_areas": [
+        "effects",
+        "buffs",
+        "debuffs",
+        "interactions"
+      ],
+      "priority": "medium",
+      "estimated_duration_hours": 5,
+      "sophistication_level": "expert"
+    },
+    "armor_mod_sets": {
+      "description": "Creates armor sets and mod combinations",
+      "focus_areas": [
+        "armor",
+        "mods",
+        "sets",
+        "synergies"
+      ],
+      "priority": "low",
+      "estimated_duration_hours": 7,
+      "sophistication_level": "expert"
+    }
+  },
+  "enhanced_coordination": {
+    "status_check_interval": 30,
+    "log_level": "INFO",
+    "auto_restart_failed_agents": true,
+    "max_concurrent_agents": 6,
+    "sophistication_mode": "expert",
+    "data_analysis_depth": "comprehensive"
+  },
+  "enhanced_task_types": {
+    "enemy_database_creation": {
+      "description": "Create sophisticated enemy databases with unique abilities and lore",
+      "estimated_time_minutes": 45,
+      "sophistication_required": "expert"
+    },
+    "combat_abilities_creation": {
+      "description": "Create complex combat abilities with unique effects and interactions",
+      "estimated_time_minutes": 30,
+      "sophistication_required": "expert"
+    },
+    "status_effects_creation": {
+      "description": "Create comprehensive status effect systems with interactions",
+      "estimated_time_minutes": 25,
+      "sophistication_required": "expert"
+    },
+    "armor_sets_creation": {
+      "description": "Create armor sets with set bonuses and synergies",
+      "estimated_time_minutes": 35,
+      "sophistication_required": "expert"
+    },
+    "mod_sets_creation": {
+      "description": "Create mod combinations with unique synergies",
+      "estimated_time_minutes": 40,
+      "sophistication_required": "expert"
+    },
+    "boss_encounters_creation": {
+      "description": "Create unique boss encounters with complex mechanics",
+      "estimated_time_minutes": 50,
+      "sophistication_required": "expert"
+    },
+    "world_content_creation": {
+      "description": "Create world-specific content and atmospheric elements",
+      "estimated_time_minutes": 60,
+      "sophistication_required": "expert"
+    },
+    "data_analysis": {
+      "description": "Comprehensive analysis of existing data for optimization",
+      "estimated_time_minutes": 20,
+      "sophistication_required": "expert"
+    },
+    "content_optimization": {
+      "description": "Optimize and enhance existing content",
+      "estimated_time_minutes": 30,
+      "sophistication_required": "expert"
+    },
+    "comprehensive_testing": {
+      "description": "Comprehensive testing of all data systems",
+      "estimated_time_minutes": 25,
+      "sophistication_required": "expert"
+    }
+  }
+}

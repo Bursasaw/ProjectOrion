@@ -1,0 +1,1404 @@
+[
+  {
+    "id": "terra_ability_1",
+    "name": "Nature's Wrath",
+    "type": "damage",
+    "element": "nature",
+    "damage": 20,
+    "cooldown": 3,
+    "mana_cost": 15,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 25
+      },
+      {
+        "type": "healing",
+        "value": 10
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_2",
+    "name": "Crystal Storm",
+    "type": "healing",
+    "element": "crystal",
+    "damage": 25,
+    "cooldown": 4,
+    "mana_cost": 18,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 30
+      },
+      {
+        "type": "healing",
+        "value": 12
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 6
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_3",
+    "name": "Life Drain",
+    "type": "buff",
+    "element": "life",
+    "damage": 30,
+    "cooldown": 5,
+    "mana_cost": 21,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 35
+      },
+      {
+        "type": "healing",
+        "value": 14
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 7
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_4",
+    "name": "Primal Strike",
+    "type": "debuff",
+    "element": "earth",
+    "damage": 35,
+    "cooldown": 6,
+    "mana_cost": 24,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 40
+      },
+      {
+        "type": "healing",
+        "value": 16
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_5",
+    "name": "Forest's Embrace",
+    "type": "area",
+    "element": "nature",
+    "damage": 40,
+    "cooldown": 7,
+    "mana_cost": 27,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 45
+      },
+      {
+        "type": "healing",
+        "value": 18
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 9
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_6",
+    "name": "Nature's Wrath",
+    "type": "damage",
+    "element": "crystal",
+    "damage": 45,
+    "cooldown": 3,
+    "mana_cost": 30,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 50
+      },
+      {
+        "type": "healing",
+        "value": 20
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 10
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_7",
+    "name": "Crystal Storm",
+    "type": "healing",
+    "element": "life",
+    "damage": 50,
+    "cooldown": 4,
+    "mana_cost": 33,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 55
+      },
+      {
+        "type": "healing",
+        "value": 22
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_8",
+    "name": "Life Drain",
+    "type": "buff",
+    "element": "earth",
+    "damage": 55,
+    "cooldown": 5,
+    "mana_cost": 36,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 60
+      },
+      {
+        "type": "healing",
+        "value": 24
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 12
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_9",
+    "name": "Primal Strike",
+    "type": "debuff",
+    "element": "nature",
+    "damage": 60,
+    "cooldown": 6,
+    "mana_cost": 39,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 65
+      },
+      {
+        "type": "healing",
+        "value": 26
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 13
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_10",
+    "name": "Forest's Embrace",
+    "type": "area",
+    "element": "crystal",
+    "damage": 65,
+    "cooldown": 7,
+    "mana_cost": 42,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 70
+      },
+      {
+        "type": "healing",
+        "value": 28
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_11",
+    "name": "Nature's Wrath",
+    "type": "damage",
+    "element": "life",
+    "damage": 70,
+    "cooldown": 3,
+    "mana_cost": 45,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 75
+      },
+      {
+        "type": "healing",
+        "value": 30
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 15
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_12",
+    "name": "Crystal Storm",
+    "type": "healing",
+    "element": "earth",
+    "damage": 75,
+    "cooldown": 4,
+    "mana_cost": 48,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 80
+      },
+      {
+        "type": "healing",
+        "value": 32
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 16
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_13",
+    "name": "Life Drain",
+    "type": "buff",
+    "element": "nature",
+    "damage": 80,
+    "cooldown": 5,
+    "mana_cost": 51,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 85
+      },
+      {
+        "type": "healing",
+        "value": 34
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_14",
+    "name": "Primal Strike",
+    "type": "debuff",
+    "element": "crystal",
+    "damage": 85,
+    "cooldown": 6,
+    "mana_cost": 54,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 90
+      },
+      {
+        "type": "healing",
+        "value": 36
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 18
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_15",
+    "name": "Forest's Embrace",
+    "type": "area",
+    "element": "life",
+    "damage": 90,
+    "cooldown": 7,
+    "mana_cost": 57,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 95
+      },
+      {
+        "type": "healing",
+        "value": 38
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 19
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_16",
+    "name": "Nature's Wrath",
+    "type": "damage",
+    "element": "earth",
+    "damage": 95,
+    "cooldown": 3,
+    "mana_cost": 60,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 100
+      },
+      {
+        "type": "healing",
+        "value": 40
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_17",
+    "name": "Crystal Storm",
+    "type": "healing",
+    "element": "nature",
+    "damage": 100,
+    "cooldown": 4,
+    "mana_cost": 63,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 105
+      },
+      {
+        "type": "healing",
+        "value": 42
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 21
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_18",
+    "name": "Life Drain",
+    "type": "buff",
+    "element": "crystal",
+    "damage": 105,
+    "cooldown": 5,
+    "mana_cost": 66,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 110
+      },
+      {
+        "type": "healing",
+        "value": 44
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 22
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_19",
+    "name": "Primal Strike",
+    "type": "debuff",
+    "element": "life",
+    "damage": 110,
+    "cooldown": 6,
+    "mana_cost": 69,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 115
+      },
+      {
+        "type": "healing",
+        "value": 46
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "terra_ability_20",
+    "name": "Forest's Embrace",
+    "type": "area",
+    "element": "earth",
+    "damage": 115,
+    "cooldown": 7,
+    "mana_cost": 72,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 120
+      },
+      {
+        "type": "healing",
+        "value": 48
+      },
+      {
+        "type": "buff",
+        "stat": "defense",
+        "value": 24
+      }
+    ],
+    "description": "Channels the primal forces of terra to unleash devastating natural power."
+  },
+  {
+    "id": "nokturn_ability_1",
+    "name": "Shadow Strike",
+    "type": "damage",
+    "element": "shadow",
+    "damage": 20,
+    "cooldown": 3,
+    "mana_cost": 15,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 30
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -3
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_2",
+    "name": "Void Blast",
+    "type": "debuff",
+    "element": "void",
+    "damage": 25,
+    "cooldown": 4,
+    "mana_cost": 18,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 36
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -4
+      },
+      {
+        "type": "fear",
+        "duration": 3
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_3",
+    "name": "Fear Wave",
+    "type": "control",
+    "element": "darkness",
+    "damage": 30,
+    "cooldown": 5,
+    "mana_cost": 21,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 42
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -5
+      },
+      {
+        "type": "fear",
+        "duration": 4
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_4",
+    "name": "Dark Embrace",
+    "type": "stealth",
+    "element": "fear",
+    "damage": 35,
+    "cooldown": 6,
+    "mana_cost": 24,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 48
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -6
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_5",
+    "name": "Nightmare Touch",
+    "type": "area",
+    "element": "shadow",
+    "damage": 40,
+    "cooldown": 7,
+    "mana_cost": 27,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 54
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -7
+      },
+      {
+        "type": "fear",
+        "duration": 6
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_6",
+    "name": "Shadow Strike",
+    "type": "damage",
+    "element": "void",
+    "damage": 45,
+    "cooldown": 3,
+    "mana_cost": 30,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 60
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -8
+      },
+      {
+        "type": "fear",
+        "duration": 7
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_7",
+    "name": "Void Blast",
+    "type": "debuff",
+    "element": "darkness",
+    "damage": 50,
+    "cooldown": 4,
+    "mana_cost": 33,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 66
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -9
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_8",
+    "name": "Fear Wave",
+    "type": "control",
+    "element": "fear",
+    "damage": 55,
+    "cooldown": 5,
+    "mana_cost": 36,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 72
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -10
+      },
+      {
+        "type": "fear",
+        "duration": 9
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_9",
+    "name": "Dark Embrace",
+    "type": "stealth",
+    "element": "shadow",
+    "damage": 60,
+    "cooldown": 6,
+    "mana_cost": 39,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 78
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -11
+      },
+      {
+        "type": "fear",
+        "duration": 10
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_10",
+    "name": "Nightmare Touch",
+    "type": "area",
+    "element": "void",
+    "damage": 65,
+    "cooldown": 7,
+    "mana_cost": 42,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 84
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -12
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_11",
+    "name": "Shadow Strike",
+    "type": "damage",
+    "element": "darkness",
+    "damage": 70,
+    "cooldown": 3,
+    "mana_cost": 45,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 90
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -13
+      },
+      {
+        "type": "fear",
+        "duration": 12
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_12",
+    "name": "Void Blast",
+    "type": "debuff",
+    "element": "fear",
+    "damage": 75,
+    "cooldown": 4,
+    "mana_cost": 48,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 96
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -14
+      },
+      {
+        "type": "fear",
+        "duration": 13
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_13",
+    "name": "Fear Wave",
+    "type": "control",
+    "element": "shadow",
+    "damage": 80,
+    "cooldown": 5,
+    "mana_cost": 51,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 102
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -15
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_14",
+    "name": "Dark Embrace",
+    "type": "stealth",
+    "element": "void",
+    "damage": 85,
+    "cooldown": 6,
+    "mana_cost": 54,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 108
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -16
+      },
+      {
+        "type": "fear",
+        "duration": 15
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_15",
+    "name": "Nightmare Touch",
+    "type": "area",
+    "element": "darkness",
+    "damage": 90,
+    "cooldown": 7,
+    "mana_cost": 57,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 114
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -17
+      },
+      {
+        "type": "fear",
+        "duration": 16
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_16",
+    "name": "Shadow Strike",
+    "type": "damage",
+    "element": "fear",
+    "damage": 95,
+    "cooldown": 3,
+    "mana_cost": 60,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 120
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -18
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_17",
+    "name": "Void Blast",
+    "type": "debuff",
+    "element": "shadow",
+    "damage": 100,
+    "cooldown": 4,
+    "mana_cost": 63,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 126
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -19
+      },
+      {
+        "type": "fear",
+        "duration": 18
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_18",
+    "name": "Fear Wave",
+    "type": "control",
+    "element": "void",
+    "damage": 105,
+    "cooldown": 5,
+    "mana_cost": 66,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 132
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -20
+      },
+      {
+        "type": "fear",
+        "duration": 19
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_19",
+    "name": "Dark Embrace",
+    "type": "stealth",
+    "element": "darkness",
+    "damage": 110,
+    "cooldown": 6,
+    "mana_cost": 69,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 138
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -21
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "nokturn_ability_20",
+    "name": "Nightmare Touch",
+    "type": "area",
+    "element": "fear",
+    "damage": 115,
+    "cooldown": 7,
+    "mana_cost": 72,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 144
+      },
+      {
+        "type": "debuff",
+        "stat": "defense",
+        "value": -22
+      },
+      {
+        "type": "fear",
+        "duration": 21
+      }
+    ],
+    "description": "Harnesses the dark energy of nokturn to strike fear into enemies."
+  },
+  {
+    "id": "elysion_ability_1",
+    "name": "Divine Light",
+    "type": "damage",
+    "element": "light",
+    "damage": 20,
+    "cooldown": 3,
+    "mana_cost": 15,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 20
+      },
+      {
+        "type": "healing",
+        "value": 15
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_2",
+    "name": "Holy Smite",
+    "type": "healing",
+    "element": "holy",
+    "damage": 25,
+    "cooldown": 4,
+    "mana_cost": 18,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 24
+      },
+      {
+        "type": "healing",
+        "value": 18
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 4
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_3",
+    "name": "Celestial Blessing",
+    "type": "buff",
+    "element": "divine",
+    "damage": 30,
+    "cooldown": 5,
+    "mana_cost": 21,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 28
+      },
+      {
+        "type": "healing",
+        "value": 21
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 5
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_4",
+    "name": "Wisdom's Touch",
+    "type": "protection",
+    "element": "celestial",
+    "damage": 35,
+    "cooldown": 6,
+    "mana_cost": 24,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 32
+      },
+      {
+        "type": "healing",
+        "value": 24
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_5",
+    "name": "Sacred Shield",
+    "type": "area",
+    "element": "light",
+    "damage": 40,
+    "cooldown": 7,
+    "mana_cost": 27,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 36
+      },
+      {
+        "type": "healing",
+        "value": 27
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 7
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_6",
+    "name": "Divine Light",
+    "type": "damage",
+    "element": "holy",
+    "damage": 45,
+    "cooldown": 3,
+    "mana_cost": 30,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 40
+      },
+      {
+        "type": "healing",
+        "value": 30
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 8
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_7",
+    "name": "Holy Smite",
+    "type": "healing",
+    "element": "divine",
+    "damage": 50,
+    "cooldown": 4,
+    "mana_cost": 33,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 44
+      },
+      {
+        "type": "healing",
+        "value": 33
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_8",
+    "name": "Celestial Blessing",
+    "type": "buff",
+    "element": "celestial",
+    "damage": 55,
+    "cooldown": 5,
+    "mana_cost": 36,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 48
+      },
+      {
+        "type": "healing",
+        "value": 36
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 10
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_9",
+    "name": "Wisdom's Touch",
+    "type": "protection",
+    "element": "light",
+    "damage": 60,
+    "cooldown": 6,
+    "mana_cost": 39,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 52
+      },
+      {
+        "type": "healing",
+        "value": 39
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 11
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_10",
+    "name": "Sacred Shield",
+    "type": "area",
+    "element": "holy",
+    "damage": 65,
+    "cooldown": 7,
+    "mana_cost": 42,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 56
+      },
+      {
+        "type": "healing",
+        "value": 42
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_11",
+    "name": "Divine Light",
+    "type": "damage",
+    "element": "divine",
+    "damage": 70,
+    "cooldown": 3,
+    "mana_cost": 45,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 60
+      },
+      {
+        "type": "healing",
+        "value": 45
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 13
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_12",
+    "name": "Holy Smite",
+    "type": "healing",
+    "element": "celestial",
+    "damage": 75,
+    "cooldown": 4,
+    "mana_cost": 48,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 64
+      },
+      {
+        "type": "healing",
+        "value": 48
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 14
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_13",
+    "name": "Celestial Blessing",
+    "type": "buff",
+    "element": "light",
+    "damage": 80,
+    "cooldown": 5,
+    "mana_cost": 51,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 68
+      },
+      {
+        "type": "healing",
+        "value": 51
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_14",
+    "name": "Wisdom's Touch",
+    "type": "protection",
+    "element": "holy",
+    "damage": 85,
+    "cooldown": 6,
+    "mana_cost": 54,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 72
+      },
+      {
+        "type": "healing",
+        "value": 54
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 16
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_15",
+    "name": "Sacred Shield",
+    "type": "area",
+    "element": "divine",
+    "damage": 90,
+    "cooldown": 7,
+    "mana_cost": 57,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 76
+      },
+      {
+        "type": "healing",
+        "value": 57
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 17
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_16",
+    "name": "Divine Light",
+    "type": "damage",
+    "element": "celestial",
+    "damage": 95,
+    "cooldown": 3,
+    "mana_cost": 60,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 80
+      },
+      {
+        "type": "healing",
+        "value": 60
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_17",
+    "name": "Holy Smite",
+    "type": "healing",
+    "element": "light",
+    "damage": 100,
+    "cooldown": 4,
+    "mana_cost": 63,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 84
+      },
+      {
+        "type": "healing",
+        "value": 63
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 19
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_18",
+    "name": "Celestial Blessing",
+    "type": "buff",
+    "element": "holy",
+    "damage": 105,
+    "cooldown": 5,
+    "mana_cost": 66,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 88
+      },
+      {
+        "type": "healing",
+        "value": 66
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 20
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_19",
+    "name": "Wisdom's Touch",
+    "type": "protection",
+    "element": "divine",
+    "damage": 110,
+    "cooldown": 6,
+    "mana_cost": 69,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 92
+      },
+      {
+        "type": "healing",
+        "value": 69
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  },
+  {
+    "id": "elysion_ability_20",
+    "name": "Sacred Shield",
+    "type": "area",
+    "element": "celestial",
+    "damage": 115,
+    "cooldown": 7,
+    "mana_cost": 72,
+    "effects": [
+      {
+        "type": "damage",
+        "value": 96
+      },
+      {
+        "type": "healing",
+        "value": 72
+      },
+      {
+        "type": "buff",
+        "stat": "all",
+        "value": 22
+      }
+    ],
+    "description": "Calls upon the divine light of elysion to smite foes and heal allies."
+  }
+]

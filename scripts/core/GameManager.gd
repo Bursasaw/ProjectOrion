@@ -362,3 +362,42 @@ func is_in_dialogue() -> bool:
 func is_paused() -> bool:
 	"""Check if game is paused"""
 	return current_state == GameState.PAUSED 
+
+# Skill System Integration Methods
+func add_movement_speed_bonus(bonus_value: float):
+	"""Add movement speed bonus from skill system"""
+	print("GameManager: Adding movement speed bonus: ", bonus_value)
+	
+	# Store the bonus for use in movement calculations
+	if not has_method("get_movement_speed_bonus"):
+		# Initialize movement speed bonus if not exists
+		set_meta("movement_speed_bonus", 0.0)
+	
+	var current_bonus = get_meta("movement_speed_bonus", 0.0)
+	set_meta("movement_speed_bonus", current_bonus + bonus_value)
+	
+	# Emit signal for UI updates
+	player_stats_updated.emit()
+
+func add_crafting_quality_bonus(bonus_value: float):
+	"""Add crafting quality bonus from skill system"""
+	print("GameManager: Adding crafting quality bonus: ", bonus_value)
+	
+	# Store the bonus for use in crafting calculations
+	if not has_method("get_crafting_quality_bonus"):
+		# Initialize crafting quality bonus if not exists
+		set_meta("crafting_quality_bonus", 0.0)
+	
+	var current_bonus = get_meta("crafting_quality_bonus", 0.0)
+	set_meta("crafting_quality_bonus", current_bonus + bonus_value)
+	
+	# Emit signal for UI updates
+	player_stats_updated.emit()
+
+func get_movement_speed_bonus() -> float:
+	"""Get current movement speed bonus"""
+	return get_meta("movement_speed_bonus", 0.0)
+
+func get_crafting_quality_bonus() -> float:
+	"""Get current crafting quality bonus"""
+	return get_meta("crafting_quality_bonus", 0.0) 

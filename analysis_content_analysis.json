@@ -1,0 +1,54 @@
+{
+  "files_analyzed": 16,
+  "total_items": 65,
+  "worlds_covered": 0,
+  "optimization_opportunities": [
+    {
+      "file": "locations_expanded.json",
+      "size": 21887,
+      "recommendation": "Consider splitting into smaller files"
+    },
+    {
+      "file": "class_progression.json",
+      "size": 23139,
+      "recommendation": "Consider splitting into smaller files"
+    },
+    {
+      "file": "skill_trees_expanded.json",
+      "size": 23974,
+      "recommendation": "Consider splitting into smaller files"
+    },
+    {
+      "file": "stances_expanded.json",
+      "size": 13337,
+      "recommendation": "Consider splitting into smaller files"
+    },
+    {
+      "file": "achievements.json",
+      "size": 11621,
+      "recommendation": "Consider splitting into smaller files"
+    },
+    {
+      "file": "skill_trees.json",
+      "size": 11615,
+      "recommendation": "Consider splitting into smaller files"
+    },
+    {
+      "file": "items_expanded.json",
+      "size": 17085,
+      "recommendation": "Consider splitting into smaller files"
+    },
+    {
+      "file": "weapons.json",
+      "size": 13511,
+      "recommendation": "Consider splitting into smaller files"
+    },
+    {
+      "file": "enemies.json",
+      "size": 30382,
+      "recommendation": "Consider splitting into smaller files"
+    }
+  ],
+  "missing_content": [],
+  "recommendations": []
+}

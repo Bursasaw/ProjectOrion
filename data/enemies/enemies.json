@@ -1,0 +1,1757 @@
+[
+  {
+    "id": "terra_enemy_1",
+    "name": "Ancient Treant 1",
+    "world": "terra",
+    "level": 5,
+    "health": 50,
+    "damage": 15,
+    "defense": 10,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction"
+    ],
+    "theme": "nature",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_0"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "defensive",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.0
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_2",
+    "name": "Crystal Guardian 2",
+    "world": "terra",
+    "level": 7,
+    "health": 60,
+    "damage": 18,
+    "defense": 12,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction",
+      "Life Force Absorption"
+    ],
+    "theme": "life",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_1"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "regenerative",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.1
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_3",
+    "name": "Forest Spirit 3",
+    "world": "terra",
+    "level": 9,
+    "health": 70,
+    "damage": 21,
+    "defense": 14,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction",
+      "Life Force Absorption",
+      "Primal Rage"
+    ],
+    "theme": "primal",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_2"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "primal",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.2
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_4",
+    "name": "Life Force Manifestation 4",
+    "world": "terra",
+    "level": 11,
+    "health": 80,
+    "damage": 24,
+    "defense": 16,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction"
+    ],
+    "theme": "crystal",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_3"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "defensive",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.3
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_5",
+    "name": "Primal Beast 5",
+    "world": "terra",
+    "level": 13,
+    "health": 90,
+    "damage": 27,
+    "defense": 18,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction",
+      "Life Force Absorption"
+    ],
+    "theme": "forest",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_4"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "regenerative",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.4
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_6",
+    "name": "Ancient Treant 6",
+    "world": "terra",
+    "level": 15,
+    "health": 100,
+    "damage": 30,
+    "defense": 20,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction",
+      "Life Force Absorption",
+      "Primal Rage"
+    ],
+    "theme": "nature",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_5"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "primal",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.5
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_7",
+    "name": "Crystal Guardian 7",
+    "world": "terra",
+    "level": 17,
+    "health": 110,
+    "damage": 33,
+    "defense": 22,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction"
+    ],
+    "theme": "life",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_6"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "defensive",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.6
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_8",
+    "name": "Forest Spirit 8",
+    "world": "terra",
+    "level": 19,
+    "health": 120,
+    "damage": 36,
+    "defense": 24,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction",
+      "Life Force Absorption"
+    ],
+    "theme": "primal",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_7"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "regenerative",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.7000000000000002
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_9",
+    "name": "Life Force Manifestation 9",
+    "world": "terra",
+    "level": 21,
+    "health": 130,
+    "damage": 39,
+    "defense": 26,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction",
+      "Life Force Absorption",
+      "Primal Rage"
+    ],
+    "theme": "crystal",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_8"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "primal",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.8
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_10",
+    "name": "Primal Beast 10",
+    "world": "terra",
+    "level": 23,
+    "health": 140,
+    "damage": 42,
+    "defense": 28,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction"
+    ],
+    "theme": "forest",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_9"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "defensive",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.9
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_11",
+    "name": "Ancient Treant 11",
+    "world": "terra",
+    "level": 25,
+    "health": 150,
+    "damage": 45,
+    "defense": 30,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction",
+      "Life Force Absorption"
+    ],
+    "theme": "nature",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_10"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "regenerative",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.0
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_12",
+    "name": "Crystal Guardian 12",
+    "world": "terra",
+    "level": 27,
+    "health": 160,
+    "damage": 48,
+    "defense": 32,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction",
+      "Life Force Absorption",
+      "Primal Rage"
+    ],
+    "theme": "life",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_11"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "primal",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.1
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_13",
+    "name": "Forest Spirit 13",
+    "world": "terra",
+    "level": 29,
+    "health": 170,
+    "damage": 51,
+    "defense": 34,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction"
+    ],
+    "theme": "primal",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_12"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "defensive",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.2
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_14",
+    "name": "Life Force Manifestation 14",
+    "world": "terra",
+    "level": 31,
+    "health": 180,
+    "damage": 54,
+    "defense": 36,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction",
+      "Life Force Absorption"
+    ],
+    "theme": "crystal",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_13"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "regenerative",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.3
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "terra_enemy_15",
+    "name": "Primal Beast 15",
+    "world": "terra",
+    "level": 33,
+    "health": 190,
+    "damage": 57,
+    "defense": 38,
+    "abilities": [
+      "Nature Regeneration",
+      "Crystal Refraction",
+      "Life Force Absorption",
+      "Primal Rage"
+    ],
+    "theme": "forest",
+    "loot_table": {
+      "common_items": [
+        "terra_material_0",
+        "terra_material_1",
+        "terra_material_2"
+      ],
+      "rare_items": [
+        "terra_essence_14"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "primal",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.4000000000000004
+    },
+    "lore": "A manifestation of terra's primal forces, this entity represents the ancient power of nature itself."
+  },
+  {
+    "id": "nokturn_enemy_1",
+    "name": "Shadow Stalker 1",
+    "world": "nokturn",
+    "level": 5,
+    "health": 50,
+    "damage": 15,
+    "defense": 10,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion"
+    ],
+    "theme": "shadow",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_0"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "stealth",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.0
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_2",
+    "name": "Void Wraith 2",
+    "world": "nokturn",
+    "level": 7,
+    "health": 60,
+    "damage": 18,
+    "defense": 12,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion",
+      "Fear Aura"
+    ],
+    "theme": "void",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_1"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "aggressive",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.1
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_3",
+    "name": "Dark Mage 3",
+    "world": "nokturn",
+    "level": 9,
+    "health": 70,
+    "damage": 21,
+    "defense": 14,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion",
+      "Fear Aura",
+      "Void Absorption"
+    ],
+    "theme": "darkness",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_2"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "fearful",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.2
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_4",
+    "name": "Nightmare Creature 4",
+    "world": "nokturn",
+    "level": 11,
+    "health": 80,
+    "damage": 24,
+    "defense": 16,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion"
+    ],
+    "theme": "fear",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_3"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "stealth",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.3
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_5",
+    "name": "Void Horror 5",
+    "world": "nokturn",
+    "level": 13,
+    "health": 90,
+    "damage": 27,
+    "defense": 18,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion",
+      "Fear Aura"
+    ],
+    "theme": "nightmare",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_4"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "aggressive",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.4
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_6",
+    "name": "Shadow Stalker 6",
+    "world": "nokturn",
+    "level": 15,
+    "health": 100,
+    "damage": 30,
+    "defense": 20,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion",
+      "Fear Aura",
+      "Void Absorption"
+    ],
+    "theme": "shadow",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_5"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "fearful",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.5
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_7",
+    "name": "Void Wraith 7",
+    "world": "nokturn",
+    "level": 17,
+    "health": 110,
+    "damage": 33,
+    "defense": 22,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion"
+    ],
+    "theme": "void",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_6"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "stealth",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.6
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_8",
+    "name": "Dark Mage 8",
+    "world": "nokturn",
+    "level": 19,
+    "health": 120,
+    "damage": 36,
+    "defense": 24,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion",
+      "Fear Aura"
+    ],
+    "theme": "darkness",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_7"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "aggressive",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.7000000000000002
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_9",
+    "name": "Nightmare Creature 9",
+    "world": "nokturn",
+    "level": 21,
+    "health": 130,
+    "damage": 39,
+    "defense": 26,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion",
+      "Fear Aura",
+      "Void Absorption"
+    ],
+    "theme": "fear",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_8"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "fearful",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.8
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_10",
+    "name": "Void Horror 10",
+    "world": "nokturn",
+    "level": 23,
+    "health": 140,
+    "damage": 42,
+    "defense": 28,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion"
+    ],
+    "theme": "nightmare",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_9"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "stealth",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.9
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_11",
+    "name": "Shadow Stalker 11",
+    "world": "nokturn",
+    "level": 25,
+    "health": 150,
+    "damage": 45,
+    "defense": 30,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion",
+      "Fear Aura"
+    ],
+    "theme": "shadow",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_10"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "aggressive",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.0
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_12",
+    "name": "Void Wraith 12",
+    "world": "nokturn",
+    "level": 27,
+    "health": 160,
+    "damage": 48,
+    "defense": 32,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion",
+      "Fear Aura",
+      "Void Absorption"
+    ],
+    "theme": "void",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_11"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "fearful",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.1
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_13",
+    "name": "Dark Mage 13",
+    "world": "nokturn",
+    "level": 29,
+    "health": 170,
+    "damage": 51,
+    "defense": 34,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion"
+    ],
+    "theme": "darkness",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_12"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "stealth",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.2
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_14",
+    "name": "Nightmare Creature 14",
+    "world": "nokturn",
+    "level": 31,
+    "health": 180,
+    "damage": 54,
+    "defense": 36,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion",
+      "Fear Aura"
+    ],
+    "theme": "fear",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_13"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "aggressive",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.3
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "nokturn_enemy_15",
+    "name": "Void Horror 15",
+    "world": "nokturn",
+    "level": 33,
+    "health": 190,
+    "damage": 57,
+    "defense": 38,
+    "abilities": [
+      "Shadow Phase",
+      "Void Distortion",
+      "Fear Aura",
+      "Void Absorption"
+    ],
+    "theme": "nightmare",
+    "loot_table": {
+      "common_items": [
+        "nokturn_material_0",
+        "nokturn_material_1",
+        "nokturn_material_2"
+      ],
+      "rare_items": [
+        "nokturn_essence_14"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "fearful",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.4000000000000004
+    },
+    "lore": "Born from the shadows of nokturn, this creature embodies the darkness that lurks in the void."
+  },
+  {
+    "id": "elysion_enemy_1",
+    "name": "Light Guardian 1",
+    "world": "elysion",
+    "level": 5,
+    "health": 50,
+    "damage": 15,
+    "defense": 10,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite"
+    ],
+    "theme": "light",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_0"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "tactical",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.0
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_2",
+    "name": "Divine Sentinel 2",
+    "world": "elysion",
+    "level": 7,
+    "health": 60,
+    "damage": 18,
+    "defense": 12,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite",
+      "Wisdom Drain"
+    ],
+    "theme": "divine",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_1"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "protective",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.1
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_3",
+    "name": "Celestial Being 3",
+    "world": "elysion",
+    "level": 9,
+    "health": 70,
+    "damage": 21,
+    "defense": 14,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite",
+      "Wisdom Drain",
+      "Light Purification"
+    ],
+    "theme": "holy",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_2"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "divine",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.2
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_4",
+    "name": "Ancient Sage 4",
+    "world": "elysion",
+    "level": 11,
+    "health": 80,
+    "damage": 24,
+    "defense": 16,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite"
+    ],
+    "theme": "celestial",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_3"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "tactical",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.3
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_5",
+    "name": "Holy Warrior 5",
+    "world": "elysion",
+    "level": 13,
+    "health": 90,
+    "damage": 27,
+    "defense": 18,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite",
+      "Wisdom Drain"
+    ],
+    "theme": "wisdom",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_4"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "protective",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.4
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_6",
+    "name": "Light Guardian 6",
+    "world": "elysion",
+    "level": 15,
+    "health": 100,
+    "damage": 30,
+    "defense": 20,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite",
+      "Wisdom Drain",
+      "Light Purification"
+    ],
+    "theme": "light",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_5"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "divine",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.5
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_7",
+    "name": "Divine Sentinel 7",
+    "world": "elysion",
+    "level": 17,
+    "health": 110,
+    "damage": 33,
+    "defense": 22,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite"
+    ],
+    "theme": "divine",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_6"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "tactical",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.6
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_8",
+    "name": "Celestial Being 8",
+    "world": "elysion",
+    "level": 19,
+    "health": 120,
+    "damage": 36,
+    "defense": 24,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite",
+      "Wisdom Drain"
+    ],
+    "theme": "holy",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_7"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "protective",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.7000000000000002
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_9",
+    "name": "Ancient Sage 9",
+    "world": "elysion",
+    "level": 21,
+    "health": 130,
+    "damage": 39,
+    "defense": 26,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite",
+      "Wisdom Drain",
+      "Light Purification"
+    ],
+    "theme": "celestial",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_8"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "divine",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.8
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_10",
+    "name": "Holy Warrior 10",
+    "world": "elysion",
+    "level": 23,
+    "health": 140,
+    "damage": 42,
+    "defense": 28,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite"
+    ],
+    "theme": "wisdom",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_9"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "tactical",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 1.9
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_11",
+    "name": "Light Guardian 11",
+    "world": "elysion",
+    "level": 25,
+    "health": 150,
+    "damage": 45,
+    "defense": 30,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite",
+      "Wisdom Drain"
+    ],
+    "theme": "light",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_10"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "protective",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.0
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_12",
+    "name": "Divine Sentinel 12",
+    "world": "elysion",
+    "level": 27,
+    "health": 160,
+    "damage": 48,
+    "defense": 32,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite",
+      "Wisdom Drain",
+      "Light Purification"
+    ],
+    "theme": "divine",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_11"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "divine",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.1
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_13",
+    "name": "Celestial Being 13",
+    "world": "elysion",
+    "level": 29,
+    "health": 170,
+    "damage": 51,
+    "defense": 34,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite"
+    ],
+    "theme": "holy",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_12"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "tactical",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.2
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_14",
+    "name": "Ancient Sage 14",
+    "world": "elysion",
+    "level": 31,
+    "health": 180,
+    "damage": 54,
+    "defense": 36,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite",
+      "Wisdom Drain"
+    ],
+    "theme": "celestial",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_13"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "protective",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.3
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  },
+  {
+    "id": "elysion_enemy_15",
+    "name": "Holy Warrior 15",
+    "world": "elysion",
+    "level": 33,
+    "health": 190,
+    "damage": 57,
+    "defense": 38,
+    "abilities": [
+      "Divine Protection",
+      "Holy Smite",
+      "Wisdom Drain",
+      "Light Purification"
+    ],
+    "theme": "wisdom",
+    "loot_table": {
+      "common_items": [
+        "elysion_material_0",
+        "elysion_material_1",
+        "elysion_material_2"
+      ],
+      "rare_items": [
+        "elysion_essence_14"
+      ],
+      "drop_rates": {
+        "common": 0.8,
+        "rare": 0.2,
+        "epic": 0.05
+      }
+    },
+    "ai_pattern": {
+      "primary_behavior": "divine",
+      "secondary_behavior": "adaptive",
+      "special_abilities": [
+        "world_specific_power"
+      ],
+      "difficulty_curve": 2.4000000000000004
+    },
+    "lore": "A divine being from elysion, this entity carries the light and wisdom of the heavens."
+  }
+]

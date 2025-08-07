@@ -1,0 +1,14 @@
+{
+  "files_analyzed": 1,
+  "total_items": 60,
+  "worlds_covered": 0,
+  "optimization_opportunities": [
+    {
+      "file": "abilities.json",
+      "size": 20449,
+      "recommendation": "Consider splitting into smaller files"
+    }
+  ],
+  "missing_content": [],
+  "recommendations": []
+}

@@ -1,0 +1,58 @@
+2025-08-07 00:04:31,128 - EnhancedCoordinator - INFO - Created enhanced agent enemy_database with 4 complex tasks
+2025-08-07 00:04:31,128 - EnhancedCoordinator - INFO - Created enhanced agent combat_abilities with 4 complex tasks
+2025-08-07 00:04:31,128 - EnhancedCoordinator - INFO - Created enhanced agent content_analysis with 4 complex tasks
+2025-08-07 00:04:31,128 - EnhancedCoordinator - INFO - Enhanced Agent enemy_database starting work on 4 complex tasks
+2025-08-07 00:04:31,128 - EnhancedCoordinator - INFO - Started enhanced agent enemy_database in thread
+2025-08-07 00:04:31,128 - EnhancedCoordinator - INFO - Working on complex task: Create Terra Enemies
+2025-08-07 00:04:31,128 - EnhancedCoordinator - INFO - Creating 15 enemies for terra
+2025-08-07 00:04:31,128 - EnhancedCoordinator - INFO - Enhanced Agent combat_abilities starting work on 4 complex tasks
+2025-08-07 00:04:31,128 - EnhancedCoordinator - INFO - Started enhanced agent combat_abilities in thread
+2025-08-07 00:04:31,129 - EnhancedCoordinator - INFO - Working on complex task: Create Terra Combat Abilities
+2025-08-07 00:04:31,129 - EnhancedCoordinator - INFO - Enhanced Agent content_analysis starting work on 4 complex tasks
+2025-08-07 00:04:31,129 - EnhancedCoordinator - INFO - Creating 20 combat abilities for terra
+2025-08-07 00:04:31,129 - EnhancedCoordinator - INFO - Started enhanced agent content_analysis in thread
+2025-08-07 00:04:31,129 - EnhancedCoordinator - INFO - Working on complex task: Analyze All Data Files
+2025-08-07 00:04:31,129 - EnhancedCoordinator - INFO - Analyzing data in data
+2025-08-07 00:04:31,130 - EnhancedCoordinator - INFO - Created 15 enemies for terra
+2025-08-07 00:04:31,130 - EnhancedCoordinator - INFO - Completed complex task: Create Terra Enemies
+2025-08-07 00:04:31,130 - EnhancedCoordinator - INFO - Working on complex task: Create Nokturn Enemies
+2025-08-07 00:04:31,130 - EnhancedCoordinator - INFO - Creating 15 enemies for nokturn
+2025-08-07 00:04:31,131 - EnhancedCoordinator - INFO - Created 20 combat abilities for terra
+2025-08-07 00:04:31,131 - EnhancedCoordinator - INFO - Completed complex task: Create Terra Combat Abilities
+2025-08-07 00:04:31,131 - EnhancedCoordinator - INFO - Working on complex task: Create Nokturn Combat Abilities
+2025-08-07 00:04:31,131 - EnhancedCoordinator - INFO - Creating 20 combat abilities for nokturn
+2025-08-07 00:04:31,132 - EnhancedCoordinator - INFO - Created 15 enemies for nokturn
+2025-08-07 00:04:31,132 - EnhancedCoordinator - INFO - Completed complex task: Create Nokturn Enemies
+2025-08-07 00:04:31,132 - EnhancedCoordinator - INFO - Working on complex task: Create Elysion Enemies
+2025-08-07 00:04:31,132 - EnhancedCoordinator - INFO - Creating 15 enemies for elysion
+2025-08-07 00:04:31,133 - EnhancedCoordinator - INFO - Created 20 combat abilities for nokturn
+2025-08-07 00:04:31,134 - EnhancedCoordinator - INFO - Completed complex task: Create Nokturn Combat Abilities
+2025-08-07 00:04:31,135 - EnhancedCoordinator - INFO - Working on complex task: Create Elysion Combat Abilities
+2025-08-07 00:04:31,135 - EnhancedCoordinator - INFO - Created 15 enemies for elysion
+2025-08-07 00:04:31,135 - EnhancedCoordinator - INFO - Creating 20 combat abilities for elysion
+2025-08-07 00:04:31,135 - EnhancedCoordinator - INFO - Completed complex task: Create Elysion Enemies
+2025-08-07 00:04:31,135 - EnhancedCoordinator - INFO - Working on complex task: Analyze Enemy Data
+2025-08-07 00:04:31,135 - EnhancedCoordinator - INFO - Analyzing data in data/enemies
+2025-08-07 00:04:31,139 - EnhancedCoordinator - INFO - Analysis complete: 1 files, 45 items
+2025-08-07 00:04:31,139 - EnhancedCoordinator - INFO - Created 20 combat abilities for elysion
+2025-08-07 00:04:31,139 - EnhancedCoordinator - INFO - Completed complex task: Analyze Enemy Data
+2025-08-07 00:04:31,139 - EnhancedCoordinator - INFO - Completed complex task: Create Elysion Combat Abilities
+2025-08-07 00:04:31,139 - EnhancedCoordinator - INFO - Working on complex task: Analyze Combat Data
+2025-08-07 00:04:31,139 - EnhancedCoordinator - INFO - Enhanced Agent enemy_database finished work. Completed: 4, Failed: 0
+2025-08-07 00:04:31,139 - EnhancedCoordinator - INFO - Analyzing data in data/combat
+2025-08-07 00:04:31,140 - EnhancedCoordinator - INFO - Analysis complete: 1 files, 60 items
+2025-08-07 00:04:31,141 - EnhancedCoordinator - INFO - Completed complex task: Analyze Combat Data
+2025-08-07 00:04:31,141 - EnhancedCoordinator - INFO - Enhanced Agent combat_abilities finished work. Completed: 4, Failed: 0
+2025-08-07 00:04:31,143 - EnhancedCoordinator - INFO - Analysis complete: 16 files, 65 items
+2025-08-07 00:04:31,143 - EnhancedCoordinator - INFO - Completed complex task: Analyze All Data Files
+2025-08-07 00:04:31,143 - EnhancedCoordinator - INFO - Working on complex task: Optimize Item Data
+2025-08-07 00:04:31,143 - EnhancedCoordinator - ERROR - Error executing complex task: 'EnhancedTaskAgent' object has no attribute 'optimize_content'
+2025-08-07 00:04:31,143 - EnhancedCoordinator - INFO - Working on complex task: Optimize World Data
+2025-08-07 00:04:31,143 - EnhancedCoordinator - ERROR - Error executing complex task: 'EnhancedTaskAgent' object has no attribute 'optimize_content'
+2025-08-07 00:04:31,143 - EnhancedCoordinator - INFO - Working on complex task: Test Data Integrity
+2025-08-07 00:04:31,143 - EnhancedCoordinator - ERROR - Error executing complex task: 'EnhancedTaskAgent' object has no attribute 'run_comprehensive_tests'
+2025-08-07 00:04:31,144 - EnhancedCoordinator - INFO - Enhanced Agent content_analysis finished work. Completed: 1, Failed: 3
+2025-08-07 00:08:31,251 - EnhancedCoordinator - INFO - Stopping all enhanced agents
+2025-08-07 00:08:31,252 - EnhancedCoordinator - INFO - Enhanced Agent enemy_database stopping work
+2025-08-07 00:08:31,252 - EnhancedCoordinator - INFO - Enhanced Agent combat_abilities stopping work
+2025-08-07 00:08:31,252 - EnhancedCoordinator - INFO - Enhanced Agent content_analysis stopping work

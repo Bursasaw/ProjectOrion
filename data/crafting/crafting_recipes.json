@@ -1,0 +1,461 @@
+{
+  "version": "0.13.0",
+  "crafting_recipes": {
+    "basic_sword": {
+      "name": "Basic Sword",
+      "description": "A simple steel sword for basic combat",
+      "discipline": "blacksmithing",
+      "discipline_level": 1,
+      "requirements": {
+        "steel": 2,
+        "wood": 1
+      },
+      "skill_requirement": {
+        "combat_mastery": 1
+      },
+      "experience": 10,
+      "result": "basic_sword",
+      "quality_tiers": {
+        "poor": {"damage": 10, "durability": 50},
+        "common": {"damage": 15, "durability": 75},
+        "uncommon": {"damage": 20, "durability": 100},
+        "rare": {"damage": 25, "durability": 125},
+        "epic": {"damage": 30, "durability": 150},
+        "legendary": {"damage": 40, "durability": 200},
+        "mythic": {"damage": 50, "durability": 250}
+      }
+    },
+    "magic_sword": {
+      "name": "Magic Sword",
+      "description": "A sword imbued with magical properties",
+      "discipline": "blacksmithing",
+      "discipline_level": 3,
+      "requirements": {
+        "steel": 3,
+        "magic_crystal": 1,
+        "essence": 1
+      },
+      "skill_requirement": {
+        "combat_mastery": 5,
+        "arcane_arts": 3
+      },
+      "experience": 25,
+      "result": "magic_sword",
+      "quality_tiers": {
+        "poor": {"damage": 20, "magic_damage": 10, "durability": 75},
+        "common": {"damage": 25, "magic_damage": 15, "durability": 100},
+        "uncommon": {"damage": 30, "magic_damage": 20, "durability": 125},
+        "rare": {"damage": 35, "magic_damage": 25, "durability": 150},
+        "epic": {"damage": 40, "magic_damage": 30, "durability": 175},
+        "legendary": {"damage": 50, "magic_damage": 40, "durability": 225},
+        "mythic": {"damage": 60, "magic_damage": 50, "durability": 275}
+      }
+    },
+    "fire_sword": {
+      "name": "Fire Sword",
+      "description": "A sword that burns with elemental fire",
+      "discipline": "blacksmithing",
+      "discipline_level": 5,
+      "requirements": {
+        "steel": 4,
+        "fire_crystal": 2,
+        "essence": 2
+      },
+      "skill_requirement": {
+        "combat_mastery": 10,
+        "arcane_arts": 8
+      },
+      "experience": 50,
+      "result": "fire_sword",
+      "quality_tiers": {
+        "poor": {"damage": 30, "fire_damage": 15, "durability": 100},
+        "common": {"damage": 35, "fire_damage": 20, "durability": 125},
+        "uncommon": {"damage": 40, "fire_damage": 25, "durability": 150},
+        "rare": {"damage": 45, "fire_damage": 30, "durability": 175},
+        "epic": {"damage": 50, "fire_damage": 35, "durability": 200},
+        "legendary": {"damage": 60, "fire_damage": 45, "durability": 250},
+        "mythic": {"damage": 70, "fire_damage": 55, "durability": 300}
+      }
+    },
+    "void_sword": {
+      "name": "Void Sword",
+      "description": "A sword that cuts through reality itself",
+      "discipline": "blacksmithing",
+      "discipline_level": 8,
+      "requirements": {
+        "void_essence": 5,
+        "reality_crystal": 3,
+        "dimensional_shard": 2
+      },
+      "skill_requirement": {
+        "combat_mastery": 50,
+        "arcane_arts": 40
+      },
+      "experience": 200,
+      "result": "void_sword",
+      "quality_tiers": {
+        "poor": {"damage": 60, "void_damage": 30, "reality_penetration": 0.1, "durability": 200},
+        "common": {"damage": 70, "void_damage": 40, "reality_penetration": 0.15, "durability": 250},
+        "uncommon": {"damage": 80, "void_damage": 50, "reality_penetration": 0.2, "durability": 300},
+        "rare": {"damage": 90, "void_damage": 60, "reality_penetration": 0.25, "durability": 350},
+        "epic": {"damage": 100, "void_damage": 70, "reality_penetration": 0.3, "durability": 400},
+        "legendary": {"damage": 120, "void_damage": 90, "reality_penetration": 0.4, "durability": 500},
+        "mythic": {"damage": 140, "void_damage": 110, "reality_penetration": 0.5, "durability": 600}
+      }
+    },
+    "cosmic_sword": {
+      "name": "Cosmic Sword",
+      "description": "A sword that transcends reality and creation",
+      "discipline": "blacksmithing",
+      "discipline_level": 10,
+      "requirements": {
+        "cosmic_essence": 10,
+        "reality_crystal": 5,
+        "time_crystal": 3,
+        "creation_shard": 2
+      },
+      "skill_requirement": {
+        "combat_mastery": 100,
+        "arcane_arts": 80
+      },
+      "experience": 500,
+      "result": "cosmic_sword",
+      "quality_tiers": {
+        "poor": {"damage": 100, "cosmic_damage": 50, "reality_creation": 0.1, "time_manipulation": 0.05, "durability": 500},
+        "common": {"damage": 120, "cosmic_damage": 60, "reality_creation": 0.15, "time_manipulation": 0.1, "durability": 600},
+        "uncommon": {"damage": 140, "cosmic_damage": 70, "reality_creation": 0.2, "time_manipulation": 0.15, "durability": 700},
+        "rare": {"damage": 160, "cosmic_damage": 80, "reality_creation": 0.25, "time_manipulation": 0.2, "durability": 800},
+        "epic": {"damage": 180, "cosmic_damage": 90, "reality_creation": 0.3, "time_manipulation": 0.25, "durability": 900},
+        "legendary": {"damage": 200, "cosmic_damage": 100, "reality_creation": 0.4, "time_manipulation": 0.3, "durability": 1000},
+        "mythic": {"damage": 250, "cosmic_damage": 125, "reality_creation": 0.5, "time_manipulation": 0.4, "durability": 1200}
+      }
+    },
+    "health_potion": {
+      "name": "Health Potion",
+      "description": "A basic potion that restores health",
+      "discipline": "alchemy",
+      "discipline_level": 1,
+      "requirements": {
+        "herbs": 2,
+        "water": 1
+      },
+      "skill_requirement": {
+        "arcane_arts": 1
+      },
+      "experience": 5,
+      "result": "health_potion",
+      "quality_tiers": {
+        "poor": {"healing": 20, "duration": 0},
+        "common": {"healing": 30, "duration": 0},
+        "uncommon": {"healing": 40, "duration": 0},
+        "rare": {"healing": 50, "duration": 0},
+        "epic": {"healing": 60, "duration": 0},
+        "legendary": {"healing": 80, "duration": 0},
+        "mythic": {"healing": 100, "duration": 0}
+      }
+    },
+    "mana_potion": {
+      "name": "Mana Potion",
+      "description": "A potion that restores magical energy",
+      "discipline": "alchemy",
+      "discipline_level": 2,
+      "requirements": {
+        "magic_crystal": 1,
+        "essence": 1,
+        "water": 1
+      },
+      "skill_requirement": {
+        "arcane_arts": 3
+      },
+      "experience": 15,
+      "result": "mana_potion",
+      "quality_tiers": {
+        "poor": {"mana_restore": 25, "duration": 0},
+        "common": {"mana_restore": 35, "duration": 0},
+        "uncommon": {"mana_restore": 45, "duration": 0},
+        "rare": {"mana_restore": 55, "duration": 0},
+        "epic": {"mana_restore": 65, "duration": 0},
+        "legendary": {"mana_restore": 85, "duration": 0},
+        "mythic": {"mana_restore": 105, "duration": 0}
+      }
+    },
+    "fire_resistance_potion": {
+      "name": "Fire Resistance Potion",
+      "description": "A potion that grants resistance to fire damage",
+      "discipline": "alchemy",
+      "discipline_level": 4,
+      "requirements": {
+        "fire_crystal": 1,
+        "herbs": 2,
+        "essence": 1
+      },
+      "skill_requirement": {
+        "arcane_arts": 6
+      },
+      "experience": 30,
+      "result": "fire_resistance_potion",
+      "quality_tiers": {
+        "poor": {"fire_resistance": 0.2, "duration": 60},
+        "common": {"fire_resistance": 0.3, "duration": 90},
+        "uncommon": {"fire_resistance": 0.4, "duration": 120},
+        "rare": {"fire_resistance": 0.5, "duration": 150},
+        "epic": {"fire_resistance": 0.6, "duration": 180},
+        "legendary": {"fire_resistance": 0.8, "duration": 240},
+        "mythic": {"fire_resistance": 1.0, "duration": 300}
+      }
+    },
+    "reality_elixir": {
+      "name": "Reality Elixir",
+      "description": "An elixir that grants reality manipulation abilities",
+      "discipline": "alchemy",
+      "discipline_level": 8,
+      "requirements": {
+        "reality_crystal": 3,
+        "void_essence": 2,
+        "dimensional_shard": 1
+      },
+      "skill_requirement": {
+        "arcane_arts": 50,
+        "world_resonance": 30
+      },
+      "experience": 150,
+      "result": "reality_elixir",
+      "quality_tiers": {
+        "poor": {"reality_manipulation": 0.1, "duration": 30},
+        "common": {"reality_manipulation": 0.15, "duration": 45},
+        "uncommon": {"reality_manipulation": 0.2, "duration": 60},
+        "rare": {"reality_manipulation": 0.25, "duration": 75},
+        "epic": {"reality_manipulation": 0.3, "duration": 90},
+        "legendary": {"reality_manipulation": 0.4, "duration": 120},
+        "mythic": {"reality_manipulation": 0.5, "duration": 150}
+      }
+    },
+    "basic_ring": {
+      "name": "Basic Ring",
+      "description": "A simple ring with basic magical properties",
+      "discipline": "jewelcrafting",
+      "discipline_level": 1,
+      "requirements": {
+        "precious_metal": 1,
+        "gem": 1
+      },
+      "skill_requirement": {
+        "utility_expertise": 1
+      },
+      "experience": 8,
+      "result": "basic_ring",
+      "quality_tiers": {
+        "poor": {"magic_bonus": 0.05, "durability": 50},
+        "common": {"magic_bonus": 0.1, "durability": 75},
+        "uncommon": {"magic_bonus": 0.15, "durability": 100},
+        "rare": {"magic_bonus": 0.2, "durability": 125},
+        "epic": {"magic_bonus": 0.25, "durability": 150},
+        "legendary": {"magic_bonus": 0.35, "durability": 200},
+        "mythic": {"magic_bonus": 0.45, "durability": 250}
+      }
+    },
+    "fire_ring": {
+      "name": "Fire Ring",
+      "description": "A ring that enhances fire magic",
+      "discipline": "jewelcrafting",
+      "discipline_level": 3,
+      "requirements": {
+        "precious_metal": 2,
+        "fire_crystal": 1,
+        "essence": 1
+      },
+      "skill_requirement": {
+        "utility_expertise": 5,
+        "arcane_arts": 3
+      },
+      "experience": 20,
+      "result": "fire_ring",
+      "quality_tiers": {
+        "poor": {"fire_magic_bonus": 0.1, "fire_resistance": 0.1, "durability": 75},
+        "common": {"fire_magic_bonus": 0.15, "fire_resistance": 0.15, "durability": 100},
+        "uncommon": {"fire_magic_bonus": 0.2, "fire_resistance": 0.2, "durability": 125},
+        "rare": {"fire_magic_bonus": 0.25, "fire_resistance": 0.25, "durability": 150},
+        "epic": {"fire_magic_bonus": 0.3, "fire_resistance": 0.3, "durability": 175},
+        "legendary": {"fire_magic_bonus": 0.4, "fire_resistance": 0.4, "durability": 225},
+        "mythic": {"fire_magic_bonus": 0.5, "fire_resistance": 0.5, "durability": 275}
+      }
+    },
+    "reality_ring": {
+      "name": "Reality Ring",
+      "description": "A ring that grants reality manipulation abilities",
+      "discipline": "jewelcrafting",
+      "discipline_level": 8,
+      "requirements": {
+        "reality_crystal": 2,
+        "void_essence": 1,
+        "precious_metal": 3
+      },
+      "skill_requirement": {
+        "utility_expertise": 50,
+        "world_resonance": 30
+      },
+      "experience": 120,
+      "result": "reality_ring",
+      "quality_tiers": {
+        "poor": {"reality_manipulation": 0.1, "dimensional_creation": 0.05, "durability": 200},
+        "common": {"reality_manipulation": 0.15, "dimensional_creation": 0.1, "durability": 250},
+        "uncommon": {"reality_manipulation": 0.2, "dimensional_creation": 0.15, "durability": 300},
+        "rare": {"reality_manipulation": 0.25, "dimensional_creation": 0.2, "durability": 350},
+        "epic": {"reality_manipulation": 0.3, "dimensional_creation": 0.25, "durability": 400},
+        "legendary": {"reality_manipulation": 0.4, "dimensional_creation": 0.3, "durability": 500},
+        "mythic": {"reality_manipulation": 0.5, "dimensional_creation": 0.4, "durability": 600}
+      }
+    },
+    "basic_gadget": {
+      "name": "Basic Gadget",
+      "description": "A simple mechanical device",
+      "discipline": "engineering",
+      "discipline_level": 1,
+      "requirements": {
+        "gears": 2,
+        "metal": 1
+      },
+      "skill_requirement": {
+        "utility_expertise": 1
+      },
+      "experience": 8,
+      "result": "basic_gadget",
+      "quality_tiers": {
+        "poor": {"utility_bonus": 0.05, "durability": 50},
+        "common": {"utility_bonus": 0.1, "durability": 75},
+        "uncommon": {"utility_bonus": 0.15, "durability": 100},
+        "rare": {"utility_bonus": 0.2, "durability": 125},
+        "epic": {"utility_bonus": 0.25, "durability": 150},
+        "legendary": {"utility_bonus": 0.35, "durability": 200},
+        "mythic": {"utility_bonus": 0.45, "durability": 250}
+      }
+    },
+    "energy_cell": {
+      "name": "Energy Cell",
+      "description": "A device that stores and releases energy",
+      "discipline": "engineering",
+      "discipline_level": 4,
+      "requirements": {
+        "energy_cells": 2,
+        "circuits": 1,
+        "metal": 2
+      },
+      "skill_requirement": {
+        "utility_expertise": 8
+      },
+      "experience": 35,
+      "result": "energy_cell",
+      "quality_tiers": {
+        "poor": {"energy_storage": 50, "energy_output": 10, "durability": 100},
+        "common": {"energy_storage": 75, "energy_output": 15, "durability": 125},
+        "uncommon": {"energy_storage": 100, "energy_output": 20, "durability": 150},
+        "rare": {"energy_storage": 125, "energy_output": 25, "durability": 175},
+        "epic": {"energy_storage": 150, "energy_output": 30, "durability": 200},
+        "legendary": {"energy_storage": 200, "energy_output": 40, "durability": 250},
+        "mythic": {"energy_storage": 250, "energy_output": 50, "durability": 300}
+      }
+    },
+    "reality_device": {
+      "name": "Reality Device",
+      "description": "A device that manipulates reality",
+      "discipline": "engineering",
+      "discipline_level": 8,
+      "requirements": {
+        "reality_crystal": 2,
+        "void_essence": 1,
+        "nanites": 3
+      },
+      "skill_requirement": {
+        "utility_expertise": 50,
+        "world_resonance": 30
+      },
+      "experience": 150,
+      "result": "reality_device",
+      "quality_tiers": {
+        "poor": {"reality_manipulation": 0.1, "dimensional_creation": 0.05, "durability": 200},
+        "common": {"reality_manipulation": 0.15, "dimensional_creation": 0.1, "durability": 250},
+        "uncommon": {"reality_manipulation": 0.2, "dimensional_creation": 0.15, "durability": 300},
+        "rare": {"reality_manipulation": 0.25, "dimensional_creation": 0.2, "durability": 350},
+        "epic": {"reality_manipulation": 0.3, "dimensional_creation": 0.25, "durability": 400},
+        "legendary": {"reality_manipulation": 0.4, "dimensional_creation": 0.3, "durability": 500},
+        "mythic": {"reality_manipulation": 0.5, "dimensional_creation": 0.4, "durability": 600}
+      }
+    },
+    "basic_food": {
+      "name": "Basic Food",
+      "description": "Simple food that provides sustenance",
+      "discipline": "cooking",
+      "discipline_level": 1,
+      "requirements": {
+        "ingredients": 2,
+        "water": 1
+      },
+      "skill_requirement": {
+        "utility_expertise": 1
+      },
+      "experience": 5,
+      "result": "basic_food",
+      "quality_tiers": {
+        "poor": {"nutrition": 10, "healing": 5},
+        "common": {"nutrition": 15, "healing": 8},
+        "uncommon": {"nutrition": 20, "healing": 12},
+        "rare": {"nutrition": 25, "healing": 15},
+        "epic": {"nutrition": 30, "healing": 18},
+        "legendary": {"nutrition": 40, "healing": 25},
+        "mythic": {"nutrition": 50, "healing": 30}
+      }
+    },
+    "magical_food": {
+      "name": "Magical Food",
+      "description": "Food imbued with magical properties",
+      "discipline": "cooking",
+      "discipline_level": 3,
+      "requirements": {
+        "ingredients": 2,
+        "magical_herbs": 1,
+        "essence": 1
+      },
+      "skill_requirement": {
+        "utility_expertise": 5,
+        "arcane_arts": 2
+      },
+      "experience": 15,
+      "result": "magical_food",
+      "quality_tiers": {
+        "poor": {"nutrition": 15, "healing": 10, "mana_restore": 5},
+        "common": {"nutrition": 20, "healing": 15, "mana_restore": 8},
+        "uncommon": {"nutrition": 25, "healing": 20, "mana_restore": 12},
+        "rare": {"nutrition": 30, "healing": 25, "mana_restore": 15},
+        "epic": {"nutrition": 35, "healing": 30, "mana_restore": 18},
+        "legendary": {"nutrition": 45, "healing": 40, "mana_restore": 25},
+        "mythic": {"nutrition": 55, "healing": 50, "mana_restore": 30}
+      }
+    },
+    "reality_food": {
+      "name": "Reality Food",
+      "description": "Food that transcends normal sustenance",
+      "discipline": "cooking",
+      "discipline_level": 8,
+      "requirements": {
+        "reality_crystal": 1,
+        "void_essence": 1,
+        "magical_herbs": 2
+      },
+      "skill_requirement": {
+        "utility_expertise": 50,
+        "world_resonance": 30
+      },
+      "experience": 100,
+      "result": "reality_food",
+      "quality_tiers": {
+        "poor": {"nutrition": 30, "healing": 25, "reality_manipulation": 0.05},
+        "common": {"nutrition": 40, "healing": 35, "reality_manipulation": 0.1},
+        "uncommon": {"nutrition": 50, "healing": 45, "reality_manipulation": 0.15},
+        "rare": {"nutrition": 60, "healing": 55, "reality_manipulation": 0.2},
+        "epic": {"nutrition": 70, "healing": 65, "reality_manipulation": 0.25},
+        "legendary": {"nutrition": 85, "healing": 80, "reality_manipulation": 0.3},
+        "mythic": {"nutrition": 100, "healing": 95, "reality_manipulation": 0.4}
+      }
+    }
+  }
+} 

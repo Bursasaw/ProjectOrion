@@ -1,5 +1,4 @@
 extends Node
-class_name CombatManager
 
 # Combat Manager - Handles turn-based combat system
 # Manages combat state, actions, and integration with other systems
@@ -2677,3 +2676,52 @@ func trigger_all_out_attack_narrative(condition: String):
 	var narrative_manager = get_node_or_null("/root/NarrativeManager")
 	if narrative_manager and narrative_manager.has_method("trigger_all_out_attack_narrative"):
 		narrative_manager.trigger_all_out_attack_narrative(condition)
+
+# Skill System Integration Methods
+func add_weapon_damage_bonus(bonus_value: float):
+	"""Add weapon damage bonus from skill system"""
+	print("CombatManager: Adding weapon damage bonus: ", bonus_value)
+	
+	# Store the bonus for use in damage calculations
+	if not has_method("get_weapon_damage_bonus"):
+		# Initialize weapon damage bonus if not exists
+		set_meta("weapon_damage_bonus", 0.0)
+	
+	var current_bonus = get_meta("weapon_damage_bonus", 0.0)
+	set_meta("weapon_damage_bonus", current_bonus + bonus_value)
+	
+	# Add to combat history
+	combat_history.append({
+		"turn": current_turn,
+		"type": "weapon_damage_bonus_added",
+		"bonus_value": bonus_value,
+		"total_bonus": current_bonus + bonus_value
+	})
+
+func add_spell_damage_bonus(bonus_value: float):
+	"""Add spell damage bonus from skill system"""
+	print("CombatManager: Adding spell damage bonus: ", bonus_value)
+	
+	# Store the bonus for use in damage calculations
+	if not has_method("get_spell_damage_bonus"):
+		# Initialize spell damage bonus if not exists
+		set_meta("spell_damage_bonus", 0.0)
+	
+	var current_bonus = get_meta("spell_damage_bonus", 0.0)
+	set_meta("spell_damage_bonus", current_bonus + bonus_value)
+	
+	# Add to combat history
+	combat_history.append({
+		"turn": current_turn,
+		"type": "spell_damage_bonus_added",
+		"bonus_value": bonus_value,
+		"total_bonus": current_bonus + bonus_value
+	})
+
+func get_weapon_damage_bonus() -> float:
+	"""Get current weapon damage bonus"""
+	return get_meta("weapon_damage_bonus", 0.0)
+
+func get_spell_damage_bonus() -> float:
+	"""Get current spell damage bonus"""
+	return get_meta("spell_damage_bonus", 0.0)

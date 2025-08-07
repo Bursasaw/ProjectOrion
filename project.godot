@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Project Orion"
+config/name="Project Orion v0.16.0"
 run/main_scene="res://scenes/game/Main.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
@@ -25,6 +25,12 @@ WorldEvents="*res://scripts/world/WorldEvents.gd"
 Logger="*res://scripts/core/Logger.gd"
 SteamManager="*res://scripts/core/SteamManager.gd"
 ControllerIcons="*res://scripts/core/ControllerIcons.gd"
+ControllerManager="*res://scripts/core/ControllerManager.gd"
+CombatManager="*res://scripts/core/CombatManager.gd"
+SkillSystem="*res://scripts/core/SkillSystem.gd"
+StanceManager="*res://scripts/core/StanceManager.gd"
+AchievementTracker="*res://scripts/core/AchievementTracker.gd"
+CraftingSystem="*res://scripts/core/CraftingSystem.gd"
 
 [editor_plugins]
 
