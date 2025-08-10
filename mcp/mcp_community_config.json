@@ -1,0 +1,46 @@
+{
+  "mcp_community_management": {
+    "discord_automation": {
+      "server_management": {
+        "welcome_messages": true,
+        "progress_updates": true,
+        "technical_discussions": true,
+        "achievement_announcements": true
+      },
+      "engagement": {
+        "daily_updates": true,
+        "weekly_showcases": true,
+        "community_questions": true,
+        "developer_networking": true
+      }
+    },
+    "reddit_management": {
+      "subreddit_participation": {
+        "r/gamedev": true,
+        "r/indiegaming": true,
+        "r/godot": true,
+        "r/programming": true
+      },
+      "content_strategy": {
+        "technical_posts": true,
+        "development_journey": true,
+        "achievement_shares": true,
+        "community_engagement": true
+      }
+    },
+    "networking": {
+      "industry_connections": {
+        "game_developers": true,
+        "indie_studios": true,
+        "publishers": true,
+        "influencers": true
+      },
+      "opportunity_tracking": {
+        "game_jams": true,
+        "festivals": true,
+        "conferences": true,
+        "collaborations": true
+      }
+    }
+  }
+} 

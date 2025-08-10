@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Project Orion"
+run/main_scene="res://scenes/game/Main.tscn"
+config/features=PackedStringArray("4.4", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://scripts/core/GameManager.gd"
+SaveSystem="*res://scripts/core/SaveSystem.gd"
+DialogueManager="*res://scripts/core/DialogueManager.gd"
+QuestManager="*res://scripts/core/QuestManager.gd"
+WorldEvents="*res://scripts/world/WorldEvents.gd"
+Logger="*res://scripts/core/Logger.gd"
+SteamManager="*res://scripts/core/SteamManager.gd"
+ControllerIcons="*res://scripts/core/ControllerIcons.gd"
+ControllerManager="*res://scripts/core/ControllerManager.gd"
+CombatManager="*res://scripts/core/CombatManager.gd"
+InventoryManager="*res://scripts/core/InventoryManager.gd"
+GameSettings="*res://scripts/core/GameSettings.gd"
+SecurityValidator="*res://scripts/core/SecurityValidator.gd"
+SaveEncryption="*res://scripts/core/SaveEncryption.gd"
+PerformanceOptimizer="*res://scripts/core/PerformanceOptimizer.gd"
+NetworkSecurity="*res://scripts/core/NetworkSecurity.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/diagnosticlist/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"

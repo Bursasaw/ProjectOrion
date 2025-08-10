@@ -1,0 +1,114 @@
+{
+	"locations": {
+		"arcanum_sanctum": {
+			"name": "Arcanum Sanctum",
+			"description": "A sacred place of learning and ancient knowledge, where the Elder Magus guards the secrets of the arcane arts.",
+			"world": "Terra",
+			"type": "sanctuary",
+			"connections": ["crystal_spire", "nokturn_market"],
+			"characters": ["elder_magus"],
+			"items": ["ancient_scroll", "magic_crystal"],
+			"encounters": ["wisdom_trial", "knowledge_test"],
+			"ambient": "The air hums with ancient magic, and the walls are lined with glowing runes that pulse with arcane energy."
+		},
+		"crystal_spire": {
+			"name": "Crystal Spire",
+			"description": "A towering structure of pure crystal that reaches into the clouds, home to the Gate Keeper who controls travel between worlds.",
+			"world": "Aethra",
+			"type": "gateway",
+			"connections": ["arcanum_sanctum", "dragon_spire", "techno_nexus"],
+			"characters": ["gate_keeper"],
+			"items": ["crystal_shard", "gate_key"],
+			"encounters": ["gate_trial", "crystal_puzzle"],
+			"ambient": "The crystal walls refract light in mesmerizing patterns, and the air crackles with dimensional energy."
+		},
+		"nokturn_market": {
+			"name": "Nokturn Market",
+			"description": "A shadowy marketplace where rare and dangerous goods are traded, including artifacts from forgotten realms.",
+			"world": "Nokturn",
+			"type": "marketplace",
+			"connections": ["arcanum_sanctum", "void_rift"],
+			"characters": ["shadow_merchant"],
+			"items": ["shadow_crystal", "void_essence", "mirror_of_past"],
+			"encounters": ["merchant_haggle", "artifact_curse"],
+			"ambient": "Shadows dance between the stalls, and the air is thick with the scent of exotic spices and forbidden magic."
+		},
+		"dragon_spire": {
+			"name": "Dragon Spire",
+			"description": "A massive tower built into the side of a mountain, where the Dragon Sage guards the ancient knowledge of the dragon alliance.",
+			"world": "Krynn",
+			"type": "sanctuary",
+			"connections": ["crystal_spire", "wisdom_grove"],
+			"characters": ["dragon_sage"],
+			"items": ["dragon_scroll", "fire_crystal"],
+			"encounters": ["dragon_trial", "fire_magic_test"],
+			"ambient": "The air is warm with dragon fire, and ancient runes glow with the power of the first alliance."
+		},
+		"techno_nexus": {
+			"name": "Techno-Nexus",
+			"description": "A vast complex of floating platforms connected by energy bridges, where the Techno-Archivist preserves the knowledge of the techno-mages.",
+			"world": "Tauron",
+			"type": "archive",
+			"connections": ["crystal_spire", "wisdom_grove"],
+			"characters": ["techno_archivist"],
+			"items": ["tech_scroll", "energy_crystal"],
+			"encounters": ["tech_trial", "energy_puzzle"],
+			"ambient": "Machines hum with precision, and holographic displays show the history of technological advancement."
+		},
+		"wisdom_grove": {
+			"name": "Wisdom Grove",
+			"description": "A serene forest where ancient trees hold the wisdom of the guardians, and the Wisdom Keeper maintains the balance of all things.",
+			"world": "Elysion",
+			"type": "sanctuary",
+			"connections": ["dragon_spire", "techno_nexus"],
+			"characters": ["wisdom_keeper"],
+			"items": ["wisdom_scroll", "life_crystal"],
+			"encounters": ["wisdom_trial", "balance_test"],
+			"ambient": "Ancient trees whisper secrets, and the air is filled with the peaceful energy of natural magic."
+		},
+		"void_rift": {
+			"name": "Void Rift",
+			"description": "A dangerous tear in the Veil where void energy leaks through, creating unstable conditions and attracting Void Seekers.",
+			"world": "Nokturn",
+			"type": "danger_zone",
+			"connections": ["nokturn_market"],
+			"characters": ["void_seeker"],
+			"items": ["void_essence", "rift_shard"],
+			"encounters": ["void_creature", "rift_stabilization"],
+			"ambient": "The air crackles with unstable void energy, and reality itself seems to bend and twist around the rift."
+		},
+		"ancient_library": {
+			"name": "Ancient Library",
+			"description": "A vast library hidden in the ruins of an ancient civilization, containing scrolls with knowledge of the Veil's creation.",
+			"world": "Elysion",
+			"type": "ruins",
+			"connections": ["wisdom_grove"],
+			"characters": [],
+			"items": ["ancient_scroll", "veil_knowledge"],
+			"encounters": ["library_guardian", "knowledge_seeker"],
+			"ambient": "Dusty tomes line the walls, and the air is thick with the weight of forgotten knowledge."
+		},
+		"crystal_caverns": {
+			"name": "Crystal Caverns",
+			"description": "A network of caves filled with magical crystals that amplify and store arcane energy.",
+			"world": "Aethra",
+			"type": "resource",
+			"connections": ["crystal_spire"],
+			"characters": ["crystal_miner"],
+			"items": ["magic_crystal", "crystal_shard"],
+			"encounters": ["crystal_golem", "energy_surge"],
+			"ambient": "Crystals glow with inner light, casting colorful shadows on the cave walls and filling the air with magical energy."
+		},
+		"shadow_forest": {
+			"name": "Shadow Forest",
+			"description": "A dark forest where shadows come to life and the boundary between light and dark is blurred.",
+			"world": "Nokturn",
+			"type": "wilderness",
+			"connections": ["nokturn_market"],
+			"characters": ["shadow_walker"],
+			"items": ["shadow_crystal", "dark_essence"],
+			"encounters": ["shadow_creature", "darkness_test"],
+			"ambient": "Shadows move independently of their sources, and the trees seem to whisper secrets in the darkness."
+		}
+	}
+} 

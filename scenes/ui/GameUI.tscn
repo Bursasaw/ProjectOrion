@@ -1,0 +1,418 @@
+[gd_scene load_steps=6 format=3 uid="uid://game_ui_unique_001"]
+
+[ext_resource type="Script" path="res://scripts/ui/GameUI.gd" id="1_ui_script"]
+[ext_resource type="PackedScene" uid="uid://quest_panel_001" path="res://scenes/ui/QuestPanel.tscn" id="2_quest_panel"]
+[ext_resource type="PackedScene" uid="uid://settings_panel_001" path="res://scenes/ui/SettingsPanel.tscn" id="3_settings_panel"]
+[ext_resource type="PackedScene" uid="uid://world_map_panel_001" path="res://scenes/ui/WorldMapPanel.tscn" id="4_world_map_panel"]
+[ext_resource type="PackedScene" uid="uid://puzzle_panel_001" path="res://scenes/ui/PuzzlePanel.tscn" id="5_puzzle_panel"]
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_ui_script")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.5)
+
+[node name="TopPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+
+[node name="TopPanelContainer" type="HBoxContainer" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = -10.0
+offset_bottom = -5.0
+
+[node name="PlayerInfo" type="VBoxContainer" parent="TopPanel/TopPanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerName" type="Label" parent="TopPanel/TopPanelContainer/PlayerInfo"]
+layout_mode = 2
+text = "Arius - The Seeker"
+horizontal_alignment = 1
+
+[node name="PlayerStats" type="HBoxContainer" parent="TopPanel/TopPanelContainer/PlayerInfo"]
+layout_mode = 2
+
+[node name="Level" type="Label" parent="TopPanel/TopPanelContainer/PlayerInfo/PlayerStats"]
+layout_mode = 2
+text = "Level: 1"
+
+[node name="HP" type="Label" parent="TopPanel/TopPanelContainer/PlayerInfo/PlayerStats"]
+layout_mode = 2
+text = "HP: 100/100"
+
+[node name="MP" type="Label" parent="TopPanel/TopPanelContainer/PlayerInfo/PlayerStats"]
+layout_mode = 2
+text = "MP: 50/50"
+
+[node name="Spacer" type="Control" parent="TopPanel/TopPanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameControls" type="HBoxContainer" parent="TopPanel/TopPanelContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="Button" parent="TopPanel/TopPanelContainer/GameControls"]
+layout_mode = 2
+text = "Menu"
+
+[node name="InventoryButton" type="Button" parent="TopPanel/TopPanelContainer/GameControls"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="CharacterButton" type="Button" parent="TopPanel/TopPanelContainer/GameControls"]
+layout_mode = 2
+text = "Character"
+
+[node name="WorldButton" type="Button" parent="TopPanel/TopPanelContainer/GameControls"]
+layout_mode = 2
+text = "World"
+
+[node name="SaveButton" type="Button" parent="TopPanel/TopPanelContainer/GameControls"]
+layout_mode = 2
+text = "Save"
+
+[node name="QuestButton" type="Button" parent="TopPanel/TopPanelContainer/GameControls"]
+layout_mode = 2
+text = "Quests"
+
+[node name="BottomPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+
+[node name="BottomPanelContainer" type="VBoxContainer" parent="BottomPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = -10.0
+offset_bottom = -5.0
+
+[node name="GameLog" type="RichTextLabel" parent="BottomPanel/BottomPanelContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Welcome to Arcanum Origins: Before the Veil. Your journey begins here..."
+
+[node name="ActionButtons" type="HBoxContainer" parent="BottomPanel/BottomPanelContainer"]
+layout_mode = 2
+
+[node name="MoveButton" type="Button" parent="BottomPanel/BottomPanelContainer/ActionButtons"]
+layout_mode = 2
+text = "Move"
+
+[node name="InteractButton" type="Button" parent="BottomPanel/BottomPanelContainer/ActionButtons"]
+layout_mode = 2
+text = "Interact"
+
+[node name="CombatButton" type="Button" parent="BottomPanel/BottomPanelContainer/ActionButtons"]
+layout_mode = 2
+text = "Combat"
+
+[node name="CastButton" type="Button" parent="BottomPanel/BottomPanelContainer/ActionButtons"]
+layout_mode = 2
+text = "Cast"
+
+[node name="RightPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = 60.0
+offset_bottom = -100.0
+
+[node name="RightPanelContainer" type="VBoxContainer" parent="RightPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+
+[node name="LocationLabel" type="Label" parent="RightPanel/RightPanelContainer"]
+layout_mode = 2
+text = "Location: Arcanum Sanctum"
+horizontal_alignment = 1
+
+[node name="WorldLabel" type="Label" parent="RightPanel/RightPanelContainer"]
+layout_mode = 2
+text = "World: Terra"
+horizontal_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="RightPanel/RightPanelContainer"]
+layout_mode = 2
+text = "Time: Day 1"
+horizontal_alignment = 1
+
+[node name="StatusEffects" type="VBoxContainer" parent="RightPanel/RightPanelContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatusLabel" type="Label" parent="RightPanel/RightPanelContainer/StatusEffects"]
+layout_mode = 2
+text = "Status Effects:"
+horizontal_alignment = 1
+
+[node name="StatusList" type="ItemList" parent="RightPanel/RightPanelContainer/StatusEffects"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InventoryPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+visible = false
+
+[node name="InventoryContainer" type="VBoxContainer" parent="InventoryPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="InventoryTitle" type="Label" parent="InventoryPanel/InventoryContainer"]
+layout_mode = 2
+text = "Inventory"
+horizontal_alignment = 1
+
+[node name="InventoryGrid" type="GridContainer" parent="InventoryPanel/InventoryContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 8
+
+[node name="CloseInventoryButton" type="Button" parent="InventoryPanel/InventoryContainer"]
+layout_mode = 2
+text = "Close"
+
+[node name="CharacterPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+visible = false
+
+[node name="CharacterContainer" type="VBoxContainer" parent="CharacterPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="CharacterTitle" type="Label" parent="CharacterPanel/CharacterContainer"]
+layout_mode = 2
+text = "Character Sheet"
+horizontal_alignment = 1
+
+[node name="CharacterStats" type="GridContainer" parent="CharacterPanel/CharacterContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="CloseCharacterButton" type="Button" parent="CharacterPanel/CharacterContainer"]
+layout_mode = 2
+text = "Close"
+
+[node name="MenuPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+visible = false
+
+[node name="MenuContainer" type="VBoxContainer" parent="MenuPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="MenuTitle" type="Label" parent="MenuPanel/MenuContainer"]
+layout_mode = 2
+text = "Game Menu"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="MenuPanel/MenuContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="SaveButton" type="Button" parent="MenuPanel/MenuContainer"]
+layout_mode = 2
+text = "Save Game"
+
+[node name="LoadButton" type="Button" parent="MenuPanel/MenuContainer"]
+layout_mode = 2
+text = "Load Game"
+
+[node name="SettingsButton" type="Button" parent="MenuPanel/MenuContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="MenuPanel/MenuContainer"]
+layout_mode = 2
+text = "Quit to Main Menu"
+
+[node name="CombatPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
+visible = false
+
+[node name="CombatContainer" type="VBoxContainer" parent="CombatPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="CombatTitle" type="Label" parent="CombatPanel/CombatContainer"]
+layout_mode = 2
+text = "Combat"
+horizontal_alignment = 1
+
+[node name="CombatLog" type="RichTextLabel" parent="CombatPanel/CombatContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="CombatActions" type="HBoxContainer" parent="CombatPanel/CombatContainer"]
+layout_mode = 2
+
+[node name="AttackButton" type="Button" parent="CombatPanel/CombatContainer/CombatActions"]
+layout_mode = 2
+text = "Attack"
+
+[node name="SpellButton" type="Button" parent="CombatPanel/CombatContainer/CombatActions"]
+layout_mode = 2
+text = "Spell"
+
+[node name="ItemButton" type="Button" parent="CombatPanel/CombatContainer/CombatActions"]
+layout_mode = 2
+text = "Item"
+
+[node name="FleeButton" type="Button" parent="CombatPanel/CombatContainer/CombatActions"]
+layout_mode = 2
+text = "Flee"
+
+[node name="DialoguePanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -150.0
+offset_right = 400.0
+offset_bottom = 150.0
+visible = false
+
+[node name="DialogueContainer" type="VBoxContainer" parent="DialoguePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+
+[node name="SpeakerLabel" type="Label" parent="DialoguePanel/DialogueContainer"]
+layout_mode = 2
+text = "Speaker Name"
+horizontal_alignment = 1
+
+[node name="DialogueText" type="RichTextLabel" parent="DialoguePanel/DialogueContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="DialogueChoices" type="VBoxContainer" parent="DialoguePanel/DialogueContainer"]
+layout_mode = 2
+
+[node name="Choice1" type="Button" parent="DialoguePanel/DialogueContainer/DialogueChoices"]
+layout_mode = 2
+text = "Choice 1"
+
+[node name="Choice2" type="Button" parent="DialoguePanel/DialogueContainer/DialogueChoices"]
+layout_mode = 2
+text = "Choice 2"
+
+[node name="Choice3" type="Button" parent="DialoguePanel/DialogueContainer/DialogueChoices"]
+layout_mode = 2
+text = "Choice 3"
+
+[node name="QuestPanel" parent="." instance=ExtResource("2_quest_panel")]
+visible = false
+
+[node name="SettingsPanel" parent="." instance=ExtResource("3_settings_panel")]
+visible = false
+
+[node name="WorldMapPanel" parent="." instance=ExtResource("4_world_map_panel")]
+visible = false
+
+[node name="PuzzlePanel" parent="." instance=ExtResource("5_puzzle_panel")]
+visible = false 

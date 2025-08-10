@@ -1,0 +1,64 @@
+{
+  "mcp_content_creation": {
+    "blog_platforms": {
+      "medium": {
+        "enabled": true,
+        "topics": [
+          "game_development",
+          "artificial_intelligence",
+          "godot_engine",
+          "solo_development",
+          "technical_achievements"
+        ],
+        "posting_schedule": {
+          "weekly_technical": 1,
+          "monthly_showcase": 1,
+          "achievement_posts": "immediate"
+        }
+      },
+      "dev_to": {
+        "enabled": true,
+        "topics": [
+          "gamedev",
+          "godot",
+          "ai",
+          "indiedev",
+          "programming"
+        ],
+        "posting_schedule": {
+          "weekly_technical": 1,
+          "monthly_showcase": 1
+        }
+      },
+      "personal_blog": {
+        "enabled": true,
+        "content_types": [
+          "development_journey",
+          "technical_deep_dives",
+          "system_architecture",
+          "achievement_showcases"
+        ]
+      }
+    },
+    "video_content": {
+      "youtube": {
+        "enabled": true,
+        "video_types": [
+          "development_vlogs",
+          "system_demonstrations",
+          "technical_explanations",
+          "achievement_showcases"
+        ],
+        "script_generation": true,
+        "description_generation": true,
+        "tag_generation": true
+      }
+    },
+    "technical_documentation": {
+      "system_architecture": true,
+      "api_documentation": true,
+      "development_guides": true,
+      "achievement_documentation": true
+    }
+  }
+} 

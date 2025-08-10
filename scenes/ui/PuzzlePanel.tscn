@@ -1,0 +1,130 @@
+[gd_scene load_steps=2 format=3 uid="uid://puzzle_panel_001"]
+
+[ext_resource type="Script" path="res://scripts/ui/PuzzlePanel.gd" id="1_0"]
+
+[node name="PuzzlePanel" type="Panel"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_0")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.05, 0.15, 0.95)
+
+[node name="PuzzleContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+
+[node name="Title" type="Label" parent="PuzzleContainer"]
+layout_mode = 2
+text = "Ancient Puzzle"
+horizontal_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="PuzzleContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "[center]You encounter an ancient puzzle mechanism. The symbols glow with mystical energy, and you sense that solving this puzzle will reveal something important.[/center]"
+
+[node name="PuzzleGrid" type="GridContainer" parent="PuzzleContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Symbol1" type="Button" parent="PuzzleContainer/PuzzleGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "☀"
+
+[node name="Symbol2" type="Button" parent="PuzzleContainer/PuzzleGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "☽"
+
+[node name="Symbol3" type="Button" parent="PuzzleContainer/PuzzleGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "★"
+
+[node name="Symbol4" type="Button" parent="PuzzleContainer/PuzzleGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "⚡"
+
+[node name="Symbol5" type="Button" parent="PuzzleContainer/PuzzleGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "❄"
+
+[node name="Symbol6" type="Button" parent="PuzzleContainer/PuzzleGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "🔥"
+
+[node name="Symbol7" type="Button" parent="PuzzleContainer/PuzzleGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "🌊"
+
+[node name="Symbol8" type="Button" parent="PuzzleContainer/PuzzleGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "🌍"
+
+[node name="Symbol9" type="Button" parent="PuzzleContainer/PuzzleGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "⚔"
+
+[node name="HintLabel" type="Label" parent="PuzzleContainer"]
+layout_mode = 2
+text = "Hint: The order matters. Look for patterns in the ancient texts."
+horizontal_alignment = 1
+
+[node name="ProgressLabel" type="Label" parent="PuzzleContainer"]
+layout_mode = 2
+text = "Progress: 0/9 symbols placed"
+horizontal_alignment = 1
+
+[node name="ButtonContainer" type="HBoxContainer" parent="PuzzleContainer"]
+layout_mode = 2
+
+[node name="ResetButton" type="Button" parent="PuzzleContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset"
+
+[node name="HintButton" type="Button" parent="PuzzleContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hint"
+
+[node name="SolveButton" type="Button" parent="PuzzleContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Solve"
+
+[node name="CloseButton" type="Button" parent="PuzzleContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Close" 

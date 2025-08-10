@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://test_bot_001"]
+
+[ext_resource type="Script" path="res://scripts/testing/TestBot.gd" id="1_0"]
+[ext_resource type="Script" path="res://scripts/core/ControllerManager.gd" id="2_controller"]
+
+[node name="TestBot" type="Node"]
+script = ExtResource("1_0")
+
+[node name="ControllerManager" type="Node" parent="."]
+script = ExtResource("2_controller") 

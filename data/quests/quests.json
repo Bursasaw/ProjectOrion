@@ -1,0 +1,136 @@
+{
+	"sanctum_trials": {
+		"name": "Sanctum Trials",
+		"description": "Complete the trials of the Arcanum Sanctum to prove your worth.",
+		"type": "main_story",
+		"objectives": [
+			{
+				"id": "trial_1",
+				"description": "Complete the Chamber of Elements trial",
+				"type": "exploration",
+				"target": 1,
+				"current": 0
+			},
+			{
+				"id": "trial_2", 
+				"description": "Solve the ancient puzzle",
+				"type": "puzzle",
+				"target": 1,
+				"current": 0
+			},
+			{
+				"id": "trial_3",
+				"description": "Demonstrate mastery of basic magic",
+				"type": "combat",
+				"target": 1,
+				"current": 0
+			}
+		],
+		"rewards": {
+			"experience": 500,
+			"gold": 200,
+			"items": ["alliance_talisman"],
+			"reputation": {"Order of the Arcane": 50}
+		},
+		"prerequisites": [],
+		"location": "Arcanum Sanctum",
+		"quest_giver": "elder_magus"
+	},
+	"restore_alliance": {
+		"name": "Restore the Ancient Alliance",
+		"description": "Gather the scattered knowledge and reunite the ancient alliance to save the Veil.",
+		"type": "main_story",
+		"objectives": [
+			{
+				"id": "find_dragon_sage",
+				"description": "Find the Dragon Sage in Krynn",
+				"type": "exploration",
+				"target": 1,
+				"current": 0
+			},
+			{
+				"id": "find_techno_archivist",
+				"description": "Find the Techno-Archivist in Tauron",
+				"type": "exploration",
+				"target": 1,
+				"current": 0
+			},
+			{
+				"id": "find_wisdom_keeper",
+				"description": "Find the Wisdom Keeper in Elysion",
+				"type": "exploration",
+				"target": 1,
+				"current": 0
+			},
+			{
+				"id": "gather_knowledge",
+				"description": "Collect the ancient knowledge from all three guardians",
+				"type": "collection",
+				"target": 3,
+				"current": 0
+			}
+		],
+		"rewards": {
+			"experience": 2000,
+			"gold": 1000,
+			"items": ["veil_knowledge"],
+			"reputation": {"All Worlds": 100}
+		},
+		"prerequisites": ["sanctum_trials"],
+		"location": "Multiple Worlds",
+		"quest_giver": "elder_magus"
+	},
+	"shadow_crystals": {
+		"name": "Shadow Crystal Collection",
+		"description": "Collect shadow crystals for the Shadow Merchant.",
+		"type": "side_quest",
+		"objectives": [
+			{
+				"id": "collect_crystals",
+				"description": "Collect 5 shadow crystals",
+				"type": "collection",
+				"target": 5,
+				"current": 0
+			}
+		],
+		"rewards": {
+			"experience": 300,
+			"gold": 150,
+			"items": ["shadow_crystal"],
+			"reputation": {"Nokturn": 25}
+		},
+		"prerequisites": [],
+		"location": "Nokturn",
+		"quest_giver": "shadow_merchant"
+	},
+	"void_investigation": {
+		"name": "Void Investigation",
+		"description": "Investigate the void rifts and learn about the Void Seekers.",
+		"type": "side_quest",
+		"objectives": [
+			{
+				"id": "visit_rifts",
+				"description": "Visit 3 void rifts",
+				"type": "exploration",
+				"target": 3,
+				"current": 0
+			},
+			{
+				"id": "collect_void_essence",
+				"description": "Collect void essence samples",
+				"type": "collection",
+				"target": 2,
+				"current": 0
+			}
+		],
+		"rewards": {
+			"experience": 400,
+			"gold": 200,
+			"items": ["void_essence"],
+			"reputation": {"Nokturn": 30}
+		},
+		"prerequisites": [],
+		"location": "Nokturn",
+		"quest_giver": "shadow_merchant"
+	}
+} 

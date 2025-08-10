@@ -1,0 +1,319 @@
+{
+	"items": {
+		"ancient_scroll": {
+			"name": "Ancient Scroll",
+			"description": "A fragile scroll containing ancient knowledge of the Veil's creation.",
+			"type": "artifact",
+			"rarity": "rare",
+			"value": 500,
+			"effects": {
+				"knowledge": 10,
+				"magic_power": 5
+			},
+			"usable": true,
+			"stackable": false
+		},
+		"magic_crystal": {
+			"name": "Magic Crystal",
+			"description": "A crystal that amplifies magical energy and can store spells.",
+			"type": "artifact",
+			"rarity": "uncommon",
+			"value": 200,
+			"effects": {
+				"magic_power": 10,
+				"magic_points": 20
+			},
+			"usable": true,
+			"stackable": true
+		},
+		"shadow_crystal": {
+			"name": "Shadow Crystal",
+			"description": "A dark crystal that enhances shadow magic and provides stealth abilities.",
+			"type": "artifact",
+			"rarity": "rare",
+			"value": 300,
+			"effects": {
+				"shadow_magic": 15,
+				"stealth": 10
+			},
+			"usable": true,
+			"stackable": true
+		},
+		"void_essence": {
+			"name": "Void Essence",
+			"description": "Pure energy from the space between worlds. Extremely dangerous to handle.",
+			"type": "artifact",
+			"rarity": "legendary",
+			"value": 1000,
+			"effects": {
+				"void_magic": 25,
+				"dimensional_travel": 5
+			},
+			"usable": true,
+			"stackable": true,
+			"dangerous": true
+		},
+		"mirror_of_past": {
+			"name": "Mirror of the Past",
+			"description": "A magical mirror that can show events from the past.",
+			"type": "artifact",
+			"rarity": "epic",
+			"value": 800,
+			"effects": {
+				"divination": 20,
+				"knowledge": 15
+			},
+			"usable": true,
+			"stackable": false
+		},
+		"dragon_scroll": {
+			"name": "Dragon Scroll",
+			"description": "A scroll containing the ancient knowledge of the dragon alliance.",
+			"type": "artifact",
+			"rarity": "epic",
+			"value": 600,
+			"effects": {
+				"fire_magic": 20,
+				"dragon_knowledge": 25
+			},
+			"usable": true,
+			"stackable": false
+		},
+		"fire_crystal": {
+			"name": "Fire Crystal",
+			"description": "A crystal that burns with eternal flame and enhances fire magic.",
+			"type": "artifact",
+			"rarity": "rare",
+			"value": 400,
+			"effects": {
+				"fire_magic": 15,
+				"attack_power": 10
+			},
+			"usable": true,
+			"stackable": true
+		},
+		"tech_scroll": {
+			"name": "Tech Scroll",
+			"description": "A scroll containing the technological knowledge of the techno-mages.",
+			"type": "artifact",
+			"rarity": "epic",
+			"value": 600,
+			"effects": {
+				"tech_magic": 20,
+				"energy_manipulation": 25
+			},
+			"usable": true,
+			"stackable": false
+		},
+		"energy_crystal": {
+			"name": "Energy Crystal",
+			"description": "A crystal that stores and amplifies energy for technological applications.",
+			"type": "artifact",
+			"rarity": "rare",
+			"value": 400,
+			"effects": {
+				"energy_magic": 15,
+				"magic_points": 15
+			},
+			"usable": true,
+			"stackable": true
+		},
+		"wisdom_scroll": {
+			"name": "Wisdom Scroll",
+			"description": "A scroll containing the wisdom of the ancient guardians.",
+			"type": "artifact",
+			"rarity": "epic",
+			"value": 600,
+			"effects": {
+				"wisdom": 20,
+				"balance_magic": 25
+			},
+			"usable": true,
+			"stackable": false
+		},
+		"life_crystal": {
+			"name": "Life Crystal",
+			"description": "A crystal that pulses with life energy and enhances healing magic.",
+			"type": "artifact",
+			"rarity": "rare",
+			"value": 400,
+			"effects": {
+				"healing_magic": 15,
+				"health_points": 20
+			},
+			"usable": true,
+			"stackable": true
+		},
+		"alliance_talisman": {
+			"name": "Alliance Talisman",
+			"description": "A talisman that represents the ancient alliance and can guide you to the alliance members.",
+			"type": "artifact",
+			"rarity": "legendary",
+			"value": 1500,
+			"effects": {
+				"alliance_guidance": 30,
+				"world_travel": 10
+			},
+			"usable": true,
+			"stackable": false
+		},
+		"gate_key": {
+			"name": "Gate Key",
+			"description": "A key that can unlock the gates between worlds.",
+			"type": "artifact",
+			"rarity": "epic",
+			"value": 800,
+			"effects": {
+				"gate_access": 25
+			},
+			"usable": true,
+			"stackable": false
+		},
+		"crystal_shard": {
+			"name": "Crystal Shard",
+			"description": "A small shard of crystal that can be used for minor magical enhancements.",
+			"type": "material",
+			"rarity": "common",
+			"value": 50,
+			"effects": {
+				"magic_power": 5
+			},
+			"usable": true,
+			"stackable": true
+		},
+		"rift_shard": {
+			"name": "Rift Shard",
+			"description": "A shard of void energy that can be used to create temporary rifts.",
+			"type": "material",
+			"rarity": "rare",
+			"value": 200,
+			"effects": {
+				"void_magic": 10,
+				"rift_creation": 5
+			},
+			"usable": true,
+			"stackable": true,
+			"dangerous": true
+		},
+		"dark_essence": {
+			"name": "Dark Essence",
+			"description": "Pure darkness in material form, used for shadow magic and stealth.",
+			"type": "material",
+			"rarity": "uncommon",
+			"value": 100,
+			"effects": {
+				"shadow_magic": 8,
+				"stealth": 5
+			},
+			"usable": true,
+			"stackable": true
+		},
+		"veil_knowledge": {
+			"name": "Veil Knowledge",
+			"description": "Ancient knowledge about the nature and structure of the Veil.",
+			"type": "artifact",
+			"rarity": "legendary",
+			"value": 2000,
+			"effects": {
+				"veil_understanding": 50,
+				"rift_control": 25
+			},
+			"usable": true,
+			"stackable": false
+		},
+		"basic_sword": {
+			"name": "Basic Sword",
+			"description": "A simple but reliable sword for combat.",
+			"type": "weapon",
+			"rarity": "common",
+			"value": 100,
+			"damage": 15,
+			"effects": {
+				"attack_power": 10
+			},
+			"usable": false,
+			"stackable": false,
+			"equippable": true
+		},
+		"magic_staff": {
+			"name": "Magic Staff",
+			"description": "A staff that enhances magical abilities and spell casting.",
+			"type": "weapon",
+			"rarity": "uncommon",
+			"value": 200,
+			"damage": 8,
+			"effects": {
+				"magic_power": 15,
+				"magic_points": 10
+			},
+			"usable": false,
+			"stackable": false
+		},
+		"leather_armor": {
+			"name": "Leather Armor",
+			"description": "Light armor that provides basic protection without hindering movement.",
+			"type": "armor",
+			"rarity": "common",
+			"value": 80,
+			"defense": 10,
+			"effects": {
+				"defense": 8,
+				"speed": 5
+			},
+			"usable": false,
+			"stackable": false,
+			"equippable": true
+		},
+		"magic_robe": {
+			"name": "Magic Robe",
+			"description": "A robe that enhances magical abilities and provides some protection.",
+			"type": "armor",
+			"rarity": "uncommon",
+			"value": 150,
+			"defense": 5,
+			"effects": {
+				"magic_defense": 12,
+				"magic_power": 10
+			},
+			"usable": false,
+			"stackable": false
+		},
+		"health_potion": {
+			"name": "Health Potion",
+			"description": "A potion that restores health points.",
+			"type": "consumable",
+			"rarity": "common",
+			"value": 25,
+			"effects": {
+				"healing": 50
+			},
+			"usable": true,
+			"stackable": true
+		},
+		"mana_potion": {
+			"name": "Mana Potion",
+			"description": "A potion that restores magic points.",
+			"type": "consumable",
+			"rarity": "common",
+			"value": 30,
+			"effects": {
+				"mana_restoration": 40
+			},
+			"usable": true,
+			"stackable": true
+		},
+		"antidote": {
+			"name": "Antidote",
+			"description": "A potion that cures poison and other negative status effects.",
+			"type": "consumable",
+			"rarity": "uncommon",
+			"value": 50,
+			"effects": {
+				"poison_cure": 1,
+				"status_removal": 1
+			},
+			"usable": true,
+			"stackable": true
+		}
+	}
+} 

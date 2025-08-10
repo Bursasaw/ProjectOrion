@@ -1,0 +1,263 @@
+{
+	"elder_magus": {
+		"name": "Elder Magus",
+		"description": "The wise leader of the Arcanum Sanctum",
+		"dialogue": {
+			"greeting": {
+				"text": "Welcome, young seeker. I am the Elder Magus, guardian of the ancient knowledge. The Veil that separates our worlds is weakening, and we need your help to restore the balance.",
+				"choices": [
+					{
+						"text": "Tell me more about the Veil",
+						"next_node": "veil_info"
+					},
+					{
+						"text": "What can I do to help?",
+						"next_node": "quest_offer"
+					},
+					{
+						"text": "I need supplies for my journey",
+						"next_node": "supplies"
+					}
+				]
+			},
+			"veil_info": {
+				"text": "The Veil is a magical barrier created by an ancient alliance between the nine worlds. It keeps the worlds separate but connected, allowing for controlled travel and trade. Now, dark forces are trying to tear it apart.",
+				"choices": [
+					{
+						"text": "Who was in this ancient alliance?",
+						"next_node": "alliance_info"
+					},
+					{
+						"text": "What happens if the Veil is destroyed?",
+						"next_node": "veil_danger"
+					},
+					{
+						"text": "Back to main topic",
+						"next_node": "greeting"
+					}
+				]
+			},
+			"alliance_info": {
+				"text": "The alliance consisted of the Dragon Sage of Krynn, the Techno-Archivist of Tauron, and the Wisdom Keeper of Elysion. Each held a piece of the knowledge needed to maintain the Veil.",
+				"choices": [
+					{
+						"text": "Where can I find these guardians?",
+						"next_node": "guardian_locations"
+					},
+					{
+						"text": "What happened to them?",
+						"next_node": "guardian_fate"
+					},
+					{
+						"text": "Back to main topic",
+						"next_node": "greeting"
+					}
+				]
+			},
+			"guardian_locations": {
+				"text": "The Dragon Sage dwells in the highest peaks of Krynn, the Techno-Archivist can be found in the depths of Tauron's central nexus, and the Wisdom Keeper meditates in the sacred groves of Elysion.",
+				"choices": [
+					{
+						"text": "I'll seek them out",
+						"next_node": "quest_offer"
+					},
+					{
+						"text": "That sounds dangerous",
+						"next_node": "reassurance"
+					},
+					{
+						"text": "Back to main topic",
+						"next_node": "greeting"
+					}
+				]
+			},
+			"quest_offer": {
+				"text": "I have two tasks for you. First, complete the trials here in the Sanctum to prove your worth. Then, seek out the ancient guardians and gather their knowledge. Will you accept this quest?",
+				"choices": [
+					{
+						"text": "I accept the trials",
+						"next_node": "trials_accepted",
+						"quest_given": "sanctum_trials"
+					},
+					{
+						"text": "I accept the main quest",
+						"next_node": "main_quest_accepted",
+						"quest_given": "restore_alliance"
+					},
+					{
+						"text": "I need time to think",
+						"next_node": "greeting"
+					}
+				]
+			},
+			"trials_accepted": {
+				"text": "Excellent! The trials will test your wisdom, courage, and magical aptitude. Complete them and you'll receive the Alliance Talisman, which will help guide you to the ancient sites.",
+				"choices": [
+					{
+						"text": "Where do I begin?",
+						"next_node": "trial_instructions"
+					},
+					{
+						"text": "I'm ready to start",
+						"next_node": "goodbye"
+					}
+				]
+			},
+			"main_quest_accepted": {
+				"text": "The fate of all worlds rests in your hands. Find the three guardians, learn their secrets, and return here. I will give you the Alliance Talisman to help guide your way.",
+				"choices": [
+					{
+						"text": "I won't fail you",
+						"next_node": "goodbye"
+					},
+					{
+						"text": "What if I need help?",
+						"next_node": "help_advice"
+					}
+				]
+			},
+			"supplies": {
+				"text": "Of course! Every journey requires proper preparation. I can provide you with some basic supplies to get started.",
+				"choices": [
+					{
+						"text": "I need healing items",
+						"next_node": "give_healing",
+						"items_given": ["health_potion", "magic_potion"]
+					},
+					{
+						"text": "I need equipment",
+						"next_node": "give_equipment",
+						"items_given": ["basic_sword", "leather_armor"]
+					},
+					{
+						"text": "I need gold for supplies",
+						"next_node": "give_gold",
+						"gold_given": 200
+					}
+				]
+			},
+			"give_healing": {
+				"text": "Here are some healing potions. Use them wisely - they may save your life in the trials ahead.",
+				"choices": [
+					{
+						"text": "Thank you",
+						"next_node": "goodbye"
+					}
+				]
+			},
+			"give_equipment": {
+				"text": "This basic equipment should serve you well. The sword is simple but reliable, and the armor will protect you from minor threats.",
+				"choices": [
+					{
+						"text": "Thank you",
+						"next_node": "goodbye"
+					}
+				]
+			},
+			"give_gold": {
+				"text": "Here is some gold to help you on your journey. Use it to purchase supplies from merchants in other worlds.",
+				"choices": [
+					{
+						"text": "Thank you",
+						"next_node": "goodbye"
+					}
+				]
+			},
+			"goodbye": {
+				"text": "May the ancient wisdom guide your path. Return when you have completed your quest, or if you need further assistance.",
+				"choices": [
+					{
+						"text": "Farewell",
+						"next_node": "end"
+					}
+				]
+			}
+		}
+	},
+	"shadow_merchant": {
+		"name": "Shadow Merchant",
+		"description": "A mysterious trader in the dark corners of Nokturn",
+		"dialogue": {
+			"greeting": {
+				"text": "Ah, a traveler from the light worlds. Welcome to Nokturn, where shadows hold secrets and darkness reveals truth. What brings you to my humble shop?",
+				"choices": [
+					{
+						"text": "I'm looking for rare materials",
+						"next_node": "materials"
+					},
+					{
+						"text": "Tell me about this world",
+						"next_node": "nokturn_info"
+					},
+					{
+						"text": "I need work",
+						"next_node": "work_offer"
+					}
+				]
+			},
+			"materials": {
+				"text": "I have access to materials from all nine worlds, including rare shadow crystals and void essence. But such items don't come cheap, and I prefer to trade rather than sell for gold.",
+				"choices": [
+					{
+						"text": "What do you trade for?",
+						"next_node": "trade_info"
+					},
+					{
+						"text": "Show me your wares",
+						"next_node": "wares"
+					},
+					{
+						"text": "I have shadow crystals",
+						"next_node": "crystal_trade"
+					}
+				]
+			},
+			"work_offer": {
+				"text": "I have a few tasks that need doing. Collect shadow crystals from the crystal caverns, or investigate the void rifts that have been appearing. Which interests you?",
+				"choices": [
+					{
+						"text": "I'll collect shadow crystals",
+						"next_node": "crystal_quest",
+						"quest_given": "shadow_crystals"
+					},
+					{
+						"text": "I'll investigate the void rifts",
+						"next_node": "void_quest",
+						"quest_given": "void_investigation"
+					},
+					{
+						"text": "I need more information",
+						"next_node": "quest_details"
+					}
+				]
+			},
+			"crystal_quest": {
+				"text": "Excellent! The shadow crystals can be found in the crystal caverns to the east. Bring me five crystals and I'll reward you handsomely.",
+				"choices": [
+					{
+						"text": "I'll get started",
+						"next_node": "goodbye"
+					}
+				]
+			},
+			"void_quest": {
+				"text": "The void rifts are dangerous but fascinating. Visit three of them and collect void essence samples. Be careful - the void creatures are not to be underestimated.",
+				"choices": [
+					{
+						"text": "I'll investigate",
+						"next_node": "goodbye"
+					}
+				]
+			},
+			"goodbye": {
+				"text": "Safe travels, traveler. Remember, in Nokturn, the shadows are your friends... and your enemies.",
+				"choices": [
+					{
+						"text": "Farewell",
+						"next_node": "end"
+					}
+				]
+			}
+		}
+	}
+} 

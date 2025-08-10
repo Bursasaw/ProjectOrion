@@ -1,0 +1,87 @@
+[gd_scene load_steps=2 format=3 uid="uid://dialogue_panel_001"]
+
+[ext_resource type="Script" path="res://scripts/ui/DialoguePanel.gd" id="1_0x0x0"]
+
+[node name="DialoguePanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_0x0x0")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="DialogueContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.1
+anchor_top = 0.6
+anchor_right = 0.9
+anchor_bottom = 0.95
+offset_left = 100.0
+offset_top = 300.0
+offset_right = -100.0
+offset_bottom = -25.0
+
+[node name="CharacterName" type="Label" parent="DialogueContainer"]
+layout_mode = 2
+text = "Character Name"
+label_settings = SubResource("LabelSettings_1")
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Dialogue text will appear here..."
+bbcode_enabled = true
+fit_content = true
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="DialogueContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Choice1" type="Button" parent="ChoicesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Choice 1"
+
+[node name="Choice2" type="Button" parent="ChoicesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Choice 2"
+
+[node name="Choice3" type="Button" parent="ChoicesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Choice 3"
+
+[node name="Choice4" type="Button" parent="ChoicesContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Choice 4"
+
+[node name="ContinueButton" type="Button" parent="DialogueContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Continue"
+
+[node name="CloseButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -50.0
+offset_right = -25.0
+offset_bottom = -25.0
+text = "Close"
+
+[sub_resource type="LabelSettings" id="LabelSettings_1"]
+font_size = 24
+font_color = Color(1, 1, 1, 1) 
